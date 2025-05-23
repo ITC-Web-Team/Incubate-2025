@@ -23,6 +23,15 @@ export const organizationsData = [
     logo: "IIT Bombay"
   },
   {
+    title: "Institute Technical Council",
+    subtitle: "IIT Bombay",
+    description: "The Institute Technical Council (ITC) at IIT Bombay is at the forefront of nurturing student innovation, technical skills, and leadership. We provide students with the resources and guidance needed to bring their ideas to life through a wide range of technical clubs, teams, and events. With a focus on fostering collaboration and creativity, ITC plays a pivotal role in organizing technical workshops, competitions, and projects. From aeromodelling to artificial intelligence, the council caters to a diverse set of technical interests, making it a hub for student-led innovation.",
+    socialLinks: [
+      { icon: "ri-instagram-line", url: "https://www.instagram.com/tech.iitb/" },
+      { icon: "ri-global-line", url: "https://tech-iitb.org" }
+    ]
+  },
+  {
     title: "KCDH",
     subtitle: "Koita Centre for Digital Health, IIT Bombay",
     description: "Established in 2021 with Koita Foundation support, KCDH is India's first academic center dedicated to digital health. It offers education, research, and policy partnerships, and supports national programs like ABDM. With 350+ students trained and 30+ partnerships, KCDH is pioneering India's digital health movement.",
