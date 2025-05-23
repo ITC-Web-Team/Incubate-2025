@@ -4,6 +4,8 @@ import Timeline from "@/components/home/Timeline";
 import Process from "@/components/home/Process";
 import Prizes from "@/components/home/Prizes";
 import Sponsors from "@/components/home/Sponsors";
+import IncubateLogo from "@/components/home/IncubateLogo";
+import { motion } from "framer-motion";
 import { useEffect } from "react";
 
 export default function Home() {
@@ -13,13 +15,18 @@ export default function Home() {
   }, []);
   
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <HeroSection />
+      <IncubateLogo />
       <AboutEvent />
       <Timeline />
       <Process />
       <Prizes />
       <Sponsors />
-    </>
+    </motion.div>
   );
 }
