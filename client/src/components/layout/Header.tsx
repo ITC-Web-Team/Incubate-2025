@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
+import ThemeToggle from "@/components/ui/theme-toggle";
+import incubateLogo from "@/assets/jipmer-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,141 +50,136 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-md">
+    <header className="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-md">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/">
           <div className="flex items-center cursor-pointer">
-            <div className="mr-4">
-              <i className="ri-pulse-line text-primary text-3xl"></i>
+            <div className="mr-4 h-12 w-12 overflow-hidden">
+              <img src={incubateLogo} alt="Incubate Logo" className="w-full h-full object-contain" />
             </div>
             <div>
-              <h1 className="text-xl md:text-2xl font-bold text-primary">Incubate</h1>
-              <p className="text-xs text-gray-600">Where curiosity meets innovation</p>
+              <h1 className="text-xl md:text-2xl font-bold text-primary dark:text-blue-400">Incubate</h1>
+              <p className="text-xs text-gray-600 dark:text-gray-400">Where curiosity meets innovation</p>
             </div>
           </div>
         </Link>
         
-        <nav className="hidden md:block relative">
-          <ul className="flex space-x-6 text-sm font-medium nav-links">
-            <li className="relative py-1">
-              <Link href="/">
-                <a 
-                  className={`nav-link ${activeLink === "home" ? "active" : ""}`}
+        <div className="flex items-center">
+          <nav className="hidden md:block relative mr-4">
+            <ul className="flex space-x-6 text-sm font-medium nav-links">
+              <li className="relative py-1">
+                <Link 
+                  href="/"
+                  className={`nav-link ${activeLink === "home" ? "active" : ""} dark:text-white`}
                   onClick={() => handleLinkClick("home")}
                 >
                   HOME
-                </a>
-              </Link>
-            </li>
-            <li className="relative py-1">
-              <Link href="/themes">
-                <a 
-                  className={`nav-link ${activeLink === "themes" ? "active" : ""}`}
+                </Link>
+              </li>
+              <li className="relative py-1">
+                <Link 
+                  href="/themes"
+                  className={`nav-link ${activeLink === "themes" ? "active" : ""} dark:text-white`}
                   onClick={() => handleLinkClick("themes")}
                 >
                   THEMES
-                </a>
-              </Link>
-            </li>
-            <li className="relative py-1">
-              <Link href="/about">
-                <a 
-                  className={`nav-link ${activeLink === "about" ? "active" : ""}`}
+                </Link>
+              </li>
+              <li className="relative py-1">
+                <Link 
+                  href="/about"
+                  className={`nav-link ${activeLink === "about" ? "active" : ""} dark:text-white`}
                   onClick={() => handleLinkClick("about")}
                 >
                   ABOUT US
-                </a>
-              </Link>
-            </li>
-            <li className="relative py-1">
-              <Link href="/faqs">
-                <a 
-                  className={`nav-link ${activeLink === "faqs" ? "active" : ""}`}
+                </Link>
+              </li>
+              <li className="relative py-1">
+                <Link 
+                  href="/faqs"
+                  className={`nav-link ${activeLink === "faqs" ? "active" : ""} dark:text-white`}
                   onClick={() => handleLinkClick("faqs")}
                 >
                   FAQs
-                </a>
-              </Link>
-            </li>
-            <li className="ml-4">
-              <Link href="/register">
-                <a 
+                </Link>
+              </li>
+              <li className="ml-4">
+                <Link 
+                  href="/register"
                   className="bg-[#f97316] hover:bg-orange-600 text-white py-2 px-4 rounded-md shadow-md transition duration-300"
                   onClick={() => handleLinkClick("register")}
                 >
                   REGISTER NOW
-                </a>
-              </Link>
-            </li>
-          </ul>
-          <div className="nav-indicator absolute bottom-0 h-0.5 bg-primary transition-all duration-300"></div>
-        </nav>
-        
-        <button 
-          className="md:hidden text-gray-600" 
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-        >
-          {isMenuOpen ? (
-            <i className="ri-close-line text-2xl"></i>
-          ) : (
-            <i className="ri-menu-line text-2xl"></i>
-          )}
-        </button>
+                </Link>
+              </li>
+            </ul>
+            <div className="nav-indicator absolute bottom-0 h-0.5 bg-primary dark:bg-blue-400 transition-all duration-300"></div>
+          </nav>
+          
+          {/* Theme toggle button */}
+          <ThemeToggle />
+          
+          <button 
+            className="md:hidden text-gray-600 dark:text-gray-300 ml-4" 
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? (
+              <i className="ri-close-line text-2xl"></i>
+            ) : (
+              <i className="ri-menu-line text-2xl"></i>
+            )}
+          </button>
+        </div>
       </div>
       
       {/* Mobile menu */}
-      <div className={`md:hidden bg-white py-2 shadow-inner ${isMenuOpen ? 'block' : 'hidden'}`}>
+      <div className={`md:hidden bg-white dark:bg-gray-800 py-2 shadow-inner ${isMenuOpen ? 'block' : 'hidden'}`}>
         <div className="container mx-auto px-4">
           <ul className="space-y-3">
             <li>
-              <Link href="/">
-                <a 
-                  className="block py-2 px-4 hover:bg-gray-100 rounded"
-                  onClick={() => handleLinkClick("home")}
-                >
-                  HOME
-                </a>
+              <Link 
+                href="/"
+                className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white rounded"
+                onClick={() => handleLinkClick("home")}
+              >
+                HOME
               </Link>
             </li>
             <li>
-              <Link href="/themes">
-                <a 
-                  className="block py-2 px-4 hover:bg-gray-100 rounded"
-                  onClick={() => handleLinkClick("themes")}
-                >
-                  THEMES
-                </a>
+              <Link 
+                href="/themes"
+                className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white rounded"
+                onClick={() => handleLinkClick("themes")}
+              >
+                THEMES
               </Link>
             </li>
             <li>
-              <Link href="/about">
-                <a 
-                  className="block py-2 px-4 hover:bg-gray-100 rounded"
-                  onClick={() => handleLinkClick("about")}
-                >
-                  ABOUT US
-                </a>
+              <Link 
+                href="/about"
+                className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white rounded"
+                onClick={() => handleLinkClick("about")}
+              >
+                ABOUT US
               </Link>
             </li>
             <li>
-              <Link href="/faqs">
-                <a 
-                  className="block py-2 px-4 hover:bg-gray-100 rounded"
-                  onClick={() => handleLinkClick("faqs")}
-                >
-                  FAQs
-                </a>
+              <Link 
+                href="/faqs"
+                className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white rounded"
+                onClick={() => handleLinkClick("faqs")}
+              >
+                FAQs
               </Link>
             </li>
             <li>
-              <Link href="/register">
-                <a 
-                  className="block py-2 px-4 bg-[#f97316] text-white rounded-md text-center mt-2"
-                  onClick={() => handleLinkClick("register")}
-                >
-                  REGISTER NOW
-                </a>
+              <Link 
+                href="/register"
+                className="block py-2 px-4 bg-[#f97316] text-white rounded-md text-center mt-2"
+                onClick={() => handleLinkClick("register")}
+              >
+                REGISTER NOW
               </Link>
             </li>
           </ul>
