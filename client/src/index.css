@@ -206,3 +206,13 @@
     left: 120%;
   }
 }
+
+/* Radial gradient utility */
+.bg-gradient-radial {
+  background-image: radial-gradient(var(--tw-gradient-stops));
+}
+
+/* Fix for opacity-15 */
+.opacity-15 {
+  opacity: 0.15;
+}
