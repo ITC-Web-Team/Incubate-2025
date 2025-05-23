@@ -199,10 +199,8 @@ const HeroSection = () => {
                 </span>
               </a>
               
-              <Link href="/about">
-                <a className="relative overflow-hidden bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border border-white/30 font-semibold py-3 px-8 rounded-md shadow-lg transition-all duration-300">
-                  Learn More
-                </a>
+              <Link href="/about" className="relative overflow-hidden bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border border-white/30 font-semibold py-3 px-8 rounded-md shadow-lg transition-all duration-300">
+                Learn More
               </Link>
             </motion.div>
           </motion.div>
