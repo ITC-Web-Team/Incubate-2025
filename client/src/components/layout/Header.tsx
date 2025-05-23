@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import ThemeToggle from "@/components/ui/theme-toggle";
-import incubateLogo from "@/assets/jipmer-logo.png";
+import jipmerLogo from "@/assets/logos/jipmer-logo.png";
+import iitbLogo from "@/assets/logos/iitb-logo-blue.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -54,8 +55,11 @@ const Header = () => {
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/">
           <div className="flex items-center cursor-pointer">
-            <div className="mr-4 h-12 w-12 overflow-hidden">
-              <img src={incubateLogo} alt="Incubate Logo" className="w-full h-full object-contain" />
+            <div className="mr-3 h-10 w-10 overflow-hidden">
+              <img src={jipmerLogo} alt="JIPMER Logo" className="w-full h-full object-contain" />
+            </div>
+            <div className="mr-3 h-10 w-10 overflow-hidden">
+              <img src={iitbLogo} alt="IIT Bombay Logo" className="w-full h-full object-contain" />
             </div>
             <div>
               <h1 className="text-xl md:text-2xl font-bold text-primary dark:text-blue-400">Incubate</h1>
