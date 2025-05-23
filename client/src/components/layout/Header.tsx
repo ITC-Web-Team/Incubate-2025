@@ -108,13 +108,14 @@ const Header = () => {
                 </Link>
               </li>
               <li className="ml-4">
-                <Link 
-                  href="/register"
-                  className="bg-[#f97316] hover:bg-orange-600 text-white py-2 px-4 rounded-md shadow-md transition duration-300"
-                  onClick={() => handleLinkClick("register")}
+                <a 
+                  href="https://forms.gle/your-registration-form"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-2 px-4 rounded-md shadow-md transition duration-300 border border-blue-400"
                 >
                   REGISTER NOW
-                </Link>
+                </a>
               </li>
             </ul>
             <div className="nav-indicator absolute bottom-0 h-0.5 bg-primary dark:bg-blue-400 transition-all duration-300"></div>
@@ -178,13 +179,14 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link 
-                href="/register"
-                className="block py-2 px-4 bg-[#f97316] text-white rounded-md text-center mt-2"
-                onClick={() => handleLinkClick("register")}
+              <a 
+                href="https://forms.gle/your-registration-form"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block py-2 px-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-md text-center mt-2 border border-blue-400"
               >
                 REGISTER NOW
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
