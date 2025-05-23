@@ -1,10 +1,14 @@
+import jipmerLogo from "@/assets/logos/jipmer-logo.png";
+import iitbLogo from "@/assets/logos/iitb-logo.png";
+import iitbLogoBlue from "@/assets/logos/iitb-logo-blue.png";
+
 const Sponsors = () => {
-  // Placeholder sponsor data
+  // Sponsor data with actual logos
   const sponsors = [
-    { id: 1, name: "Sponsor 1", logo: null },
-    { id: 2, name: "JIPMER", logo: "/src/assets/jipmer-logo.png" },
-    { id: 3, name: "IIT Bombay", logo: "/src/assets/iitb-logo.png" },
-    { id: 4, name: "Sponsor 4", logo: null }
+    { id: 1, name: "Incubate", logo: null },
+    { id: 2, name: "JIPMER", logo: jipmerLogo },
+    { id: 3, name: "IIT Bombay", logo: iitbLogoBlue },
+    { id: 4, name: "KCDH", logo: null }
   ];
 
   return (
