@@ -56,12 +56,12 @@ const prizeData = [
 
 const Prizes = () => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center">Prizes</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center dark:text-white">Prizes</h2>
         
         <div className="max-w-4xl mx-auto mb-16">
-          <p className="text-center text-lg text-gray-700 mb-8">
+          <p className="text-center text-lg text-gray-700 dark:text-gray-300 mb-8">
             The best prototypes judged according to standardized evaluation criteria will be awarded with cash prizes. Up to 15 teams will be selected for the finals with a cash prize of ₹10,000 to aid in prototype building.
           </p>
         </div>
@@ -84,8 +84,8 @@ const Prizes = () => {
                 <i className={`${prize.iconClass} ${prize.iconSize} ${prize.iconBgClass}`}></i>
               </motion.div>
               <div className={`bg-gradient-to-t ${prize.bgColorClass} w-64 ${prize.height} rounded-t-lg flex flex-col items-center justify-center px-4 py-8 shadow-lg`}>
-                <h3 className={`${prize.titleSize} font-bold mb-2`}>{prize.position}</h3>
-                <p className={`${prize.amountSize} font-bold text-primary-600 mb-4`}>{prize.amount}</p>
+                <h3 className={`${prize.titleSize} font-bold mb-2 dark:text-gray-800`}>{prize.position}</h3>
+                <p className={`${prize.amountSize} font-bold text-primary-600 dark:text-primary-800 mb-4`}>{prize.amount}</p>
                 <div className={`${prize.badgeColorClass} w-full ${prize.badgeHeight} rounded-lg flex items-center justify-center text-white font-bold`}>
                   {prize.title}
                 </div>

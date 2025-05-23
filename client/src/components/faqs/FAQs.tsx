@@ -10,9 +10,9 @@ const FAQs = () => {
   };
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center">Frequently Asked Questions</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center dark:text-white">Frequently Asked Questions</h2>
         
         <div className="max-w-3xl mx-auto">
           <div className="space-y-6">

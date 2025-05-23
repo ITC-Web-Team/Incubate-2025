@@ -35,9 +35,9 @@ const timelineData = [
 
 const Timeline = () => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center">Event Timeline</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center dark:text-white">Event Timeline</h2>
         
         {/* ECG Timeline Visualization */}
         <div className="relative w-full mb-16 overflow-hidden">
@@ -59,12 +59,12 @@ const Timeline = () => {
           <div className="grid grid-cols-1 md:grid-cols-6 gap-4 mt-8">
             {timelineData.map((item, index) => (
               <div key={index} className="relative">
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-[calc(100%+20px)] w-4 h-4 bg-primary rounded-full"></div>
-                <div className="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition duration-300">
-                  <h4 className="font-bold text-primary">{item.date}</h4>
-                  <p className="text-sm">{item.title}</p>
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-[calc(100%+20px)] w-4 h-4 bg-primary dark:bg-blue-400 rounded-full"></div>
+                <div className="bg-white dark:bg-gray-700 rounded-lg p-4 shadow-md hover:shadow-lg transition duration-300">
+                  <h4 className="font-bold text-primary dark:text-blue-400">{item.date}</h4>
+                  <p className="text-sm dark:text-white">{item.title}</p>
                   {item.description && (
-                    <p className="text-xs text-gray-500">{item.description}</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-300">{item.description}</p>
                   )}
                 </div>
               </div>

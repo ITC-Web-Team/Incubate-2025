@@ -3,31 +3,31 @@ import { themesData } from "@/data/themesData";
 
 const Themes = () => {
   return (
-    <section className="py-16">
+    <section className="py-16 dark:bg-gray-900">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Our Themes</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center dark:text-white">Our Themes</h2>
         
         <div className="max-w-3xl mx-auto mb-16">
-          <p className="text-center text-lg text-gray-700 mb-8">
+          <p className="text-center text-lg text-gray-700 dark:text-gray-300 mb-8">
             Faculty from JIPMER and IIT-B have co-curated these 5 themes based on scope for innovation, clinical relevance and ease of identification of problem statements.
           </p>
           
-          <div className="bg-gray-50 p-6 rounded-lg shadow-md">
-            <ul className="space-y-2 text-gray-700">
+          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md">
+            <ul className="space-y-2 text-gray-700 dark:text-gray-300">
               <li className="flex items-start">
-                <i className="ri-check-line text-primary mr-2 mt-1"></i>
+                <i className="ri-check-line text-primary dark:text-blue-400 mr-2 mt-1"></i>
                 <span>You can submit 1 proposal per registration.</span>
               </li>
               <li className="flex items-start">
-                <i className="ri-check-line text-primary mr-2 mt-1"></i>
+                <i className="ri-check-line text-primary dark:text-blue-400 mr-2 mt-1"></i>
                 <span>A team has to register again to be able to submit another proposal for a different theme.</span>
               </li>
               <li className="flex items-start">
-                <i className="ri-check-line text-primary mr-2 mt-1"></i>
+                <i className="ri-check-line text-primary dark:text-blue-400 mr-2 mt-1"></i>
                 <span>You are eligible to qualify for the finals only for one proposal.</span>
               </li>
               <li className="flex items-start">
-                <i className="ri-check-line text-primary mr-2 mt-1"></i>
+                <i className="ri-check-line text-primary dark:text-blue-400 mr-2 mt-1"></i>
                 <span>A team cannot submit more than one proposal for a given theme.</span>
               </li>
             </ul>
