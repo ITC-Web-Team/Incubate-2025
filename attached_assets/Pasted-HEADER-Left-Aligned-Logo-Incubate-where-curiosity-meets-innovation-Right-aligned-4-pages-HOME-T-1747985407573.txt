@@ -1,0 +1,204 @@
+HEADER: Left Aligned: Logo+Incubate-where curiosity meets innovation
+Right aligned, 4 pages: HOME, Themes, About us, FAQs, Register Now
+
+FOOTER: 2 sections (left and right)
+Left: Social Media handles of Incubate,
+Right: Contacts,  Chinua – +91 7892615045
+Taruna – +91 7760887335
+
+
+PAGE 1: HOME (Landing page)
+Announcement Banner
+ Tagline: Incubate - where curiosity meets innovation
+
+Have a slideshow below with 5 theme related poster
+About the Event
+Incubate is a national-level MedTech Hackathon that provides an opportunity for Medical and Engineering students to collaborate on developing innovative real-world solutions to problems in the medical field.
+Get ready to experience the world of innovation where we expand the limits of healthcare solutions through cutting-edge technology.
+[Register Now button - hyperlink to Registration Page]
+Timeline
+ (To be plotted as an ECG-style slider?)
+Announcement: 25/5/2025
+Brainstorming sessions on 7th, 14th, 21st, 28th of June and July 5th
+Last day for Proposal Submission: July 31st
+Results: August 14th
+Prototype building: August 14th to October 21st
+Finals: October 21st
+
+Process (As a flowchart)
+Form a team of up to 4 with Medical and Engineering students -> Register -> Attend Webinar -> Submit up to 1 proposal per registration -> Results -> 15 teams get selected for finals -> Get weekly mentoring -> Build working model -> Present during the offline conference in JIPMER
+Prizes
+ The best prototypes judged according to standardized evaluation criteria will be awarded with cash prizes. Up to 15 teams will be selected for the finals with a cash prize of rs. 10000 to aid in Prototype building
+1st Prize – ₹ tbd (30000)
+ 2nd Prize – ₹ tbd (20000)
+ 3rd Prize – ₹ tbd (15000)
+(Use a podium-style arrangement of trophies)
+
+Sponsors
+ (Place sponsor logos, hyperlink each to their websites)
+
+PAGE 2: OUR THEMES
+
+Faculty from JIPMER and IIT-B have co-curated these 5 themes based on scope for innovation, clinical relevance and ease of identification of problem statements.
+
+You can submit 1 proposal per registration.
+A team has to register again to be able to submit another proposal for a different theme.
+You are eligible to qualify for the finals only for one proposal.
+A team cannot submit more than one proposal for a given theme.
+Each theme should be displayed as:
+Theme 1: XYZ
+Brief Description
+Faculty Mentors
+Expected outcomes
+Theme 2: ABC
+Brief Description
+Faculty Mentors
+Expected outcomes
+
+Theme 3: RDW
+Brief Description
+Faculty Mentors
+Expected outcomes
+Theme 4: LBW
+Brief Description
+Faculty Mentors
+Expected outcomes
+
+Theme 5: YTY
+Brief Description
+Faculty Mentors
+Expected outcomes
+
+PAGE 3: ABOUT US
+JUSRC - JIPMER Undergraduate Scientific and Research Club
+Founded in 2022, JUSRC promotes undergraduate research through regular sessions, grant facilitation, and collaborations. It has organized journal clubs, quizzes, workshops, and is working on the UG research portal and an annual research magazine. JUSRC fosters networking and interdisciplinary innovation.
+[Instagram icon – Hyperlink to JUSRC Instagram]
+[YouTube icon- Hyperlink to JUSRC YouTube]
+Contact:
+ Chinua – +91 7892615045
+ Tarunasri – +91 7760887335
+JIPMER
+Established in 1823, Jawaharlal Institute of Postgraduate Medical Education and Research is one of India’s premier medical institutions. It is an Institute of National Importance and a top-ranked center for education, research, and healthcare. JIPMER offers a wide array of UG, PG, and superspeciality programs and operates a large tertiary care hospital. The institute fosters innovation, regularly hosting conferences and research events.
+IIT Bombay (Please consult, KCDH regarding this placeholder)
+Founded in 1958, IIT Bombay is one of India’s top engineering and science institutions. It offers high-quality education in engineering, design, science, and management, and is globally recognized for research and innovation. It leads initiatives in AI, clean energy, nanotech, and more.
+KCDH – Koita Centre for Digital Health, IIT Bombay (Please consult Dr. Raghav sir, we have added this as a placeholder only)
+Established in 2021 with Koita Foundation support, KCDH is India’s first academic center dedicated to digital health. It offers education, research, and policy partnerships, and supports national programs like ABDM. With 350+ students trained and 30+ partnerships, KCDH is pioneering India’s digital health movement.
+Contact:
+Possible contacts that can be given: Dr. Raghav sir/ Dr. Nivedita ma’am/ Shahu/
+ Shatakshi Saxena (Outreach Manager) – +91 7607507099
+
+
+PAGE 4: FAQs
+
+
+
+Is it paid? If yes, how do I pay? 
+Yes, it is a paid event, a QR code will be shared with you through which you can make payments, and a confirmatory email will be sent to you. The cost for registration is 250 Rs per person.
+
+Are intercollegiate teams allowed? 
+Yes, they are an essential component of our aim with InCubate, as we want to integrate the engineering and medical fields.
+
+I don’t have a team, what do I do? 
+Individuals may register and will be paired accordingly
+
+How many members in a team?
+
+
+Teams must comprise 2–4 members with at least one student from a medical background and one from engineering.
+
+Is it an online or offline event?
+The preliminary rounds will be conducted online, while the final round will be offline.
+
+Can I reuse one of my previous models? 
+No, only new ideas and models can be submitted, and sufficient time will be provided for the same.
+
+What is the prize pool?
+To be decided
+
+Are there any eligibility criteria for participating?
+Undergraduates from
+Medical Courses
+Engineering Courses
+IISc
+IISER
+
+What kind of hardware and software will be required?
+This will rely entirely on the topic/theme chosen by individual participants and their approach to solving the problem
+
+Who will judge my prototype?
+Your prototypes will be judged by esteemed judges from top-tier institutes, JIPMER and IIT Bombay
+
+What are the evaluation criteria?
+Your idea will be judged under the following headings
+Clarity of Problem Statement
+Significance of the Problem
+Novelty of the Idea
+Feasibility of Implementation
+Technical Soundness
+Clinical Relevance
+Impact Potential
+Medical-Engineering Integration
+Proposal Quality (Write-up)
+Video Pitch (5 min) 
+Can we bring an external mentor?
+Your proposal and project can be reviewed by faculty from your institute. The project should be student driven. Mentorship will be provided for Finals
+Will we be provided mentors?
+For the prelims, you won't be provided with mentors. If you qualify the prelims, you would be provided with mentors from both JIPMER and IIT Bombay, with alternating weekly sessions.
+
+Can I submit proposals for multiple themes?
+Yes, You’ll have to register again. You cannot submit multiple proposals under the same theme
+
+Can a participant be a part of more than 1 team?
+No, one person can be a part of one team only
+
+
+
+PAGE 4: REGISTER NOW
+Form Fields- Have a team already?
+ [ ] Yes
+ [ ] No
+If yes, register as a team hyperlink
+Team Member 1: Name: [Textbox]
+College: [Textbox]
+Course: [Textbox]
+Year of Study: [Textbox]
+Contact Number: [Textbox]
+Email ID: [Textbox]
+
+Team Member 2: Name: [Textbox]
+College: [Textbox]
+Course: [Textbox]
+Year of Study: [Textbox]
+Contact Number: [Textbox]
+Email ID: [Textbox]
+
+
+Team Member 3: Name: [Textbox]
+College: [Textbox]
+Course: [Textbox]
+Year of Study: [Textbox]
+Contact Number: [Textbox]
+Email ID: [Textbox]
+
+Team Member 4: Name: [Textbox]
+College: [Textbox]
+Course: [Textbox]
+Year of Study: [Textbox]
+Contact Number: [Textbox]
+Email ID: [Textbox]
+If Individual
+Do you want us to help match you with a team?
+ [ ] Yes
+ [ ] No
+
+If yes,
+Name: [Textbox]
+College: [Textbox]
+Course: [Textbox]
+Year of Study: [Textbox]
+Contact Number: [Textbox]
+Email ID: [Textbox]
+Theme Preference
+ [Dropdown list of all themes + “No Preference” option]
+[Submit Button]
+
