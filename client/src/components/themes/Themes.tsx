@@ -43,8 +43,15 @@ const Themes = () => {
               icon={theme.icon}
               color={theme.color}
               description={theme.description}
-              mentors={theme.mentors}
-              outcomes={theme.outcomes}
+              // mentors={theme.mentors}
+              // outcomes={theme.outcomes}
+              // image={theme.image}
+              // challenges={theme.challenges}
+              // resources={theme.resources}
+              tags={theme.tags}
+              // difficulty={theme.difficulty as "Beginner" | "Intermediate" | "Advanced"}
+              slug={theme.slug}
+              clickable={true}
             />
           ))}
         </div>

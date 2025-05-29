@@ -12,7 +12,7 @@ const FAQItem = ({ question, answer, isActive, onClick }: FAQItemProps) => {
     <motion.div 
       className="backdrop-blur-sm bg-white/80 dark:bg-gray-800/80 rounded-lg overflow-hidden border border-blue-200 dark:border-blue-900 hover:shadow-glow relative scanner-line"
       whileHover={{ y: -3 }}
-      transition={{ duration: 0.3 }}
+      transition={{ duration: 0.1 }}
       initial={{ opacity: 0.9, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
     >

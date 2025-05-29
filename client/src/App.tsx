@@ -9,19 +9,23 @@ import Themes from "@/pages/themes";
 import About from "@/pages/about";
 import FAQs from "@/pages/faqs";
 import Register from "@/pages/register";
+import ThemeDetailPage from "@/pages/theme-detail";
 import ScrollToTop from "@/components/ui/scroll-to-top";
 import AnnouncementBanner from "@/components/layout/AnnouncementBanner";
+import ScrollToTopOnRouteChange from "@/components/ui/scroll-to-top-on-route-change";
 
 function App() {
   return (
     <TooltipProvider>
       <div className="flex flex-col min-h-screen">
+        <ScrollToTopOnRouteChange />
         <AnnouncementBanner />
         <Header />
         <main className="flex-grow">
           <Switch>
             <Route path="/" component={Home} />
             <Route path="/themes" component={Themes} />
+            <Route path="/themes/:slug" component={ThemeDetailPage} />
             <Route path="/about" component={About} />
             <Route path="/faqs" component={FAQs} />
             <Route path="/register" component={Register} />
