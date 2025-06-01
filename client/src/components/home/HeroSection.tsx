@@ -175,7 +175,7 @@ const HeroSection = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              Where medical expertise meets engineering innovation to create the future of healthcare
+              Where Curiosity meets Innovation, integrating Medicine and Technology
             </motion.p>
             
             <motion.div 

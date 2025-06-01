@@ -1,5 +1,9 @@
 export const faqData = [
   {
+    question: "What is Incubate?",
+    answer: "Incubate is a national level collaborative Hackathon organized by IIT-B and JIPMER."
+  },
+  {
     question: "Is it paid? If yes, how do I pay?",
     answer: "Yes, it is a paid event, a QR code will be shared with you through which you can make payments, and a confirmatory email will be sent to you. The cost for registration is 250 Rs per person."
   },
@@ -25,7 +29,7 @@ export const faqData = [
   },
   {
     question: "What is the prize pool?",
-    answer: "The total prize pool is ₹65,000, with first prize at ₹30,000, second prize at ₹20,000, and third prize at ₹15,000."
+    answer: "The total prize pool is ₹2,15,000, with  ₹1,50,000 for finalists, first prize at ₹30,000, second prize at ₹20,000, and third prize at ₹15,000."
   },
   {
     question: "Are there any eligibility criteria for participating?",
@@ -42,5 +46,26 @@ export const faqData = [
   {
     question: "Can a participant be a part of more than 1 team?",
     answer: "No, one person can be a part of one team only."
+  },
+  
+  {
+    question: "Who are the judges?",
+    answer: "Judges are faculty of Medicine and Engineering from JIPMER and IIT-B respectively."
+  },
+  {
+    question: "What kind of technological solutions can we suggest?",
+    answer: "Five broad categories: Software and IT, Biotech and sensors, Mechatronics, Robotics and automation, AI and ML."
+  },
+  {
+    question: "Will there be technical support or guidance during the prototyping phase?",
+    answer: "You will receive mentoring from both JIPMER and IIT-B faculty on a weekly basis."
+  },
+  {
+    question: "What is the process of registering for the hackathon?",
+    answer: "Form teams of 2-4 and pay the Registration fees of Rs. 250 per person. (See registration page for details.)"
+  },
+  {
+    question: "Can we submit proposals for multiple themes?",
+    answer: "Yes, but you'll be selected only under one theme."
   }
 ];
