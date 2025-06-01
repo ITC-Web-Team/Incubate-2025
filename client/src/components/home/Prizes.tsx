@@ -96,7 +96,7 @@ const Prizes = () => {
         >
           <p className="text-center text-lg text-gray-700 dark:text-gray-300">
             The best prototypes judged according to standardized evaluation criteria will be awarded with cash prizes. 
-            <span className="inline-block mt-2 text-blue-600 dark:text-blue-400 font-medium">Up to 15 teams will be selected for the finals with a cash prize of ₹10,000 to aid in prototype building.</span>
+            <span className="inline-block mt-2 text-blue-600 dark:text-blue-400 font-medium">15 proposals will receive a cash prize of Rs. 10,000 to aid in prototype building. They will be selected based on standardized evaluation criteria</span>
           </p>
         </motion.div>
         

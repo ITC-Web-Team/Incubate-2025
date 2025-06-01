@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import incubateLogo from "@/assets/logos/incubate-logo.jpeg";
+import incubateLogo from "@/assets/logos/incubate-logo-removebg-preview.png";
 import { useEffect, useState } from "react";
 
 const IncubateLogo = () => {
