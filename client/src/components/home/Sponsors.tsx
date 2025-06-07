@@ -1,15 +1,14 @@
 import { motion } from "framer-motion";
-import jipmerLogo from "@/assets/logos/jipmer-logo.png";
-import iitbLogo from "@/assets/logos/iitb-logo.png";
-import iitbLogoBlue from "@/assets/logos/iitb-logo-blue.png";
+import jipmerLogo from "@/assets/logos/JUSRC-LOGO.png";
+import iitbLogo from "@/assets/logos/ITClogoWhite.png";
+import iitbLogoBlue from "@/assets/logos/logo.png";
 
 const Sponsors = () => {
   // Sponsor data with actual logos
   const sponsors = [
-    { id: 1, name: "Incubate", logo: null, delay: 0 },
-    { id: 2, name: "JIPMER", logo: jipmerLogo, delay: 0.1 },
-    { id: 3, name: "IIT Bombay", logo: iitbLogoBlue, delay: 0.2 },
-    { id: 4, name: "KCDH", logo: null, delay: 0.3 }
+    { id: 1, name: "Institute Technical Council", logo: iitbLogo, delay: 0 },
+    { id: 2, name: "JUSRC", logo: jipmerLogo, delay: 0.1 },
+    { id: 3, name: "KCDH", logo: iitbLogoBlue, delay: 0.2 }
   ];
 
   return (
@@ -40,7 +39,7 @@ const Sponsors = () => {
           Our Partners
         </motion.h2>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center">
           {sponsors.map(sponsor => (
             <motion.div 
               key={sponsor.id} 
@@ -86,7 +85,7 @@ const Sponsors = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">Interested in partnering with Incubate?</p>
+          {/* <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">Interested in partnering with Incubate?</p>
           <a 
             href="#" 
             className="inline-block relative overflow-hidden group"
@@ -96,7 +95,7 @@ const Sponsors = () => {
               Become a Partner
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
             </span>
-          </a>
+          </a> */}
         </motion.div>
       </div>
     </section>
