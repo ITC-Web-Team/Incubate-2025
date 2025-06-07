@@ -2,52 +2,32 @@ import { useEffect, useRef } from "react";
 
 const timelineData = [
 	{
-		date: "25/5/2025",
+		date: "8th June",
 		title: "Announcement",
 		description: "",
 	},
 	{
-		date: "15th June",
+		date: "21st June",
 		title: "Registrations Open",
 		description: "",
 	},
 	{
-		date: "June & July",
-		title: "Brainstorming sessions",
-		description: "7th, 14th, 21st, 28th June & 5th July",
+		date: "",
+		title: "Brainstorming Sessions",
+		description: "Mentor videos and theme discussions",
 	},
 	{
-		date: "July 31st",
-		title: "Registration/Submission Closes",
-		description: "",
-	},
-	{
-		date: "July 31st",
-		title: "Proposal Submission Deadline",
-		description: "",
-	},
-	{
-		date: "August 10th",
+		date: "August 14th",
 		title: "Result Announcement",
 		description: "",
 	},
 	{
-		date: "August 14th",
-		title: "Results Announced",
-		description: "",
-	},
-	{
-		date: "Aug 14 - Oct 21",
+		date: "Aug 14 - Oct 5",
 		title: "Prototype Building Phase",
-		description: "",
+		description: "Mentoring and development",
 	},
 	{
-		date: "Sept 28 / Oct 5",
-		title: "Finals at JIPMER",
-		description: "",
-	},
-	{
-		date: "October 21st",
+		date: "Oct 5",
 		title: "Finals at JIPMER",
 		description: "",
 	},

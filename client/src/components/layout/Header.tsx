@@ -62,8 +62,10 @@ const Header = () => {
               <img src={iitbLogo} alt="IIT Bombay Logo" className="w-full h-full object-contain" />
             </div>
             <div>
-              <h1 className="text-xl md:text-2xl font-bold text-primary dark:text-blue-400">Incubate</h1>
-              <p className="text-xs text-gray-600 dark:text-gray-400">Where curiosity meets innovation</p>
+              <h1 className="text-xl md:text-2xl font-medium" style={{ fontFamily: "'Inter', sans-serif", letterSpacing: '-0.05em' }}>
+                <span className="text-[#a51c1c]">In</span><span className="text-[#cbb26a]">Cu</span><span className="text-black dark:text-white">bate</span>
+              </h1>
+              <p className="text-xs">Where <span className="text-[#cbb26a]">Curiosity</span> meets <span className="text-[#a51c1c]">Innovation</span></p>
             </div>
           </div>
         </Link>
@@ -109,9 +111,9 @@ const Header = () => {
               </li>
               <li className="ml-4">
                 <a 
-                  href="https://forms.gle/your-registration-form"
+                  href="https://chat.whatsapp.com/LjKDX4bKnYq0X0TSH6FDqz"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel=" "
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-2 px-4 rounded-md shadow-md transition duration-300 border border-blue-400"
                 >
                   REGISTER NOW
@@ -180,7 +182,7 @@ const Header = () => {
             </li>
             <li>
               <a 
-                href="https://forms.gle/your-registration-form"
+                href="https://chat.whatsapp.com/LjKDX4bKnYq0X0TSH6FDqz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block py-2 px-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-md text-center mt-2 border border-blue-400"
