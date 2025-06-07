@@ -9,7 +9,7 @@ const Themes = () => {
         
         <div className="max-w-3xl mx-auto mb-16">
           <p className="text-center text-lg text-gray-700 dark:text-gray-300 mb-8">
-            Faculty from JIPMER and IIT-B have co-curated these 5 themes based on scope for innovation, clinical relevance and ease of identification of problem statements.
+            Faculty from JIPMER and IIT-B have co-curated these 12 themes based on scope for innovation, clinical relevance and ease of identification of problem statements.
           </p>
           
           <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md">

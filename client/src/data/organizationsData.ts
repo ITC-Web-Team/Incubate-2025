@@ -6,7 +6,7 @@ export const organizationsData = [
   },
   {
     title: "IIT Bombay",
-    description: "Founded in 1958, IIT Bombay is one of India's top engineering and science institutions. It offers high-quality education and is globally recognized for research and innovation, leading initiatives in AI, clean energy, nanotech, and more.",
+    description: "Founded in 1958, IIT Bombay is one of India's top engineering and science institutions. It is globally recognized for research and innovation, leading in AI, clean energy, nanotechnology, and robotics. The campus has a vibrant student community and strong entrepreneurship. Alumni have made significant global contributions, and the institute collaborates with leading organizations worldwide.",
     logo: "IIT Bombay"
   },
   
