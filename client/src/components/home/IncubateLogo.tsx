@@ -154,8 +154,8 @@ const IncubateLogo = () => {
             
             {/* Logo container */}
             <motion.div 
-              className="relative mx-auto w-64 h-64 md:w-72 md:h-72 bg-gradient-to-r from-blue-950/90 to-indigo-950/90 backdrop-blur-md rounded-full flex items-center justify-center overflow-hidden border border-blue-400/40"
-              style={{ boxShadow: "0 0 30px 5px rgba(59, 130, 246, 0.3)" }}
+              className="relative mx-auto w-64 h-64 md:w-72 md:h-72 bg-gradient-to-br from-blue-300/70 via-indigo-300/60 to-purple-200/70 backdrop-blur-md rounded-full flex items-center justify-center overflow-hidden border border-blue-200/40"
+              style={{ boxShadow: "0 0 30px 5px rgba(147, 197, 253, 0.18)" }}
               whileHover={{ scale: 1.03 }}
               onHoverStart={() => setIsHovered(true)}
               onHoverEnd={() => setIsHovered(false)}

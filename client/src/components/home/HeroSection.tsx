@@ -185,7 +185,7 @@ const HeroSection = () => {
               transition={{ delay: 0.6, duration: 0.8 }}
             >
               <a 
-                href="https://forms.gle/your-registration-form" 
+                href="https://chat.whatsapp.com/LjKDX4bKnYq0X0TSH6FDqz" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-3 px-8 rounded-md shadow-lg group"
@@ -199,7 +199,7 @@ const HeroSection = () => {
                 </span>
               </a>
               
-              <Link href="/about" className="relative overflow-hidden bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border border-white/30 font-semibold py-3 px-8 rounded-md shadow-lg transition-all duration-300">
+              <Link href="/themes" className="relative overflow-hidden bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border border-white/30 font-semibold py-3 px-8 rounded-md shadow-lg transition-all duration-300">
                 Learn More
               </Link>
             </motion.div>

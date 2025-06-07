@@ -5,7 +5,6 @@ import Process from "@/components/home/Process";
 import Prizes from "@/components/home/Prizes";
 import Sponsors from "@/components/home/Sponsors";
 import IncubateLogo from "@/components/home/IncubateLogo";
-import NewsTicker from "@/components/home/NewsTicker";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 
@@ -22,7 +21,6 @@ export default function Home() {
       transition={{ duration: 0.5 }}
     >
       <HeroSection />
-      <NewsTicker />
       <IncubateLogo />
       <AboutEvent />
       <Timeline />

@@ -12,28 +12,22 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-6">Connect With Us</h3>
             <div className="flex space-x-4 mb-6">
               <a 
-                href="#" 
+                href="https://www.instagram.com/incubate_hackathon/" 
                 className="w-10 h-10 rounded-full bg-gray-800 dark:bg-gray-700 flex items-center justify-center hover:bg-primary transition duration-300"
                 aria-label="Instagram"
               >
                 <i className="ri-instagram-line text-xl"></i>
               </a>
+              
               <a 
-                href="#" 
-                className="w-10 h-10 rounded-full bg-gray-800 dark:bg-gray-700 flex items-center justify-center hover:bg-primary transition duration-300"
-                aria-label="Twitter"
-              >
-                <i className="ri-twitter-x-line text-xl"></i>
-              </a>
-              <a 
-                href="#" 
+                href="https://www.linkedin.com/company/jipmer-undergraduate-scientific-research-club-jusrc/" 
                 className="w-10 h-10 rounded-full bg-gray-800 dark:bg-gray-700 flex items-center justify-center hover:bg-primary transition duration-300"
                 aria-label="LinkedIn"
               >
                 <i className="ri-linkedin-fill text-xl"></i>
               </a>
               <a 
-                href="#" 
+                href="https://www.youtube.com/@JIPMERUGScientificResearchClub" 
                 className="w-10 h-10 rounded-full bg-gray-800 dark:bg-gray-700 flex items-center justify-center hover:bg-primary transition duration-300"
                 aria-label="YouTube"
               >
@@ -65,7 +59,9 @@ const Footer = () => {
               <div className="flex items-start">
                 <i className="ri-mail-line text-primary dark:text-blue-400 mt-1 mr-3"></i>
                 <div>
-                  <p className="text-gray-300">incubate@jipmer.edu.in</p>
+                    <a href="mailto:jiipmersciclub@gmail.com" className="text-gray-300 hover:underline">
+                    jiipmersciclub@gmail.com
+                    </a>
                 </div>
               </div>
               <div className="flex items-start">
