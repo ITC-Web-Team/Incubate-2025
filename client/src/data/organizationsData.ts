@@ -36,10 +36,10 @@ export const organizationsData = [
     title: "KCDH",
     subtitle: "Koita Centre for Digital Health, IIT Bombay",
     description: "Established in 2021 with Koita Foundation support, KCDH is India's first academic center for digital health. It offers education, research, and policy partnerships, supporting national programs like ABDM. With 350+ students trained and 30+ partnerships, KCDH pioneers digital health in India.",
-    contacts: [
-      "Contact:",
-      "Shatakshi Saxena (Outreach Manager) – +91 7607507099"
-    ]
+    // contacts: [
+    //   "Contact:",
+    //   "Shatakshi Saxena (Outreach Manager) – +91 7607507099"
+    // ]
   },
   
 ];

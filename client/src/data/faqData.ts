@@ -29,7 +29,7 @@ export const faqData = [
   },
   {
     question: "What is the prize pool?",
-    answer: "The total prize pool is ₹2,15,000, with  ₹1,50,000 for finalists, first prize at ₹30,000, second prize at ₹20,000, and third prize at ₹15,000."
+    answer: "The total prize pool is ₹2,15,000, with  ₹1,50,000 (10,000 for each of the 15 finalists) for finalists, first prize at ₹30,000, second prize at ₹20,000, and third prize at ₹15,000."
   },
   {
     question: "Are there any eligibility criteria for participating?",
@@ -41,7 +41,7 @@ export const faqData = [
   },
   {
     question: "Can I submit proposals for multiple themes?",
-    answer: "Yes, You'll have to register again. You cannot submit multiple proposals under the same theme."
+    answer: "Yes, the same team can submit multiple proposals."
   },
   {
     question: "Can a participant be a part of more than 1 team?",

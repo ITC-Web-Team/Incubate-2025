@@ -121,60 +121,45 @@ const Timeline = () => {
 						))}
 					</div>
 
-					{/* Futuristic circuit background */}
-					<div className="absolute inset-0 -z-10 overflow-hidden opacity-10">
-						<svg
-							className="w-full h-full"
-							viewBox="0 0 100 100"
-							preserveAspectRatio="none"
-						>
-							<path
-								d="M10,10 Q30,30 50,10 T90,10"
-								fill="none"
-								stroke="#4f46e5"
-								strokeWidth="0.2"
-							/>
-							<path
-								d="M10,90 Q30,70 50,90 T90,90"
-								fill="none"
-								stroke="#4f46e5"
-								strokeWidth="0.2"
-							/>
-							<path
-								d="M10,50 Q30,30 50,50 T90,50"
-								fill="none"
-								stroke="#4f46e5"
-								strokeWidth="0.2"
-							/>
-							<path
-								d="M10,30 L90,30"
-								fill="none"
-								stroke="#4f46e5"
-								strokeWidth="0.2"
-								strokeDasharray="1,3"
-							/>
-							<path
-								d="M10,70 L90,70"
-								fill="none"
-								stroke="#4f46e5"
-								strokeWidth="0.2"
-								strokeDasharray="1,3"
-							/>
-							<path
-								d="M30,10 L30,90"
-								fill="none"
-								stroke="#4f46e5"
-								strokeWidth="0.2"
-								strokeDasharray="1,3"
-							/>
-							<path
-								d="M70,10 L70,90"
-								fill="none"
-								stroke="#4f46e5"
-								strokeWidth="0.2"
-								strokeDasharray="1,3"
-							/>
-						</svg>
+					{/* Prelims and Finals Graphic */}
+					<div className="mt-12 p-6 bg-white/70 dark:bg-gray-800/70 backdrop-blur-md rounded-xl shadow-xl border border-blue-200 dark:border-blue-800">
+						<h4 className="text-xl font-semibold text-center mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+							Hackathon Phases
+						</h4>
+						<div className="relative w-full h-20">
+							{/* Background Bar */}
+							<div className="absolute top-1/2 left-0 w-full h-3 bg-gray-300 dark:bg-gray-700 rounded-full transform -translate-y-1/2"></div>
+
+							{/* Prelims Section (Steps 1-4) */}
+							<motion.div
+								className="absolute top-1/2 left-0 h-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-l-full transform -translate-y-1/2"
+								initial={{ width: 0 }}
+								whileInView={{ width: "calc(100% * 4 / 6)" }} // 4 out of 6 steps
+								transition={{ duration: 1, ease: "easeInOut" }}
+								viewport={{ once: true }}
+							>
+								<span className="absolute -top-7 left-1/2 -translate-x-1/2 text-xs font-medium text-blue-700 dark:text-blue-300 whitespace-nowrap">
+									Prelims (Steps 1-4)
+								</span>
+							</motion.div>
+
+							{/* Finals Section (Steps 5-6) */}
+							<motion.div
+								className="absolute top-1/2 right-0 h-3 bg-gradient-to-l from-purple-500 to-pink-500 rounded-r-full transform -translate-y-1/2"
+								initial={{ width: 0 }}
+								whileInView={{ width: "calc(100% * 2 / 6)" }} // 2 out of 6 steps
+								transition={{
+									duration: 1,
+									ease: "easeInOut",
+									delay: 0.5, // Delay to start after prelims bar
+								}}
+								viewport={{ once: true }}
+							>
+								<span className="absolute -top-7 left-1/2 -translate-x-1/2 text-xs font-medium text-purple-700 dark:text-purple-300 whitespace-nowrap">
+									Finals (Steps 5-6)
+								</span>
+							</motion.div>
+						</div>
 					</div>
 				</div>
 			</div>
