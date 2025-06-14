@@ -55,10 +55,10 @@ const Header = () => {
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/">
           <div className="flex items-center cursor-pointer">
-            <div className="mr-3 h-10 w-10 overflow-hidden">
+            <div className="mr-3 h-10 w-10 overflow-hidden rounded-full bg-white/80 p-1 dark:bg-white/90">
               <img src={jipmerLogo} alt="JIPMER Logo" className="w-full h-full object-contain" />
             </div>
-            <div className="mr-3 h-10 w-10 overflow-hidden">
+            <div className="mr-3 h-10 w-10 overflow-hidden rounded-full bg-white/80 p-1 dark:bg-white/90">
               <img src={iitbLogo} alt="IIT Bombay Logo" className="w-full h-full object-contain" />
             </div>
             <div>
