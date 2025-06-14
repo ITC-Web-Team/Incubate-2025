@@ -1,14 +1,49 @@
 import { motion } from "framer-motion";
-import jipmerLogo from "@/assets/logos/JUSRC-LOGO.png";
-import iitbLogo from "@/assets/logos/ITClogoWhite.png";
-import iitbLogoBlue from "@/assets/logos/logo.png";
+import { useState, useEffect } from "react"; // Added for theme detection
+import jusrcLogo from "@/assets/logos/JUSRC-LOGO.png";
+import itcLogoWhite from "@/assets/logos/ITClogoWhite.png";
+import itcLogoColor from "@/assets/logos/ITC-logo.png";
+import kcdhLogo from "@/assets/logos/logo.png";
 
 const Sponsors = () => {
-  // Sponsor data with actual logos
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const checkTheme = () => {
+      const currentTheme = localStorage.getItem("theme");
+      if (currentTheme === "dark" || (!currentTheme && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        setIsDarkMode(true);
+      } else {
+        setIsDarkMode(false);
+      }
+    };
+
+    checkTheme();
+
+    // Optional: Listen for storage changes if theme can be changed from other tabs/windows
+    // window.addEventListener('storage', checkTheme);
+
+    // Create a MutationObserver to watch for class changes on documentElement (for theme toggle)
+    const observer = new MutationObserver((mutationsList) => {
+      for (let mutation of mutationsList) {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+          checkTheme();
+        }
+      }
+    });
+
+    observer.observe(document.documentElement, { attributes: true });
+
+    return () => {
+      // window.removeEventListener('storage', checkTheme);
+      observer.disconnect();
+    };
+  }, []);
+
   const sponsors = [
-    { id: 1, name: "Institute Technical Council", logo: iitbLogo, delay: 0 },
-    { id: 2, name: "JUSRC", logo: jipmerLogo, delay: 0.1 },
-    { id: 3, name: "KCDH", logo: iitbLogoBlue, delay: 0.2 }
+    { id: 1, name: "ITC", logo: isDarkMode ? itcLogoWhite : itcLogoColor, delay: 0 },
+    { id: 2, name: "JUSRC", logo: jusrcLogo, delay: 0.1 },
+    { id: 3, name: "KCDH", logo: kcdhLogo, delay: 0.2 }
   ];
 
   return (
