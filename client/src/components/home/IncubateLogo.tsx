@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import incubateLogo from "@/assets/logos/incubate-logo-removebg-preview.png";
+import incubateLogo from "@/assets/logos/incubate-logo.jpeg"; // Changed to PNG version
 import { useEffect, useState } from "react";
 
 const IncubateLogo = () => {
@@ -154,14 +154,14 @@ const IncubateLogo = () => {
             
             {/* Logo container */}
             <motion.div 
-              className="relative mx-auto w-64 h-64 md:w-72 md:h-72 bg-white dark:bg-gradient-to-br dark:from-blue-300/70 dark:via-indigo-300/60 dark:to-purple-200/70 backdrop-blur-md rounded-full flex items-center justify-center overflow-hidden border border-gray-300 dark:border-blue-200/40"
+              className="relative mx-auto w-64 h-64 md:w-72 md:h-72 bg-white dark:bg-white backdrop-blur-md rounded-full flex items-center justify-center overflow-hidden border border-gray-300 dark:border-gray-300"
               style={{ boxShadow: "0 0 30px 5px rgba(147, 197, 253, 0.18)" }}
               whileHover={{ scale: 1.03 }}
               onHoverStart={() => setIsHovered(true)}
               onHoverEnd={() => setIsHovered(false)}
             >
-              {/* Scanner effect */}
-              <motion.div 
+              {/* Scanner effect - consider removing or making it very subtle if background is white */}
+              {/* <motion.div 
                 className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-400/20 to-transparent"
                 initial={{ top: "-100%" }}
                 animate={{ top: ["100%", "-100%"] }}
@@ -172,7 +172,7 @@ const IncubateLogo = () => {
                   repeatDelay: 3
                 }}
                 style={{ height: "50%", width: "100%" }}
-              />
+              /> */}
               
               {/* Logo image */}
               <motion.div
@@ -190,7 +190,7 @@ const IncubateLogo = () => {
                 <img
                   src={incubateLogo}
                   alt="Incubate Logo"
-                  className="w-5/6 h-5/6 object-contain filter drop-shadow-lg"
+                  className="w-5/6 h-5/6 object-contain filter "
                 />
               </motion.div>
             </motion.div>

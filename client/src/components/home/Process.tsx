@@ -7,7 +7,7 @@ const processSteps = [
 	{
 		step: 2,
 		title: "Submit Proposal",
-		description: "Attend webinars and submit up to 1 proposal per registration",
+		description: "Watch videos of faculty members explaining the themes and submit up to 1 proposal per registration",
 	},
 	{
 		step: 3,
