@@ -9,15 +9,17 @@ const AboutEvent = () => {
           <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
             Incubate is a national-level MedTech Hackathon that provides an opportunity for medical and engineering students to collaborate on developing innovative solutions to real world problems.
           </p>
-          <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
+            <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
             Get ready to experience the world of innovation where we expand the limits of healthcare solutions through cutting-edge technology.
-          </p>
-          <Link 
-            href="/register"
+            </p>
+            <a
+            href="https://linktr.ee/incubatehackathon"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-primary hover:bg-primary-600 text-white font-semibold py-3 px-8 rounded-md shadow-md transition duration-300"
-          >
+            >
             Register Now
-          </Link>
+            </a>
         </div>
         
         {/* Features grid */}
