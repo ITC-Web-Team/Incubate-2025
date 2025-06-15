@@ -77,6 +77,17 @@ const Footer = () => {
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm">
           <p>&copy; {new Date().getFullYear()} Incubate. All rights reserved.</p>
+          <p>
+            Website by{" "}
+            <a
+              href="https://www.linkedin.com/in/lakshaditya-singh/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              Lakshaditya Singh
+            </a>
+          </p>
         </div>
       </div>
     </footer>

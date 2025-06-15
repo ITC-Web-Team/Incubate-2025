@@ -49,18 +49,31 @@ const AboutEvent = () => {
 
         {/* YouTube Video Section */}
         <div className="mt-16 md:mt-24">
-          <h3 className="text-2xl md:text-3xl font-bold text-center mb-8 dark:text-white">Incubate Announcement Video</h3>
-            <div className="aspect-w-16 aspect-h-9 max-w-3xl mx-auto bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden shadow-xl">
-            <iframe 
-              className="w-full h-full min-h-[350px]"
-              src="https://www.youtube.com/embed/YTUmorKDUoY?si=EuhZI2GV5vg307Gu"
-              title="YouTube video player" 
-              frameBorder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              referrerPolicy="strict-origin-when-cross-origin" 
-              allowFullScreen
-            ></iframe>
+          <h3 className="text-2xl md:text-3xl font-bold text-center mb-8 dark:text-white">Incubate Announcement Videos</h3>
+          <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 max-w-6xl mx-auto">
+            <div className="aspect-w-16 aspect-h-9 flex-1 bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden shadow-xl">
+              <iframe 
+                className="w-full h-full min-h-[350px]"
+                src="https://www.youtube.com/embed/YTUmorKDUoY?si=EuhZI2GV5vg307Gu"
+                title="YouTube video player 1" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerPolicy="strict-origin-when-cross-origin" 
+                allowFullScreen
+              ></iframe>
             </div>
+            <div className="aspect-w-16 aspect-h-9 flex-1 bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden shadow-xl">
+              <iframe 
+                className="w-full h-full min-h-[350px]"
+                src="https://www.youtube.com/embed/G0mi4WodTfk?si=I_bcg273m-EjJZSJ"
+                title="YouTube video player 2" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerPolicy="strict-origin-when-cross-origin" 
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
         </div>
 
       </div>
