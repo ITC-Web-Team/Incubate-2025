@@ -94,24 +94,24 @@ const Header = () => {
         </Link>
         
         <div className="flex items-center">
-          <nav className="hidden lg:block relative mr-4"> {/* Changed md:block to lg:block */}
-            <ul className="flex space-x-4 text-sm font-medium nav-links"> {/* Adjusted space-x-4 for potentially more items */}
+          <nav className="hidden 3xl:block relative mr-4"> {/* Changed 2xl:block to 3xl:block */}
+            <ul className="flex space-x-2 text-sm font-medium nav-links items-center">
               {desktopNavItems.map((item) => (
-                <li className="relative py-1" key={item.href}>
+                <li className="relative py-1 text-center" key={item.href}> 
                   <Link
                     href={item.href}
-                    className={`nav-link px-2 py-1 ${activeLink === (item.href === "/" ? "home" : item.href.slice(1)) ? "active" : ""} dark:text-white hover:text-primary dark:hover:text-blue-400 transition-colors`}
+                    className={`nav-link px-1 py-1 text-center ${activeLink === (item.href === "/" ? "home" : item.href.slice(1)) ? "active" : ""} dark:text-white hover:text-primary dark:hover:text-blue-400 transition-colors inline-block`} 
                     onClick={() => handleLinkClick(item.href === "/" ? "home" : item.href.slice(1))}
                   >
                     {item.name.toUpperCase()}
                   </Link>
                 </li>
               ))}
-              <li className="ml-4">
+              <li className="ml-2 text-center"> 
                 <a
                   href="https://chat.whatsapp.com/LjKDX4bKnYq0X0TSH6FDqz"
                   target="_blank"
-                  rel="noopener noreferrer" // Added rel for security
+                  rel="noopener noreferrer" 
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-2 px-4 rounded-md shadow-md transition duration-300 border border-blue-400"
                 >
                   REGISTER NOW
@@ -125,7 +125,7 @@ const Header = () => {
           <ThemeToggle />
           
           <button 
-            className="lg:hidden text-gray-600 dark:text-gray-300 ml-4"  // Changed md:hidden to lg:hidden
+            className="3xl:hidden text-gray-600 dark:text-gray-300 ml-4"  // Changed 2xl:hidden to 3xl:hidden
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
@@ -139,7 +139,7 @@ const Header = () => {
       </div>
       
       {/* Mobile menu */}
-      <div className={`lg:hidden bg-white dark:bg-gray-800 py-2 shadow-inner ${isMenuOpen ? 'block' : 'hidden'}`}> {/* Changed md:hidden to lg:hidden */}
+      <div className={`3xl:hidden bg-white dark:bg-gray-800 py-2 shadow-inner ${isMenuOpen ? 'block' : 'hidden'}`}> {/* Changed 2xl:hidden to 3xl:hidden */}
         <div className="container mx-auto px-4">
           <ul className="space-y-3">
             {mobileNavItems.map((item) => (
