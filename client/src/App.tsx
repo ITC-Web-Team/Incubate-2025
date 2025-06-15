@@ -8,7 +8,7 @@ import Home from "@/pages/home";
 import Themes from "@/pages/themes";
 import About from "@/pages/about";
 import FAQs from "@/pages/faqs";
-import Register from "@/pages/register";
+// import Register from "@/pages/register"; // Commented out Register import
 import ThemeDetailPage from "@/pages/theme-detail";
 import RegistrationDetailsPage from "@/pages/registration-details";
 import IPPolicyRulesPage from "@/pages/ip-policy-rules";
@@ -17,6 +17,7 @@ import AnnouncementBanner from "@/components/layout/AnnouncementBanner";
 import ScrollToTopOnRouteChange from "@/components/ui/scroll-to-top-on-route-change";
 import PrelimsPage from "./pages/prelims";
 import FinalsPage from "./pages/finals";
+import SubmissionTemplatePage from "./pages/submission-template";
 
 function App() {
   return (
@@ -32,11 +33,12 @@ function App() {
             <Route path="/themes" component={Themes} />
             <Route path="/themes/:slug" component={ThemeDetailPage} />
             <Route path="/faqs" component={FAQs} />
-            <Route path="/register" component={Register} />
+            {/* <Route path="/register" component={Register} /> */}{/* Commented out /register route */}
             <Route path="/registration-details" component={RegistrationDetailsPage} />
             <Route path="/ip-policy-rules" component={IPPolicyRulesPage} />
             <Route path="/prelims" component={PrelimsPage} />
             <Route path="/finals" component={FinalsPage} />
+            <Route path="/submission-template" component={SubmissionTemplatePage} />
             <Route component={NotFound} />
           </Switch>
         </main>

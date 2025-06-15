@@ -32,29 +32,58 @@ const RegistrationDetailsPage = () => {
             
             <div className="space-y-6">
               <div>
-                <h3 className="text-xl font-medium text-gray-700 dark:text-gray-200 mb-3">Eligible Courses</h3>
+                <p className="mb-3 text-gray-700 dark:text-gray-200">
+                  Students currently pursuing any of the following degrees are eligible:
+                </p>
                 <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300 pl-4">
-                  <li>Medical Courses - MBBS, CRRIs (interns), BSc Nursing or allied health sciences</li>
-                  <li>Engineering and sciences - BTech, BSc and equivalent undergraduate degrees in Sciences</li>
-                  <li>Students studying in International institutes may participate, but it is mandated that at least 2 representatives, one each from BTech and MBBS attend the Finals</li>
+                  <li>
+                    <span className="font-semibold">Medical courses</span> – MBBS, BDS, BSc Nursing
+                    <ul className="list-none pl-6">
+                      <li className="flex items-start">
+                        <i className="ri-arrow-right-s-line text-blue-500 dark:text-blue-400 mr-2 mt-1 flex-shrink-0"></i>
+                        <span>Those pursuing CRRIs under MBBS/BDS are eligible</span>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span className="font-semibold">Engineering courses</span> – BTech, BE and equivalent degrees in any discipline of engineering
+                  </li>
+                  <li>
+                    <span className="font-semibold">Science courses</span> – BSc, MSc, Integrated Masters in any discipline of natural or life sciences
+                    <ul className="list-none pl-6">
+                      <li className="flex items-start">
+                        <i className="ri-arrow-right-s-line text-blue-500 dark:text-blue-400 mr-2 mt-1 flex-shrink-0"></i>
+                        <span>
+                          Students pursuing these courses can only be supplementary team members in addition to the medical and engineering courses mentioned above
+                        </span>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Students studying in International institutes may participate, but it is mandated that at least 2 representatives, one each from BTech and MBBS, attend the Finals
+                  </li>
+                  <li>
+                    <span className="font-semibold text-blue-700 dark:text-blue-300">
+                      It is mandatory that 2 members of the team (the medical and engineering student) must attend the finals round to be held at JIPMER.
+                    </span>
+                  </li>
                 </ul>
               </div>
 
-              <div>
+                <div>
                 <h3 className="text-xl font-medium text-gray-700 dark:text-gray-200 mb-4">Team Structure</h3>
                 
                 {/* Team Composition Graphic */}
                 
-
                 <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300 pl-4">
                   <li>Teams of 2-4</li>
-                  <li>Minimum 1 student from MBBS (including CRRI) and 1 student pursuing BTech.</li>
-                  <li>Teammates 3 and 4 can belong to other courses or from the same background</li>
-                  <li>A team can comprise members from different institutions.</li>
+                  <li>Minimum 1 medical student and 1 engineering student required in each team.</li>
+                  <li>A team can comprise of members affiliated to different institutions.</li>
                   <li>Changes to team members are not permitted after registration.</li>
-                  <li>A student can be part of only one team for the hackathon. However, the same team can submit multiple proposals from different themes.</li>
+                  <li>A student can be part of only one team for the hackathon.</li>
+                  <li>A team can submit multiple proposals but not more than one per theme.</li>
                 </ul>
-              </div>
+                </div>
               <motion.div 
                   className="mb-6 p-4 bg-blue-50 dark:bg-blue-900/30 rounded-lg border border-blue-200 dark:border-blue-700 shadow-sm"
                   initial={{ opacity: 0, scale: 0.95 }}
@@ -103,41 +132,42 @@ const RegistrationDetailsPage = () => {
           >
             <h2 className="flex items-center text-3xl font-semibold mb-6 text-blue-600 dark:text-blue-400 border-b pb-3 border-gray-300 dark:border-gray-700">
               <i className="ri-file-list-3-line mr-3 text-3xl"></i>
-              <span>Registrations</span>
+              <span>Team Registrations</span>
             </h2>
             <ul className="list-disc list-inside space-y-3 text-gray-600 dark:text-gray-300 pl-4">
               <li>The registration fees for the team will be INR 250/- per person.</li>
               <li className="flex items-start">
                 <i className="ri-arrow-right-s-line text-blue-500 dark:text-blue-400 mr-2 mt-1 flex-shrink-0"></i>
-                <span>Only those who have registered will be eligible for the awards for finalists</span>
+                <span>Only registered teams will be considered for shortlisting.</span>
               </li>
-              <li>Participants can register for the InCubate MedTech Hackathon 2025 on June 25th through this website.</li>
+              <li>Participants can register for the InCubate MedTech Hackathon 2025 from June 25th through this website.</li>
               <li>The registration for the Hackathon is only complete after the participating team fills out and completes payment.</li>
-              <li>Name of the team and the teammates must be clearly specified as per College IDs or institution records.</li>
+              <li>Name of the team and the team members must be clearly specified as per College IDs or institution records.</li>
               <li>The registered team can choose any theme of their choice mentioned in the brochure and website.</li>
-              <li>The fees will not be returned under any circumstance after registering for the event.</li>
+              <li>The registration fees will not be refunded under any circumstance.</li>
             </ul>
           </motion.section>
 
           {/* Individual Registrations Section */}
-          <motion.section 
+            <motion.section 
             className="bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-          >
+            >
             <h2 className="flex items-center text-3xl font-semibold mb-6 text-blue-600 dark:text-blue-400 border-b pb-3 border-gray-300 dark:border-gray-700">
               <i className="ri-user-add-line mr-3 text-3xl"></i>
               <span>Individual Registrations</span>
             </h2>
             <ul className="list-disc list-inside space-y-3 text-gray-600 dark:text-gray-300 pl-4">
-              <li>You may register as an individual participant, by paying Rs. 250.</li>
-              <li>You’ll gain access to a platform (DISCORD) with other solo participants from your theme.</li>
-              <li>We cannot guarantee that you will find a team mate. We will only facilitate team formation. Please note that at no point will the entry fee be returned, regardless of the outcome.</li>
-              <li>You may, at any point enroll anyone in your team who is not part of the platform provided by us.</li>
+              <li>Individuals without a team may register separately by paying INR 250.</li>
+              <li>Registered individuals will gain access to a platform (Discord) with other solo participants from the chosen theme to form teams.</li>
+              <li>The organisers cannot guarantee that all participants will find a teammate. The platform is only to facilitate team formation.</li>
+              <li>Please note that the entry fee will not be refunded under any circumstances regardless of the outcome.</li>
+              <li>Individual registrants are also free to find team members outside the platform.</li>
             </ul>
-          </motion.section>
+            </motion.section>
         </div>
       </div>
     </div>

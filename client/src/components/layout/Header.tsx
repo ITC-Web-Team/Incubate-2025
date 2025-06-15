@@ -56,7 +56,7 @@ const Header = () => {
     { name: "Themes", href: "/themes" },
     { name: "Registration Info", href: "/registration-details" },
     { name: "IP Policy & Rules", href: "/ip-policy-rules" },
-    { name: "Prelims", href: "/prelims" },
+    { name: "Phase I", href: "/prelims" },
     { name: "Finals & Awards", href: "/finals" }, // Added Finals & Awards
     { name: "FAQs", href: "/faqs" },
   ];
@@ -67,7 +67,7 @@ const Header = () => {
     { name: "Themes", href: "/themes" },
     { name: "Registration Info", href: "/registration-details" },
     { name: "IP Policy & Rules", href: "/ip-policy-rules" },
-    { name: "Prelims", href: "/prelims" },
+    { name: "Phase I", href: "/prelims" },
     { name: "Finals & Awards", href: "/finals" }, // Added Finals & Awards
     { name: "FAQs", href: "/faqs" },
     { name: "Register", href: "/register", isButton: true },
@@ -78,10 +78,10 @@ const Header = () => {
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/">
           <div className="flex items-center cursor-pointer">
-            <div className="mr-3 h-10 w-10 overflow-hidden rounded-full bg-white/80 p-1 dark:bg-white/90">
+            <div className="mr-3 h-12 w-12 overflow-hidden rounded-full bg-white/80 p-1 dark:bg-white/90">
               <img src={jipmerLogo} alt="JIPMER Logo" className="w-full h-full object-contain" />
             </div>
-            <div className="mr-3 h-10 w-10 overflow-hidden rounded-full bg-white/80 p-1 dark:bg-white/90">
+            <div className="mr-3 h-12 w-12 overflow-hidden rounded-full bg-white/80 p-1 dark:bg-white/90">
               <img src={iitbLogo} alt="IIT Bombay Logo" className="w-full h-full object-contain" />
             </div>
             <div>

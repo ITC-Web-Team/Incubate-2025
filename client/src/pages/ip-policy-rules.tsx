@@ -28,7 +28,7 @@ const IPPolicyRulesPage = () => {
             </h2>
             <ul className="list-disc list-inside space-y-4 text-gray-600 dark:text-gray-300 pl-4">
               <li>
-                <strong className="text-gray-700 dark:text-gray-200">Organizer's Discretion:</strong> All decisions made by the organizing committee—including participant eligibility, judging criteria, and final selections—are conclusive. These decisions are not open to dispute or appeal.
+                <strong className="text-gray-700 dark:text-gray-200">Organizer's Discretion:</strong> All decisions made by the organizing committee—including participant eligibility, evaluation criteria, and final selections—are conclusive. These decisions are not open to dispute or appeal.
               </li>
               <li>
                 <strong className="text-gray-700 dark:text-gray-200">Right to Modify:</strong> The organizing team retains full authority to update or alter any rules, deadlines, or participation criteria at any point during the event. Such changes will be shared on the official platform and will be binding for all participants.
@@ -73,7 +73,7 @@ const IPPolicyRulesPage = () => {
                 <strong className="text-gray-700 dark:text-gray-200">Legal Assurance:</strong> By participating, teams certify that their submission is free from any infringement or ownership disputes. The organizers will not be liable for any conflict arising from the project’s content.
               </li>
               <li>
-                <strong className="text-gray-700 dark:text-gray-200">Final Ownership Rights:</strong> The complete intellectual property rights of any innovation developed during the Hackathon will remain with the participants and their respective faculty mentors. The event organizers do not claim ownership over any idea, model, or output created during the event.
+                <strong className="text-gray-700 dark:text-gray-200">Final Ownership Rights:</strong> The complete intellectual property rights of any innovation developed during the Hackathon will remain solely with the participants. The event organizers do not claim ownership over any idea, model, or output created during the event.
               </li>
             </ul>
           </section>

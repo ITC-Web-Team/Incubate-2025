@@ -182,7 +182,7 @@ const HeroSection = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              Where Curiosity meets Innovation, integrating Medicine and Technology
+              INTEGRATING MEDICINE & TECHNOLOGY
             </motion.p>
             
             <motion.div 

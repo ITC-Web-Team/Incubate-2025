@@ -2,12 +2,12 @@ import { useEffect, useRef } from "react";
 
 const timelineData = [
 	{
-		date: "8th June",
+		date: "Jun 8",
 		title: "Announcement",
 		description: "",
 	},
 	{
-		date: "25th June",
+		date: "Jun 25",
 		title: "Registrations Open",
 		description: "",
 	},
@@ -17,12 +17,12 @@ const timelineData = [
 		description: "Mentor videos and theme discussions",
 	},
 	{
-		date: "August 14th",
+		date: "Aug 14",
 		title: "Result Announcement",
 		description: "",
 	},
 	{
-		date: "Aug 14 - Oct 5",
+		date: "Aug 14 - Oct 4",
 		title: "Prototype Building Phase",
 		description: "Mentoring and development",
 	},
@@ -139,7 +139,7 @@ const Timeline = () => {
 								viewport={{ once: true }}
 							>
 								<span className="absolute -top-7 left-1/2 -translate-x-1/2 text-xs font-medium text-purple-600 dark:text-purple-400 whitespace-nowrap">
-									Prelims (Steps 1-4)
+									Phase I 
 								</span>
 							</motion.div>
 
@@ -156,7 +156,7 @@ const Timeline = () => {
 								viewport={{ once: true }}
 							>
 								<span className="absolute -top-7 left-1/2 -translate-x-1/2 text-xs font-medium text-green-600 dark:text-green-400 whitespace-nowrap">
-									Finals (Steps 5-6)
+									Phase II
 								</span>
 							</motion.div>
 						</div>
@@ -186,14 +186,14 @@ const Timeline = () => {
 										1
 									</span>
 									<h4 className="text-xl font-semibold text-gray-800 dark:text-white">
-										Online Prelims
+										Online Evaluation
 									</h4>
 								</div>
 								<p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
 									June - July
 								</p>
 								<p className="text-gray-700 dark:text-gray-300">
-									Proposal submission and initial screening.
+									Proposal submission and initial shortlisting.
 								</p>
 							</div>
 						</motion.div>
@@ -211,14 +211,14 @@ const Timeline = () => {
 										2
 									</span>
 									<h4 className="text-xl font-semibold text-gray-800 dark:text-white">
-										Offline Finals
+										Offline Evaluation
 									</h4>
 								</div>
 								<p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
 									August - October
 								</p>
 								<p className="text-gray-700 dark:text-gray-300">
-									Prototype submission and final presentations for selected teams.
+									Prototype submission and offline presentation by the finalists.
 								</p>
 							</div>
 						</motion.div>

@@ -11,8 +11,8 @@ const PrelimsPage = () => {
   const processSteps = [
     { text: "Theme selection", rawIcon: <FaBullseye /> },
     { text: "Team registrations", rawIcon: <FaUsers /> },
-    { text: "Problem Identification", rawIcon: <FaLightbulb /> },
-    { text: "Submission of proposal and Video (June 25th - July 31st)", rawIcon: <FaFileAlt /> },
+    { text: "Problem identification", rawIcon: <FaLightbulb /> },
+    { text: "Submission of proposal and video (June 25th - July 31st)", rawIcon: <FaFileAlt /> },
     { text: "Results (August 14th)", rawIcon: <FaMedal /> },
   ];
 
@@ -127,41 +127,37 @@ const PrelimsPage = () => {
         {/* Submission Format Section */}
         <section className="bg-background-card dark:bg-gray-800 shadow-2xl rounded-xl p-6 md:p-10 transition-shadow duration-300 hover:shadow-lg">
           <h2 className="text-3xl font-semibold text-secondary dark:text-secondary-dark mb-8 text-center">
-            Submission Format
+            Submission Requirements
           </h2>
-          <p className="mb-6 text-lg text-center text-foreground dark:text-gray-300">You are requested to submit 2 things: A) Proposal and B) Video.</p>
+          <p className="mb-6 text-lg text-center text-foreground dark:text-gray-300">
+            Submissions should include a slide deck (uploaded as a .pdf file) and a video pitch.
+          </p>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Proposal Card */}
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            {/* Slide Deck Card */}
             <div className="bg-background-alt dark:bg-gray-700 p-6 rounded-lg shadow-md">
               <h3 className="text-2xl font-semibold text-primary dark:text-primary-dark mb-4 flex items-center">
-                <FaFileAlt className="mr-3 text-xl" /> A) Proposal
+                <FaFileAlt className="mr-3 text-xl" /> A) Slide Deck (PDF)
               </h3>
-              <ul className="space-y-3 text-foreground dark:text-gray-300">
-                {submissionProposalPoints.map((point, index) => (
-                  <li key={index} className="flex items-start">
-                    <RiArrowRightSLine className="flex-shrink-0 mr-2 mt-1 text-primary dark:text-accent-dark" />
-                    <span>{point}</span>
-                  </li>
-                ))}
-                <li>
-                  <RiArrowRightSLine className="flex-shrink-0 mr-2 mt-1 text-primary dark:text-accent-dark inline-block" />
-                  <span className="font-semibold">Part B Headings:</span>
-                  <ul className="list-disc list-inside mt-2 pl-6 space-y-1">
-                    {partBHeadings.map((heading, idx) => (
-                      <li key={idx}>{heading}</li>
-                    ))}
-                  </ul>
-                </li>
-              </ul>
+              <p className="text-foreground dark:text-gray-300 mb-3">
+                Upload as a single <strong>.pdf file</strong> using the recommended template.
+              </p>
+              <a 
+                href="/submission-template" // Link to the new template page
+                target="_blank" // Open in new tab
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-dark dark:bg-accent-dark dark:hover:bg-accent-hover transition-colors"
+              >
+                View Submission Template <RiArrowRightSLine className="ml-2" />
+              </a>
             </div>
 
-            {/* Video Card */}
+            {/* Video Pitch Card */}
             <div className="bg-background-alt dark:bg-gray-700 p-6 rounded-lg shadow-md">
               <h3 className="text-2xl font-semibold text-primary dark:text-primary-dark mb-4 flex items-center">
-                <FaVideo className="mr-3 text-xl" /> B) Video
+                <FaVideo className="mr-3 text-xl" /> B) Video Pitch
               </h3>
-              <ul className="space-y-3 text-foreground dark:text-gray-300">
+              <ul className="space-y-2 text-foreground dark:text-gray-300">
                 {submissionVideoPoints.map((point, index) => (
                   <li key={index} className="flex items-start">
                     <RiArrowRightSLine className="flex-shrink-0 mr-2 mt-1 text-primary dark:text-accent-dark" />
@@ -176,7 +172,7 @@ const PrelimsPage = () => {
         {/* Judging Criteria Section */}
         <section className="bg-background-card dark:bg-gray-800 shadow-2xl rounded-xl p-6 md:p-10 transition-shadow duration-300 hover:shadow-lg">
           <h2 className="text-3xl font-semibold text-secondary dark:text-secondary-dark mb-8 text-center">
-            Judging Criteria
+            Evaluation Criteria
           </h2>
           <ul className="grid md:grid-cols-2 gap-x-8 gap-y-4">
             {judgingCriteria.map((criterion, index) => (
@@ -188,11 +184,12 @@ const PrelimsPage = () => {
               </li>
             ))}
           </ul>
-          <p className="mt-6 text-lg font-semibold text-center text-primary dark:text-primary-dark">
+          {/* <p className="mt-6 text-lg font-semibold text-center text-primary dark:text-primary-dark">
             Total Score: 100 marks
-          </p>
+          </p> */}
           <p className="mt-4 text-md text-gray-600 dark:text-gray-400 text-center">
-            All sections will be marked separately by IIT Bombay and JIPMER faculty and the total will be added. Section 5 is only graded by Engineering faculty. Section 6 is graded only by Medical faculty.
+               All proposals submitted for Phase I will be evaluated by a faculty committee from both JIPMER and IIT-B.
+
           </p>
         </section>
 
@@ -200,7 +197,7 @@ const PrelimsPage = () => {
         <section className="bg-primary dark:bg-primary-dark text-white dark:text-gray-900 p-6 md:p-8 rounded-xl shadow-xl text-center hover:shadow-2xl transition-shadow duration-300">
           <h2 className="text-2xl md:text-3xl font-bold mb-2">Results Announcement</h2>
           <p className="text-xl md:text-2xl font-medium">
-            Results will be announced on <span className="font-bold underline">August 14th</span>.
+            Results for Phase I will be announced on the website on <span className="font-bold underline">August 14th</span>.
           </p>
         </section>
 

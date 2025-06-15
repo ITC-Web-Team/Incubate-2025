@@ -95,7 +95,7 @@ const Prizes = () => {
         >
           <p className="text-center text-lg text-gray-700 dark:text-gray-300">
             <span className="inline-block mt-2 text-blue-600 dark:text-blue-400 font-medium">
-              15 proposals will receive a cash prize to aid in prototype building. They will be selected based on standardized evaluation criteria.
+              Upto 15 proposals will receive funding support of Rs. 10000 to aid in prototype building. They will be selected based on standardized evaluation criteria.
             </span>
           </p>
         </motion.div>
