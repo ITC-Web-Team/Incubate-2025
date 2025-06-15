@@ -36,7 +36,7 @@ export default function ThemeDetailPage({ params }: { params: { slug: string } }
         {theme.focusPoints && theme.focusPoints.length > 0 && (
           <div className="mt-2 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl p-6 md:p-8 shadow-xl w-full max-w-3xl mb-10">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-blue-700 dark:text-blue-300 border-b pb-3 border-blue-200 dark:border-blue-700">
-              Focus Points
+              Focus Areas
             </h2>
             <ul className="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 pl-2">
               {theme.focusPoints.map((point, index) => (

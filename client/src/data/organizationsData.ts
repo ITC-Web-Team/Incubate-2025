@@ -52,7 +52,9 @@ export const organizationsData = [
     description: "Established in 2021 with Koita Foundation support, KCDH is India's first academic center for digital health. It offers education, research, and policy partnerships, supporting national programs like ABDM. With 350+ students trained and 30+ partnerships, KCDH pioneers digital health in India.",
     logo: KCDHLogo, 
     socialLinks: [
-      { icon: "ri-global-line", url: "https://www.kcdh.iitb.ac.in/" }
+      { icon: "ri-global-line", url: "https://www.kcdh.iitb.ac.in/" },
+      { icon: "ri-instagram-line", url: "https://www.instagram.com/kcdh_iitb/" },
+      { icon: "ri-linkedin-box-line", url: "https://www.linkedin.com/company/kcdh-iitb/" }
     ]
   },
   

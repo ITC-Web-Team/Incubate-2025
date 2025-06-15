@@ -2,7 +2,7 @@ const processSteps = [
 	{
 		step: 1,
 		title: "Form a Team",
-		description: "Create a team of up to 4 with Medical and Engineering students",
+		description: "Create a team of up to 4 with minimum one medical and one engineering student",
 	},
 	{
 		step: 2,
@@ -12,7 +12,7 @@ const processSteps = [
 	{
 		step: 3,
 		title: "Get Selected",
-		description: "15 teams will be selected for finals with ₹10,000 for prototype building",
+		description: "Upto 15 teams will be shortlisted for competing with funding support of Rs. 10,000 for the prototype",
 	},
 ];
 
@@ -20,7 +20,7 @@ const processStepsBelow = [
 	{
 		step: 4,
 		title: "Building Prototype",
-		description: "Develop your working model with weekly mentoring and funding support",
+		description: "Develop your working model with weekly mentoring",
 	},
 	{
 		step: 5,

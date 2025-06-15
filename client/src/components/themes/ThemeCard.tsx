@@ -67,6 +67,12 @@ const ThemeCard = ({
             </p>
           </div>
         </div>
+        {/* Video Coming Soon Placeholder */}
+        <div className="mt-auto pt-4 border-t border-gray-200 dark:border-gray-700 text-center">
+          <p className="text-sm text-gray-500 dark:text-gray-400 italic">
+            <i className="ri-movie-2-line mr-2"></i>Video coming soon
+          </p>
+        </div>
       </div>
     </motion.div>
   );

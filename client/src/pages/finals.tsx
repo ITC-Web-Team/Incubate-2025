@@ -3,17 +3,17 @@ import { FaAward, FaUsers, FaLightbulb, FaClipboardList, FaFlagCheckered, FaMeda
 
 const FinalsPage: FC = () => {
   const finalsProcess = [
-    { text: "There is no theme-wise quota for selection.", icon: <FaUsers className="text-primary dark:text-accent-dark text-2xl md:text-3xl" /> },
-    { text: "A total of 15 teams will be selected for the finals.", icon: <FaClipboardList className="text-primary dark:text-accent-dark text-2xl md:text-3xl" /> },
-    { text: "Alternate weekly mentoring by IIT Bombay and JIPMER faculty respectively.", icon: <FaLightbulb className="text-primary dark:text-accent-dark text-2xl md:text-3xl" /> },
-    { text: "Building the working model.", icon: <FaUsers className="text-primary dark:text-accent-dark text-2xl md:text-3xl" /> },
-    { text: "Finals at JIPMER on October 5th.", icon: <FaFlagCheckered className="text-primary dark:text-accent-dark text-2xl md:text-3xl" /> },
+    { text: "Upto 15 teams will be shortlisted for the finals.", icon: <FaUsers className="text-primary dark:text-accent-dark text-2xl md:text-3xl" /> },
+    { text: "Shortlisting will be purely based on the merit of the proposal. There will not be a theme wise allocation.", icon: <FaClipboardList className="text-primary dark:text-accent-dark text-2xl md:text-3xl" /> },
+    { text: "Shortlisted teams will be given approximately 6 weeks to develop a prototype/proof-of-concept/working model for presentation in the finals.", icon: <FaLightbulb className="text-primary dark:text-accent-dark text-2xl md:text-3xl" /> },
+    { text: "Shortlisted teams will receive mentorship from JIPMER and IIT Bombay faculty.", icon: <FaUsers className="text-primary dark:text-accent-dark text-2xl md:text-3xl" /> },
+    { text: "Finalists will present their proposals at JIPMER on October 5th.", icon: <FaFlagCheckered className="text-primary dark:text-accent-dark text-2xl md:text-3xl" /> },
   ];
 
   const awards = [
     { title: "Certification of Participation", description: "To all participants (e-certificate).", icon: <FaMedal className="text-yellow-500 text-xl" /> },
-    { title: "Finalists", description: "Cash prize along with finalist certificates and trophy.", icon: <FaAward className="text-blue-500 text-xl" /> },
-    { title: "Winners (3 prizes in total)", description: "Cash prizes, etched custom medals, and assistance in patenting the technology.", icon: <FaAward className="text-green-500 text-xl" /> }, // Changed to FaAward as a fallback
+    { title: "Finalists", description: "Funding support along with finalist certificates and trophy.", icon: <FaAward className="text-blue-500 text-xl" /> },
+    { title: "Winners (3 prizes in total)", description: "Cash prizes, etched custom medals, and trophy.", icon: <FaAward className="text-green-500 text-xl" /> }, // Changed to FaAward as a fallback
   ];
 
 
@@ -40,7 +40,7 @@ const FinalsPage: FC = () => {
           Further details will be released soon.
         </p>
         <p className="mt-4 text-md text-red-500 dark:text-red-400 font-semibold text-center p-3 bg-red-500/10 dark:bg-red-400/10 rounded-md">
-          It is mandatory for at least 1 medical and 1 engineering student to be present for the offline phase.
+          It is mandatory for at least 1 medical and 1 engineering studentin every team to be present for the offline phase.
         </p>
       </div>
 

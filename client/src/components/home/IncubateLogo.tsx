@@ -221,7 +221,7 @@ const IncubateLogo = () => {
             transition={{ delay: 1, duration: 0.8 }}
             style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
-            Where curiosity meets innovation
+            WHERE CURIOSITY MEETS INNOVATION
           </motion.p>
         </div>
       </div>

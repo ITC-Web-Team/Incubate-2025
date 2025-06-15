@@ -7,7 +7,7 @@ const AboutEvent = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 dark:text-white">About the Event</h2>
           <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
-            Incubate is a national-level MedTech Hackathon that provides an opportunity for Medical and Engineering students to collaborate on developing innovative real-world solutions to problems in the medical field.
+            Incubate is a national-level MedTech Hackathon that provides an opportunity for medical and engineering students to collaborate on developing innovative solutions to real world problems.
           </p>
           <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
             Get ready to experience the world of innovation where we expand the limits of healthcare solutions through cutting-edge technology.
@@ -43,7 +43,7 @@ const AboutEvent = () => {
               <i className="ri-award-line text-2xl text-primary dark:text-blue-400"></i>
             </div>
             <h3 className="text-xl font-bold mb-3 dark:text-white">Mentorship</h3>
-            <p className="text-gray-600 dark:text-gray-400">Get guidance from industry experts and faculty mentors from JIPMER and IIT Bombay throughout the hackathon process.</p>
+            <p className="text-gray-600 dark:text-gray-400">Get guidance from faculty mentors from JIPMER and IIT Bombay throughout the hackathon process.</p>
           </div>
         </div>
 
