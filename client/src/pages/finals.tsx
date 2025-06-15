@@ -12,7 +12,7 @@ const FinalsPage: FC = () => {
 
   const awards = [
     { title: "Certification of Participation", description: "To all participants (e-certificate).", icon: <FaMedal className="text-yellow-500 text-xl" /> },
-    { title: "Finalists", description: "Cash prize along with certificates and trophy.", icon: <FaAward className="text-blue-500 text-xl" /> },
+    { title: "Finalists", description: "Cash prize along with finalist certificates and trophy.", icon: <FaAward className="text-blue-500 text-xl" /> },
     { title: "Winners (3 prizes in total)", description: "Cash prizes, etched custom medals, and assistance in patenting the technology.", icon: <FaAward className="text-green-500 text-xl" /> }, // Changed to FaAward as a fallback
   ];
 

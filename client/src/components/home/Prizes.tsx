@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const prizeData = [
   {
     position: "2nd Prize",
-    amount: "₹20,000",
+    amount: "To be announced on June 25th",
     title: "RUNNER UP",
     iconClass: "ri-award-line",
     bgColorClass: "from-gray-300 to-gray-200",
@@ -12,15 +12,15 @@ const prizeData = [
     iconBgClass: "text-gray-700",
     order: "order-2 md:order-1",
     height: "h-60",
-    iconSize: "text-4xl",
-    titleSize: "text-xl",
-    amountSize: "text-3xl",
+    iconSize: "text-2xl",
+    titleSize: "text-base",
+    amountSize: "text-base", // decreased font size
     badgeHeight: "h-8",
     animationDelay: 0.2
   },
   {
     position: "1st Prize",
-    amount: "₹30,000",
+    amount: "To be announced on June 25th",
     title: "WINNER",
     iconClass: "ri-trophy-line",
     bgColorClass: "from-yellow-300 to-yellow-200",
@@ -29,15 +29,15 @@ const prizeData = [
     iconBgClass: "text-yellow-700",
     order: "order-1 md:order-2",
     height: "h-72",
-    iconSize: "text-5xl",
-    titleSize: "text-2xl",
-    amountSize: "text-4xl",
+    iconSize: "text-3xl",
+    titleSize: "text-lg",
+    amountSize: "text-base", // decreased font size
     badgeHeight: "h-10",
     animationDelay: 0
   },
   {
     position: "3rd Prize",
-    amount: "₹15,000",
+    amount: "To be announced on June 25th",
     title: "SECOND RUNNER UP",
     iconClass: "ri-medal-line",
     bgColorClass: "from-orange-300 to-orange-200",
@@ -46,14 +46,13 @@ const prizeData = [
     iconBgClass: "text-orange-700",
     order: "order-3",
     height: "h-52",
-    iconSize: "text-3xl",
-    titleSize: "text-lg",
-    amountSize: "text-2xl",
+    iconSize: "text-xl",
+    titleSize: "text-sm",
+    amountSize: "text-sm", // decreased font size
     badgeHeight: "h-6",
     animationDelay: 0.4
   }
 ];
-
 const Prizes = () => {
   return (
     <section className="py-16 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 digital-noise relative overflow-hidden">
@@ -95,8 +94,9 @@ const Prizes = () => {
           viewport={{ once: true }}
         >
           <p className="text-center text-lg text-gray-700 dark:text-gray-300">
-            The best prototypes judged according to standardized evaluation criteria will be awarded with cash prizes. 
-            <span className="inline-block mt-2 text-blue-600 dark:text-blue-400 font-medium">15 proposals will receive a cash prize of Rs. 10,000 to aid in prototype building. They will be selected based on standardized evaluation criteria</span>
+            <span className="inline-block mt-2 text-blue-600 dark:text-blue-400 font-medium">
+              15 proposals will receive a cash prize to aid in prototype building. They will be selected based on standardized evaluation criteria.
+            </span>
           </p>
         </motion.div>
         

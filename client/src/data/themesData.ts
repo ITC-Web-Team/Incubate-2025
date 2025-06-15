@@ -225,7 +225,7 @@ export const themesData: ThemeData[] = [
       {
         name: "Dr. Swaminathan K",
         designation: "Department of Medical Oncology",
-        description: "Dr. Swaminathan K is an Assistant Professor in the Department of Medical Oncology at JIPMER, specializing in pediatric oncology. With an MD in Pediatrics and a DM in Pediatric Oncology, his key areas of interest include pediatric leukemias, neuroblastomas, brain tumors, sarcomas, and supportive care. He conducts Friday OPDs and leads specialty clinics for pediatric cancers. Actively involved in national academic circles, he serves on the NHL subcommittee of the Indian Pediatric Hematology Oncology Group (InPHOG) and was Joint Organizing Secretary of PHOCON 2023.",
+        description: "Dr. Swaminathan K is an Assistant Professor in the Department of Medical Oncology at JIPMER, specializing in pediatric oncology. With an MD in Pediatrics and a DM in Pediatric Oncology, his key areas of interest include pediatric leukemias, neuroblastomas, brain tumors, sarcomas, and supportive care. He leads specialty clinics for pediatric cancers. Actively involved in national academic circles, he serves on the NHL subcommittee of the Indian Pediatric Hematology Oncology Group (InPHOG) and was Joint Organizing Secretary of PHOCON 2023.",
         image: SwaminathanKImg,
       },
     ],
@@ -253,23 +253,22 @@ export const themesData: ThemeData[] = [
     ],
   },
   {
-    slug: "cardiovascular-cerebrovascular-diseases",
-    title: "Innovative Technologies for Early Detection and Long-Term Management of Cardiovascular and Cerebrovascular Diseases",
-    icon: "ri-heart-3-line", // Changed from ri-brain-line
+    slug: "structural-heart-diseases", // Updated slug for clarity, or keep as cardiovascular-cerebrovascular-diseases if preferred
+    title: "Targeted Innovation for Structural Heart Diseases: Screening, Diagnosis, and Follow-up",
+    icon: "ri-heart-3-line", 
     color: "bg-cyan-500",
-    description: "Cardiovascular and cerebrovascular diseases—such as congenital heart defects, coronary artery disease (CAD), and stroke—pose major public health challenges. This theme invites innovation in specific, high-impact areas: early detection of heart and vascular conditions, rapid response systems for stroke and chest pain, and tools for long-term monitoring and rehabilitation. Emphasis is placed on low-cost, accessible solutions tailored for underserved settings. From screening murmurs and interpreting ECGs to post-stroke recovery and CAD follow-up, participants can target clearly defined problems using technology to improve patient outcomes across all age groups.",
+    description: "Structural heart diseases—including congenital defects, valvular disorders, and cardiomyopathies—are often underdiagnosed or diagnosed late, especially in low-resource settings. This theme focuses on addressing key gaps in the care pathway: limited early screening, delayed diagnosis, inadequate referral systems, and poor long-term follow-up. Participants are encouraged to identify bottlenecks in healthcare delivery and propose impactful solutions to improve detection, continuity of care, and outcomes for patients across age groups.",
     focusPoints: [
-      "Early screening tools for congenital and acquired heart diseases",
-      "Digital triage and referral systems for acute chest pain and stroke",
-      "Low-cost, point-of-care diagnostics for CAD and cerebrovascular risk factors",
-      "Post-event rehabilitation and lifestyle monitoring for stroke and MI survivors",
-      "Vascular health innovations: limb ischemia detection, diabetic foot care, etc."
+      "Missed or delayed diagnosis of congenital heart defects",
+      "Limited access to cardiac screening in newborns and children",
+      "Inadequate early detection of valvular and myocardial diseases",
+      "Gaps in continuity of care after surgery or intervention"
     ],
     faculty: [
       {
         name: "Dr. Bhagwati prasad pant",
         designation: "Department of Cardiology",
-        description: "Dr. Bhagwati Pant is an Assistant Professor in the Department of Cardiology with a strong foundation in adult cardiology and interventional techniques. His core interests lie in structural heart disease, complex coronary interventions, coronary imaging, and heart failure management. Having completed his DM Cardiology residency at JIPMER (2018–2021), he went on to pursue a Post-Doctoral Fellowship in Adult Cardiology and Interventions at SCTIMST, Thiruvananthapuram in 2022. He joined as Assistant Professor of Cardiology at MGMCRI, Pondicherry in 2023. Dr. Pant is actively engaged in clinical research and continues to contribute to advancements in interventional and diagnostic cardiology.",
+        description: "Dr. Bhagwati Pant is an Assistant Professor in the Department of Cardiology with a strong foundation in adult cardiology and interventional techniques. His core interests lie in structural heart disease, complex coronary interventions, coronary imaging, and heart failure management. Having completed his DM Cardiology residency at JIPMER (2018–2021), he went on to pursue a Post-Doctoral Fellowship in Adult Cardiology and Interventions at SCTIMST, Thiruvananthapuram in 2022. Dr. Pant is actively engaged in clinical research and continues to contribute to advancements in interventional and diagnostic cardiology.",
         image: BhagwatiPrasadPantImg,
       },
     ],

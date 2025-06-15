@@ -109,7 +109,7 @@ const Header = () => {
               ))}
               <li className="ml-2 text-center"> 
                 <a
-                  href="https://chat.whatsapp.com/LjKDX4bKnYq0X0TSH6FDqz"
+                  href="https://linktr.ee/incubatehackathon"
                   target="_blank"
                   rel="noopener noreferrer" 
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-2 px-4 rounded-md shadow-md transition duration-300 border border-blue-400"
@@ -160,7 +160,7 @@ const Header = () => {
             {/* Mobile Register Now Button */}
             <li className="pt-2">
               <a 
-                href="https://chat.whatsapp.com/LjKDX4bKnYq0X0TSH6FDqz"
+                href="https://linktr.ee/incubatehackathon"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-2.5 px-4 rounded-md shadow-md transition duration-300 border border-blue-400"
