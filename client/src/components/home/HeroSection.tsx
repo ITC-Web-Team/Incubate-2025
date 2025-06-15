@@ -2,31 +2,38 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 
+// Import local background images
+import bg1 from "@/assets/background_images/bg1.jpg";
+import bg2 from "@/assets/background_images/bg2.jpg";
+import bg3 from "@/assets/background_images/bg3.jpg";
+import bg4 from "@/assets/background_images/bg4.jpg";
+import bg5 from "@/assets/background_images/bg5.jpg";
+
 const slides = [
   {
     id: 1,
-    url: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080",
-    alt: "Medical professionals collaborating with engineers over medical device"
+    url: bg1,
+    alt: "Abstract medical technology background 1"
   },
   {
     id: 2,
-    url: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080",
-    alt: "Medical professionals looking at brain scan with technology"
+    url: bg2,
+    alt: "Abstract medical technology background 2"
   },
   {
     id: 3,
-    url: "https://pixabay.com/get/gd6d8b3a9a1412bf43dbcc1fd8589e7376f48d25918a5ba774d39ca1ae0d42d49423d6beb606f5a2fba8557207dd3cf2ae97db05cb91541d5b9414c88e47428b5_1280.jpg",
-    alt: "High-tech medical laboratory equipment"
+    url: bg3,
+    alt: "Abstract medical technology background 3"
   },
   {
     id: 4,
-    url: "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080",
-    alt: "Medical robotics in surgery"
+    url: bg4,
+    alt: "Abstract medical technology background 4"
   },
   {
     id: 5,
-    url: "https://images.unsplash.com/photo-1581093806997-124204d9fa9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080",
-    alt: "Team collaborating on medical technology"
+    url: bg5,
+    alt: "Abstract medical technology background 5"
   }
 ];
 

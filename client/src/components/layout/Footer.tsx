@@ -20,14 +20,14 @@ const Footer = () => {
               </a>
               
               <a 
-                href="https://www.linkedin.com/company/jipmer-undergraduate-scientific-research-club-jusrc/" 
+                href="https://www.linkedin.com/in/incubate-hackathon-2936a236b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
                 className="w-10 h-10 rounded-full bg-gray-800 dark:bg-gray-700 flex items-center justify-center hover:bg-primary transition duration-300"
                 aria-label="LinkedIn"
               >
                 <i className="ri-linkedin-fill text-xl"></i>
               </a>
               <a 
-                href="https://www.youtube.com/@JIPMERUGScientificResearchClub" 
+                href="https://youtube.com/@incubatehackathon?si=I7evmvBReFiILWZy" 
                 className="w-10 h-10 rounded-full bg-gray-800 dark:bg-gray-700 flex items-center justify-center hover:bg-primary transition duration-300"
                 aria-label="YouTube"
               >
@@ -52,15 +52,16 @@ const Footer = () => {
               <div className="flex items-start">
                 <i className="ri-user-line text-primary dark:text-blue-400 mt-1 mr-3"></i>
                 <div>
-                  <p className="text-gray-300">Chinua – +91 7892615045</p>
-                  <p className="text-gray-300">Taruna – +91 7760887335</p>
+                  <p className="text-gray-300">Chinua (JIPMER) – +91 7892615045 </p>
+                  <p className="text-gray-300">Tarunasri (JIPMER) – +91 7760887335</p>
+                  <p className="text-gray-300">Shahu (IITB) – +91 91460 50850</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <i className="ri-mail-line text-primary dark:text-blue-400 mt-1 mr-3"></i>
                 <div>
-                    <a href="mailto:jiipmersciclub@gmail.com" className="text-gray-300 hover:underline">
-                    jiipmersciclub@gmail.com
+                    <a href="mailto:incubatehackathon@gmail.com" className="text-gray-300 hover:underline">
+                    incubatehackathon@gmail.com
                     </a>
                 </div>
               </div>

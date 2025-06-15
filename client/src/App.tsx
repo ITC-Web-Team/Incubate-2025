@@ -10,9 +10,13 @@ import About from "@/pages/about";
 import FAQs from "@/pages/faqs";
 import Register from "@/pages/register";
 import ThemeDetailPage from "@/pages/theme-detail";
+import RegistrationDetailsPage from "@/pages/registration-details";
+import IPPolicyRulesPage from "@/pages/ip-policy-rules";
 import ScrollToTop from "@/components/ui/scroll-to-top";
 import AnnouncementBanner from "@/components/layout/AnnouncementBanner";
 import ScrollToTopOnRouteChange from "@/components/ui/scroll-to-top-on-route-change";
+import PrelimsPage from "./pages/prelims";
+import FinalsPage from "./pages/finals";
 
 function App() {
   return (
@@ -24,11 +28,15 @@ function App() {
         <main className="flex-grow">
           <Switch>
             <Route path="/" component={Home} />
+            <Route path="/about" component={About} />
             <Route path="/themes" component={Themes} />
             <Route path="/themes/:slug" component={ThemeDetailPage} />
-            <Route path="/about" component={About} />
             <Route path="/faqs" component={FAQs} />
             <Route path="/register" component={Register} />
+            <Route path="/registration-details" component={RegistrationDetailsPage} />
+            <Route path="/ip-policy-rules" component={IPPolicyRulesPage} />
+            <Route path="/prelims" component={PrelimsPage} />
+            <Route path="/finals" component={FinalsPage} />
             <Route component={NotFound} />
           </Switch>
         </main>

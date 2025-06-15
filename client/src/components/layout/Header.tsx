@@ -50,6 +50,29 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+  const desktopNavItems = [
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/about" },
+    { name: "Themes", href: "/themes" },
+    { name: "Registration Info", href: "/registration-details" },
+    { name: "IP Policy & Rules", href: "/ip-policy-rules" },
+    { name: "Prelims", href: "/prelims" },
+    { name: "Finals & Awards", href: "/finals" }, // Added Finals & Awards
+    { name: "FAQs", href: "/faqs" },
+  ];
+
+  const mobileNavItems = [
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/about" },
+    { name: "Themes", href: "/themes" },
+    { name: "Registration Info", href: "/registration-details" },
+    { name: "IP Policy & Rules", href: "/ip-policy-rules" },
+    { name: "Prelims", href: "/prelims" },
+    { name: "Finals & Awards", href: "/finals" }, // Added Finals & Awards
+    { name: "FAQs", href: "/faqs" },
+    { name: "Register", href: "/register", isButton: true },
+  ];
+
   return (
     <header className="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-md">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
@@ -71,49 +94,24 @@ const Header = () => {
         </Link>
         
         <div className="flex items-center">
-          <nav className="hidden md:block relative mr-4">
-            <ul className="flex space-x-6 text-sm font-medium nav-links">
-              <li className="relative py-1">
-                <Link 
-                  href="/"
-                  className={`nav-link ${activeLink === "home" ? "active" : ""} dark:text-white`}
-                  onClick={() => handleLinkClick("home")}
-                >
-                  HOME
-                </Link>
-              </li>
-              <li className="relative py-1">
-                <Link 
-                  href="/themes"
-                  className={`nav-link ${activeLink === "themes" ? "active" : ""} dark:text-white`}
-                  onClick={() => handleLinkClick("themes")}
-                >
-                  THEMES
-                </Link>
-              </li>
-              <li className="relative py-1">
-                <Link 
-                  href="/about"
-                  className={`nav-link ${activeLink === "about" ? "active" : ""} dark:text-white`}
-                  onClick={() => handleLinkClick("about")}
-                >
-                  ABOUT US
-                </Link>
-              </li>
-              <li className="relative py-1">
-                <Link 
-                  href="/faqs"
-                  className={`nav-link ${activeLink === "faqs" ? "active" : ""} dark:text-white`}
-                  onClick={() => handleLinkClick("faqs")}
-                >
-                  FAQs
-                </Link>
-              </li>
+          <nav className="hidden lg:block relative mr-4"> {/* Changed md:block to lg:block */}
+            <ul className="flex space-x-4 text-sm font-medium nav-links"> {/* Adjusted space-x-4 for potentially more items */}
+              {desktopNavItems.map((item) => (
+                <li className="relative py-1" key={item.href}>
+                  <Link
+                    href={item.href}
+                    className={`nav-link px-2 py-1 ${activeLink === (item.href === "/" ? "home" : item.href.slice(1)) ? "active" : ""} dark:text-white hover:text-primary dark:hover:text-blue-400 transition-colors`}
+                    onClick={() => handleLinkClick(item.href === "/" ? "home" : item.href.slice(1))}
+                  >
+                    {item.name.toUpperCase()}
+                  </Link>
+                </li>
+              ))}
               <li className="ml-4">
-                <a 
+                <a
                   href="https://chat.whatsapp.com/LjKDX4bKnYq0X0TSH6FDqz"
                   target="_blank"
-                  rel=" "
+                  rel="noopener noreferrer" // Added rel for security
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-2 px-4 rounded-md shadow-md transition duration-300 border border-blue-400"
                 >
                   REGISTER NOW
@@ -127,7 +125,7 @@ const Header = () => {
           <ThemeToggle />
           
           <button 
-            className="md:hidden text-gray-600 dark:text-gray-300 ml-4" 
+            className="lg:hidden text-gray-600 dark:text-gray-300 ml-4"  // Changed md:hidden to lg:hidden
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
@@ -141,51 +139,32 @@ const Header = () => {
       </div>
       
       {/* Mobile menu */}
-      <div className={`md:hidden bg-white dark:bg-gray-800 py-2 shadow-inner ${isMenuOpen ? 'block' : 'hidden'}`}>
+      <div className={`lg:hidden bg-white dark:bg-gray-800 py-2 shadow-inner ${isMenuOpen ? 'block' : 'hidden'}`}> {/* Changed md:hidden to lg:hidden */}
         <div className="container mx-auto px-4">
           <ul className="space-y-3">
-            <li>
-              <Link 
-                href="/"
-                className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white rounded"
-                onClick={() => handleLinkClick("home")}
-              >
-                HOME
-              </Link>
-            </li>
-            <li>
-              <Link 
-                href="/themes"
-                className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white rounded"
-                onClick={() => handleLinkClick("themes")}
-              >
-                THEMES
-              </Link>
-            </li>
-            <li>
-              <Link 
-                href="/about"
-                className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white rounded"
-                onClick={() => handleLinkClick("about")}
-              >
-                ABOUT US
-              </Link>
-            </li>
-            <li>
-              <Link 
-                href="/faqs"
-                className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white rounded"
-                onClick={() => handleLinkClick("faqs")}
-              >
-                FAQs
-              </Link>
-            </li>
-            <li>
+            {mobileNavItems.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className={`block py-2 px-3 rounded md:hover:bg-transparent md:border-0 transition-colors duration-200 ease-in-out ${
+                    location === item.href // Corrected: use location for current path comparison
+                      ? "text-white bg-blue-700 md:bg-transparent md:text-blue-500 dark:text-blue-400"
+                      : "text-gray-700 hover:bg-gray-100 md:hover:text-blue-700 dark:text-gray-300 md:dark:hover:text-blue-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  }`}
+                  onClick={() => handleLinkClick(item.href.slice(1) || 'home')} // Corrected: use handleLinkClick for consistency and correct active link setting
+                >
+                  {item.name} {/* Changed from item.label to item.name */}
+                </Link>
+              </li>
+            ))}
+            {/* Mobile Register Now Button */}
+            <li className="pt-2">
               <a 
                 href="https://chat.whatsapp.com/LjKDX4bKnYq0X0TSH6FDqz"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block py-2 px-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-md text-center mt-2 border border-blue-400"
+                className="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-2.5 px-4 rounded-md shadow-md transition duration-300 border border-blue-400"
+                onClick={() => setIsMenuOpen(false)} // Close menu on click
               >
                 REGISTER NOW
               </a>
