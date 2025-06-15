@@ -1,223 +1,277 @@
-import aiHealthcareImg from "@/assets/themes/ai-healthcare.png";
-import remoteMonitoringImg from "@/assets/themes/remote-monitoring.png";
-import medicalDeviceImg from "@/assets/themes/medical-devices.png";
+import ApurbaSastryImg from "@/assets/Faculty/Apurba.png";
+import UshaDeviImg from "@/assets/Faculty/usha.png";
+import NishadPlakkalImg from "@/assets/Faculty/Nishad.png";
+import SubithaLImg from "@/assets/Faculty/Subitha.png";
+import HariswarPTImg from "@/assets/Faculty/Hariswar.png";
+import KarthikeyanMImg from "@/assets/Faculty/Karthikeyan.png";
+import ShuvadeepGangulyImg from "@/assets/Faculty/Shuvadeep.png";
+import MSGopalakrishnanImg from "@/assets/Faculty/Gopalakrishnan.png";
+import ArpithaAnantharajuImg from "@/assets/Faculty/Arpitha.png";
+import SasirekhaRengarajImg from "@/assets/Faculty/Sasirekha.png";
+import SwaminathanKImg from "@/assets/Faculty/Swaminathan.jpg";
+import SivamurukanPalaniswamyImg from "@/assets/Faculty/Sivamurukan.png";
+import BhagwatiPrasadPantImg from "@/assets/Faculty/Bhagwati.png";
 
-export const themesData = [
+export interface FacultyMember {
+  name: string;
+  description: string;
+  image: string; // Will be the imported image variable e.g., ApurbaSastryImg
+  designation?: string;
+}
+
+export interface ThemeData {
+  slug: string;
+  title: string;
+  icon: string;
+  color: string;
+  description: string;
+  focusPoints: string[];
+  faculty: FacultyMember[];
+  image?: string; // Optional main theme image
+  challenges?: string[];
+  resources?: string[];
+  tags?: string[];
+  mentors?: string;
+  outcomes?: string;
+  difficulty?: "Beginner" | "Intermediate" | "Advanced";
+}
+
+export const themesData: ThemeData[] = [
   {
-    slug: "antimicrobial-resistance",
-    title: "Combating Antimicrobial Resistance and Hospital Infections",
-    icon: "ri-shield-cross-line",
-    color: "bg-blue-500",
-    description: "This theme revolves around prevention and management of Healthcare associated infections and emergence of MDR infections. Antimicrobial resistance (AMR) and hospital-acquired infections (HAIs) are escalating public health challenges that compromise patient safety and burden healthcare systems. This theme addresses the urgent need to identify, prevent, and control infections in clinical settings. Teams can also venture into prevention and treatment strategies for MDR infections which cause severe Hospital acquired infection.",
-    image: remoteMonitoringImg,
-    challenges: [
-      "Prevention and management of Healthcare associated infections",
-      "Emergence of MDR infections",
-      "Identifying, preventing, and controlling infections in clinical settings",
-      "Prevention and treatment strategies for MDR infections"
-    ],
-    resources: [], // Add relevant resources
-    tags: ["AMR", "HAI", "Infection Control", "MDR"],
-    mentors: "", // Add relevant mentors
-    outcomes: "" // Add relevant outcomes
-  },
-  {
-    slug: "sepsis-critical-care",
-    title: "Early detection of sepsis and Intelligent Monitoring for Critical Care",
-    icon: "ri-heart-pulse-line",
+    slug: "infection-control-critical-care",
+    title: "Infection control & Critical Care Monitoring",
+    icon: "ri-shield-flash-line",
     color: "bg-red-500",
-    description: "Sepsis remains a leading cause of ICU mortality, often progressing silently until it's too late. Critically ill patients require constant, high-stakes monitoring across multiple organ systems. This theme emphasizes the need for timely recognition, risk prediction, and comprehensive oversight to improve outcomes and optimize critical care delivery.",
-    image: aiHealthcareImg,
-    challenges: [
-      "Timely recognition of sepsis",
-      "Risk prediction for sepsis",
-      "Comprehensive oversight for critically ill patients"
+    description: "Hospital-Acquired Infections (HAIs), often caused by multi-drug resistant (MDR) organisms, are major challenges in healthcare settings. These infections can escalate to sepsis, a life-threatening condition requiring urgent, intensive care. Critically ill patients need continuous monitoring across multiple parameters, but traditional methods may miss early warning signs. There’s a growing need for smart critical care solutions using AI, sensors, and predictive tools to detect deterioration early and guide timely intervention. This theme calls for innovations that prevent HAIs, address AMR, and enhance critical care through intelligent, tech-driven monitoring systems.",
+    focusPoints: [
+      "Detection and surveillance of Hospital-Acquired Infections (HAIs)",
+      "Tracking and addressing the emergence of Multi-Drug Resistant (MDR) pathogens",
+      "Early identification and prediction of sepsis in hospitalized patients",
+      "Continuous, multi-parameter monitoring in critical care settings",
+      "Integrated clinical data analysis for timely intervention and improved ICU outcomes"
     ],
-    resources: [], // Add relevant resources
-    tags: ["Sepsis", "Critical Care", "Patient Monitoring"],
-    mentors: "", // Add relevant mentors
-    outcomes: "" // Add relevant outcomes
+    faculty: [
+      {
+        name: "Dr. Apurba Sastry",
+        designation: "Department of Microbiology",
+        description: "Dr. Apurba Sankar Sastry, Additional Professor of Microbiology at JIPMER, is a leading expert in hospital infection control, antimicrobial resistance (AMR), and antimicrobial stewardship. He heads the Hospital Infection Control Unit and serves as the AMS Lead at JIPMER, driving key strategies against HAIs and MDR pathogens. A renowned author, his textbooks—used widely across India—include Essentials of Medical Microbiology and Essentials of Hospital Infection Control. His work bridges clinical practice, policy, and education to strengthen infection prevention.",
+        image: ApurbaSastryImg,
+      },
+    ],
   },
   {
     slug: "neonatal-infant-care",
     title: "Neonatal and Infant Care Technologies",
-    icon: "ri-bear-smile-line",
-    color: "bg-green-500",
-    description: "Neonates, particularly preterm and low-birth-weight infants, are highly vulnerable to temperature instability, infections, and inadequate nutrition. This theme focuses on innovative technologies that support essential interventions like Kangaroo Mother Care (KMC), breastfeeding, sepsis detection, thermoregulation, and hygiene. By addressing critical challenges in neonatal care—such as early sepsis identification, maintaining warmth, monitoring umbilical flow, and improving feeding and sanitation—this theme offers vast potential to reduce neonatal mortality and enhance the quality of care in resource-limited settings.",
-    image: medicalDeviceImg,
-    challenges: [
-      "Temperature instability in neonates",
-      "Infections in neonates",
-      "Inadequate nutrition in neonates",
-      "Early sepsis identification",
-      "Maintaining warmth",
-      "Monitoring umbilical flow",
-      "Improving feeding and sanitation"
-    ],
-    resources: [], // Add relevant resources
-    tags: ["Neonatal Care", "Infant Care", "KMC", "Pediatrics"],
-    mentors: "", // Add relevant mentors
-    outcomes: "" // Add relevant outcomes
-  },
-  {
-    slug: "outbreak-detection",
-    title: "Early Warning Systems for Outbreak Detection and management",
-    icon: "ri-alarm-warning-line",
-    color: "bg-yellow-500",
-    description: "Early identification of infectious disease outbreaks is vital to preventing widespread transmission and protecting public health. This theme encourages participants to explore and enhance healthcare strategies that enable timely outbreak detection through improved surveillance, data analysis, and alert mechanisms. The goal is to strengthen the capacity of health systems to respond quickly and effectively, minimizing disease impact and safeguarding communities.",
-    image: aiHealthcareImg,
-    challenges: [
-      "Improved surveillance for outbreak detection",
-      "Data analysis for outbreak detection",
-      "Alert mechanisms for outbreak detection"
-    ],
-    resources: [], // Add relevant resources
-    tags: ["Outbreak Detection", "Public Health", "Surveillance"],
-    mentors: "", // Add relevant mentors
-    outcomes: "" // Add relevant outcomes
-  },
-  {
-    slug: "vector-borne-diseases",
-    title: "Surveillance, Prevention, and Diagnosis of Vector-Borne Diseases",
-    icon: "ri-bug-line",
-    color: "bg-purple-500",
-    description: "Vector-borne diseases like malaria, dengue, and Zika pose ongoing public health risks in many regions. This theme focuses on strengthening healthcare responses through improved surveillance of vectors and cases, effective prevention strategies, and accessible, rapid diagnosis. The aim is to support healthcare systems in controlling transmission, providing timely treatment, and ultimately reducing the burden of these diseases on affected communities.",
-    image: remoteMonitoringImg,
-    challenges: [
-      "Improved surveillance of vectors and cases",
-      "Effective prevention strategies for vector-borne diseases",
-      "Accessible, rapid diagnosis of vector-borne diseases"
-    ],
-    resources: [], // Add relevant resources
-    tags: ["Vector-Borne Diseases", "Malaria", "Dengue", "Zika"],
-    mentors: "", // Add relevant mentors
-    outcomes: "" // Add relevant outcomes
-  },
-  {
-    slug: "surgical-safety",
-    title: "Surgical Safety and Smart Operating Theaters",
-    icon: "ri-microscope-line",
-    color: "bg-indigo-500",
-    description: "Ensuring patient safety during surgery is a critical priority for healthcare systems worldwide. This theme invites participants to innovate ways to enhance surgical safety through smarter operating theaters that integrate advanced monitoring, communication, and automation technologies. The focus is on reducing errors, improving team coordination, and optimizing surgical workflows to deliver safer, more efficient care and better patient outcomes.",
-    image: medicalDeviceImg,
-    challenges: [
-      "Advanced monitoring in operating theaters",
-      "Communication technologies in operating theaters",
-      "Automation technologies in operating theaters",
-      "Reducing errors in surgery",
-      "Improving team coordination in surgery",
-      "Optimizing surgical workflows"
-    ],
-    resources: [], // Add relevant resources
-    tags: ["Surgical Safety", "Smart Hospitals", "Operating Theaters"],
-    mentors: "", // Add relevant mentors
-    outcomes: "" // Add relevant outcomes
-  },
-  {
-    slug: "poc-diagnostics-infectious-diseases",
-    title: "Point of care diagnostics for Infectious Diseases",
-    icon: "ri-test-tube-line",
+    icon: "ri-heart-pulse-line", // Changed from ri-baby-line
     color: "bg-pink-500",
-    description: "Several infectious diseases still lack reliable point-of-care (PoC) diagnostics. Conditions like melioidosis, leptospirosis, scrub typhus, histoplasmosis, and strongyloidiasis are often misdiagnosed due to slow or inaccessible testing. Diseases such as extrapulmonary tuberculosis, chikungunya, and neurocysticercosis also face diagnostic delays. Developing accurate, rapid, and affordable PoC tools is critical to improve early detection, treatment, and outcomes in resource-limited settings.",
-    image: aiHealthcareImg,
-    challenges: [
-      "Developing PoC diagnostics for melioidosis",
-      "Developing PoC diagnostics for leptospirosis",
-      "Developing PoC diagnostics for scrub typhus",
-      "Developing PoC diagnostics for histoplasmosis",
-      "Developing PoC diagnostics for strongyloidiasis",
-      "Developing PoC diagnostics for extrapulmonary tuberculosis",
-      "Developing PoC diagnostics for chikungunya",
-      "Developing PoC diagnostics for neurocysticercosis"
+    description: "Neonates, particularly preterm and low-birth-weight infants, are highly vulnerable to temperature instability, infections, and inadequate nutrition. This theme focuses on innovative technologies that support essential interventions like Kangaroo Mother Care (KMC), breastfeeding, sepsis detection, thermoregulation, and hygiene. By addressing critical challenges in neonatal care—such as early sepsis identification, maintaining warmth, monitoring umbilical flow, and improving feeding and sanitation—this theme offers vast potential to reduce neonatal mortality and enhance the quality of care in resource-limited settings.",
+    focusPoints: [
+      "Umbilical cord care",
+      "Maintaining thermal stability",
+      "Early identification of Neonatal shock and sepsis",
+      "Neonatal Infections",
+      "Neonatal Nutrition and Follow up",
+      "Breast Feeding and Kangaroo Mother Care"
     ],
-    resources: [], // Add relevant resources
-    tags: ["POC Diagnostics", "Infectious Diseases", "Diagnostics"],
-    mentors: "", // Add relevant mentors
-    outcomes: "" // Add relevant outcomes
+    faculty: [
+      {
+        name: "Dr. Usha Devi R",
+        designation: "Department of Neonatology",
+        description: "Dr. Usha Devi R is a dedicated neonatologist and Assistant Professor in the Department of Neonatology at JIPMER, Puducherry. She holds an MBBS, MD in Pediatrics, DNB (Pediatrics), DM (Neonatology), DNB (Neonatology), PGDE, and AFAMS. Her clinical involvement includes running the Newborn Follow-up Clinic and the Fetal Medicine/Perinatology Clinic, contributing significantly to both acute and long-term neonatal care. Her areas of special interest include extreme preterm care, necrotizing enterocolitis, neonatal resuscitation, clinical trials, quality improvement, and basic science research. A passionate educator and researcher, Dr. Usha has authored over 58 original articles, 10 book chapters, and one book. She actively contributes to academic advancement through her teaching and research efforts.",
+        image: UshaDeviImg,
+      },
+      {
+        name: "Dr. Nishad Plakkal",
+        designation: "Department of Neonatology",
+        description: "Dr. Nishad Plakkal is a renowned neonatologist and academic leader, currently serving as Additional Professor and Head of the Department of Neonatology at JIPMER, Puducherry. He also holds the role of Associate Dean (Research). Dr. Plakkal completed his MBBS and MD (Pediatrics) in India, followed by advanced residency and fellowship training in Neonatal-Perinatal Medicine in Alberta, Canada. His clinical and academic focus lies in continuous quality improvement, neonatal intensive care, and training the next generation of pediatric and neonatal clinicians. Dr. Plakkal plays a pivotal role in advancing research and care standards in neonatal medicine, both nationally and internationally.",
+        image: NishadPlakkalImg,
+      },
+    ],
   },
   {
-    slug: "hypertensive-disorders-pregnancy",
-    title: "Monitoring and management hypertensive disorders in Pregnancy",
-    icon: "ri-heart-2-line",
-    color: "bg-teal-500",
-    description: "Hypertensive disorders in pregnancy pose serious risks to both mother and baby. This theme focuses on developing medical technologies for effective monitoring and timely management to prevent complications. Solutions that enable early detection, continuous tracking, and better communication between patients and healthcare providers—especially in low-resource settings—can greatly improve maternal and fetal outcomes.",
-    image: remoteMonitoringImg,
-    challenges: [
-      "Early detection of hypertensive disorders in pregnancy",
-      "Continuous tracking of hypertensive disorders in pregnancy",
-      "Better communication between patients and healthcare providers"
+    slug: "disease-surveillance-outbreak-detection",
+    title: "Integrated Disease Surveillance and Outbreak Detection",
+    icon: "ri-radar-line",
+    color: "bg-yellow-500",
+    description: "This theme aims to enhance the capacity of health systems to detect, respond to, and manage infectious disease outbreaks with greater speed and precision. With the increasing threat of vector-borne and emerging infections like melioidosis, the focus is on real-time surveillance, early warning systems, and rapid, point-of-care diagnostic tools. Participants are encouraged to explore digital platforms for outbreak and vector monitoring, predictive models to identify disease hotspots, and integrated strategies for early intervention. By bridging surveillance with timely diagnosis and response, this theme envisions a future where outbreaks are contained swiftly, minimizing transmission and improving public health outcomes.",
+    focusPoints: [
+      "Early Warning Systems for Outbreak Detection and management",
+      "Surveillance, Prevention, and Diagnosis of Vector-Borne Diseases",
+      "Real-time outbreak and vector surveillance using digital tools",
+      "Rapid, point-of-care diagnostics for diseases like melioidosis",
+      "Prediction of disease hotspots"
     ],
-    resources: [], // Add relevant resources
-    tags: ["Pregnancy", "Hypertension", "Maternal Health"],
-    mentors: "", // Add relevant mentors
-    outcomes: "" // Add relevant outcomes
+    faculty: [
+      {
+        name: "Dr. Subitha L",
+        designation: "Department of Preventive and Social Medicine",
+        description: "Dr. Subitha L is an accomplished public health professional serving as Additional Professor in the Department of Preventive and Social Medicine. She holds MBBS, MD, and DNB qualifications. Her core areas of expertise include non-communicable diseases, public health nutrition, health promotion, and physical activity. Dr. Subitha has made significant contributions to the field through research, training, and policy-level engagement, with over 120 scientific publications to her credit. She continues to play a vital role in strengthening preventive healthcare systems and promoting sustainable health practices at the community and population levels.",
+        image: SubithaLImg,
+      },
+      {
+        name: "Dr. Hariswar P T",
+        designation: "Department of Medicine",
+        description: "Dr. Hariswar P T is an Assistant Professor in the Department of Medicine at JIPMER, Pondicherry, and a faculty member in the Medical Intensive Care Unit. He holds an MBBS and MD in Medicine, with a strong academic and clinical foundation in neuroimmunology, genetic disorders, sepsis, and antimicrobial stewardship. A graduate of Govt. Vellore Medical College , he completed his postgraduate training at JIPMER in 2020. He served as a Senior Resident in the Department of Medicine from August 2020 to November 2023 and underwent three years of intensive training in critical care. He joined JIPMER as faculty in December 2023 and has six publications to his credit.",
+        image: HariswarPTImg,
+      },
+    ],
   },
   {
     slug: "vision-health-children",
     title: "Innovative Screening Solutions for Vision Health in Children",
-    icon: "ri-eye-2-line",
-    color: "bg-cyan-500",
+    icon: "ri-eye-line",
+    color: "bg-green-500",
     description: "Early vision screening in children is vital to detect refractive errors, amblyopia, strabismus, and serious conditions like congenital glaucoma. Challenges include limited access, lack of awareness, and the need for specialized tools and training. This theme focuses on innovative, child-friendly screening solutions to enable timely detection and referral, improving long-term vision and developmental outcomes.",
-    image: medicalDeviceImg,
-    challenges: [
-      "Child-friendly vision screening solutions",
-      "Timely detection and referral for vision problems in children"
+    focusPoints: [
+      "Screening for refractive errors, amblyopia, and strabismus",
+      "Early detection of congenital and developmental eye diseases",
+      "Innovative methods for pediatric-friendly vision assessment",
+      "Improving access and follow-up in childhood eye care"
     ],
-    resources: [], // Add relevant resources
-    tags: ["Vision Health", "Pediatrics", "Screening"],
-    mentors: "", // Add relevant mentors
-    outcomes: "" // Add relevant outcomes
-  },
-  {
-    slug: "cancer-therapy-monitoring",
-    title: "Monitoring patients on Cancer Therapy and Prevention of its harmful sequelae",
-    icon: "ri-capsule-line",
-    color: "bg-orange-500",
-    description: "Cancer therapy is known to have a prolonged course which results in deleterious side effects including Hair loss, Anemia, Immunosuppression, Chronic Fatigue amongst others. Continuous monitoring of cancer therapy and models to predict and manage side effects will ensure better compliance to the therapy, improving patient outcomes.",
-    image: aiHealthcareImg,
-    challenges: [
-      "Continuous monitoring of cancer therapy",
-      "Models to predict and manage side effects of cancer therapy"
+    faculty: [
+      {
+        name: "Dr. Karthikeyan M",
+        designation: "Department of Opthalmology",
+        description: "Dr. Karthikeyan M is an Assistant Professor of Ophthalmology at JIPMER, Pondicherry. He completed his M.B.B.S from Thanjavur Medical College and MD Ophthalmology from the prestigious R.P. Centre, AIIMS New Delhi. He further specialized in Glaucoma, Pediatric Ophthalmology, and Neuro-ophthalmology, completing FAICO (Glaucoma) and senior residency at AIIMS. His research has earned him the “Shri Janardhan Prasad Glaucoma Award” and the Young Researcher Award 2023. As a mentor for INCUBATE, he brings expertise in childhood vision disorders, guiding innovations in early, accessible, and child-friendly screening solutions to improve pediatric eye health outcomes.",
+        image: KarthikeyanMImg,
+      },
     ],
-    resources: [], // Add relevant resources
-    tags: ["Cancer Therapy", "Patient Monitoring", "Oncology"],
-    mentors: "", // Add relevant mentors
-    outcomes: "" // Add relevant outcomes
-  },
-  {
-    slug: "minimally-invasive-surgery-devices",
-    title: "Smart devices for Minimally invasive Surgery",
-    icon: "ri-robot-line",
-    color: "bg-lime-500",
-    description: "Minimally invasive surgery is the new meta for most surgical operations due to bloodless surgical fields, lesser chances of SSI, lesser scarring and better recovery. As this is a new and developing field there is scope for innovating the devices used to perform such surgeries like Endoscopes, imaging devices and surgical instruments.",
-    image: remoteMonitoringImg,
-    challenges: [
-      "Innovating endoscopes",
-      "Innovating imaging devices for surgery",
-      "Innovating surgical instruments for minimally invasive surgery"
-    ],
-    resources: [], // Add relevant resources
-    tags: ["Minimally Invasive Surgery", "Surgical Devices", "MedTech"],
-    mentors: "", // Add relevant mentors
-    outcomes: "" // Add relevant outcomes
   },
   {
     slug: "clinical-trial-design",
     title: "Clinical Trial Design- Recruitment and Execution",
-    icon: "ri-clipboard-line",
-    color: "bg-emerald-500",
+    icon: "ri-flask-line",
+    color: "bg-blue-500",
     description: "Clinical trial success heavily depends on efficient recruitment and seamless execution. Challenges like low enrollment rates, high dropout, and protocol deviations often hinder progress. With growing emphasis on patient-centric approaches and streamlined processes, there is significant scope to innovate trial design and implementation methods to enhance participant engagement, compliance, and overall trial efficiency.",
-    image: medicalDeviceImg,
-    challenges: [
-      "Efficient recruitment for clinical trials",
-      "Seamless execution of clinical trials",
-      "Innovating trial design and implementation methods"
+    focusPoints: [
+      "Patient recruitment",
+      "Randomization",
+      "Long term follow up and prevention of non-compliance",
+      "Clinical trial tracker"
     ],
-    resources: [], // Add relevant resources
-    tags: ["Clinical Trials", "Research", "Healthcare Innovation"],
-    mentors: "", // Add relevant mentors
-    outcomes: "" // Add relevant outcomes
-  }
+    faculty: [
+      {
+        name: "Dr. Shuvadeep Ganguly",
+        designation: "Department of Medical Oncology",
+        description: "Dr. Shuvadeep Ganguly is an Assistant Professor in the Department of Medical Oncology at JIPMER, Puducherry. A distinguished alumnus of AIIMS, New Delhi, he holds a DM in Medical Oncology and has made significant contributions to cancer research and clinical care. His areas of interest include pediatric oncology, solid tumors, and evidence-based cancer management tailored to the Indian context. Dr. Ganguly has published extensively in reputed journals and advocates for India-specific treatment guidelines, especially in pediatric cancers like retinoblastoma. With a strong academic and clinical background, he continues to shape the future of oncology through teaching, research, and compassionate care.",
+        image: ShuvadeepGangulyImg,
+      },
+    ],
+  },
+  {
+    slug: "smart-surgery-safer-operating-theaters",
+    title: "Smart Surgery and Safer Operating Theaters",
+    icon: "ri-robot-line", // Changed from ri-scalpel-line
+    color: "bg-indigo-500",
+    description: "The evolution of surgery is being driven by advancements in minimally invasive techniques and smart operating environments. This theme brings together innovation in surgical tools, anesthesia safety, and intelligent operating room systems. Participants are encouraged to reimagine surgical instruments, endoscopic technologies, and integrated platforms that support precision and rapid recovery. Alongside, there is a focus on enhancing surgical safety through real-time monitoring, better team coordination, and smart anesthesia delivery and vigilance systems. By bridging surgical innovation with perioperative safety, this theme aims to transform patient outcomes and redefine how surgeries are performed in the future.",
+    focusPoints: [
+      "Innovative tools and imaging systems for minimally invasive surgery",
+      "Smart anesthesia monitoring and delivery technologies",
+      "Integrated OR platforms for workflow efficiency and safety",
+      "AI-driven systems for surgical error prevention and decision support"
+    ],
+    faculty: [
+      {
+        name: "Dr. M. S. Gopalakrishnan",
+        designation: "Department of Neurosurgery",
+        description: "Dr. M. S. Gopalakrishnan is a distinguished neurosurgeon, serving as Professor in the Department of Neurosurgery. With academic credentials including MBBS, MS in General Surgery, MCh in Neurosurgery, and DNB in Neurosurgery, he brings decades of clinical and academic excellence to his practice. His clinical interests span across brain tumors, neurotrauma, vascular neurosurgery, and movement disorders. An active contributor to neurosurgical research, Dr. Gopalakrishnan has co-authored several notable publications, including studies on decompressive craniectomy and spinal aneurysms, with articles published in Frontiers in Neurology and Journal of Neurosurgery: Spine.",
+        image: MSGopalakrishnanImg,
+      },
+      {
+        name: "Dr. Arpitha Anantharaju",
+        designation: "Department of Obstetrics and Gynaecology",
+        description: "Dr. Arpitha Anantharaju is an Associate Professor in Obstetrics and Gynaecology with an MCh in Gynaecologic Oncology. Her clinical interests include cytoreductive surgery, preventive and palliative cancer care, and reproductive outcomes in oncology. She has published extensively on topics such as endometriosis-related malignancies, chemo-resistant gestational neoplasms, and HPV vaccination. A committed academician and clinician, she continues to make impactful contributions to women's health and gynecologic oncology.",
+        image: ArpithaAnantharajuImg,
+      },
+    ],
+  },
+  {
+    slug: "hypertensive-disorders-pregnancy",
+    title: "Monitoring and management of hypertensive disorders in Pregnancy",
+    icon: "ri-women-line",
+    color: "bg-purple-500",
+    description: "Hypertensive disorders in pregnancy pose serious risks to both mother and baby. This theme focuses on developing medical technologies for effective monitoring and timely management to prevent complications. Solutions that enable early detection, continuous tracking, and better communication between patients and healthcare providers—especially in low-resource settings—can greatly improve maternal and fetal outcomes.",
+    focusPoints: [
+      "Early risk stratification and screening",
+      "Remote and continuous blood pressure monitoring",
+      "Integrated maternal-fetal monitoring platforms",
+      "Novel technology for point of care diagnosis and risk stratification for Pre-eclampsia",
+      "Clinical decision support for timely intervention",
+      "Patient education and self-management tools"
+    ],
+    faculty: [
+      {
+        name: "Dr. Sasirekha Rengaraj",
+        designation: "Department of Obstetrics and Gynaecology",
+        description: "Dr. Sasirekha R is a Professor in the Department of Obstetrics and Gynaecology at JIPMER, with a keen focus on high-risk pregnancy care, obstetric medicine, emergency obstetrics, and quality improvement in maternal health. She is actively involved in clinical services, including a dedicated postnatal clinic, and has contributed extensively to academic research with 19 publications in national and international journals. Her work spans a wide range of topics, including hypertensive disorders in pregnancy, maternal outcomes in twin gestations, and atypical clinical presentations in obstetrics. Dr. Sasirekha is known for her patient-centered approach and dedication to improving maternal and perinatal outcomes.",
+        image: SasirekhaRengarajImg,
+      },
+    ],
+  },
+  {
+    slug: "pharmacovigilance-cancer-treatment",
+    title: "Integrated Systems for Pharmacovigilance and Patient Safety in Cancer Treatment and Toxicity Management",
+    icon: "ri-capsule-line",
+    color: "bg-teal-500",
+    description: "Cancer treatment often involves a combination of chemotherapy, radiotherapy, targeted therapy, and surgery—each with its own spectrum of adverse effects. From acute reactions like nausea, immunosuppression, and dermatological toxicities to long-term complications such as neuropathy, cardiotoxicity, infertility, and psychological distress, patients face a complex therapeutic journey. This theme emphasizes the need for integrated systems to monitor, predict, and manage these adverse outcomes in real-time. Innovations in pharmacovigilance, personalized risk assessment, and long-term survivorship care can enhance treatment safety, patient compliance, and overall quality of life across all oncological specialties.",
+    focusPoints: [
+      "Real-time monitoring of adverse effects from chemotherapy, radiation, and surgery",
+      "Dermatological pharmacovigilance for skin-related toxicities",
+      "Predictive models for patient-specific side-effect risks",
+      "Management of long-term sequelae and survivorship care",
+      "Integrated tools for tracking and reporting across therapy modalities"
+    ],
+    faculty: [
+      {
+        name: "Dr. Swaminathan K",
+        designation: "Department of Medical Oncology",
+        description: "Dr. Swaminathan K is an Assistant Professor in the Department of Medical Oncology at JIPMER, specializing in pediatric oncology. With an MD in Pediatrics and a DM in Pediatric Oncology, his key areas of interest include pediatric leukemias, neuroblastomas, brain tumors, sarcomas, and supportive care. He conducts Friday OPDs and leads specialty clinics for pediatric cancers. Actively involved in national academic circles, he serves on the NHL subcommittee of the Indian Pediatric Hematology Oncology Group (InPHOG) and was Joint Organizing Secretary of PHOCON 2023.",
+        image: SwaminathanKImg,
+      },
+    ],
+  },
+  {
+    slug: "low-cost-cpr-innovation",
+    title: "Low-Cost Innovation for Cardiopulmonary Resuscitation (CPR)",
+    icon: "ri-heart-pulse-line",
+    color: "bg-orange-500",
+    description: "This theme focuses on developing low-cost devices and software solutions to enhance the delivery, assessment, and monitoring of Cardiopulmonary Resuscitation (CPR) across all age groups—infants, children, and adults. It aims to support both real-life emergency scenarios and training simulations. Innovations may include tools for real-time feedback during CPR, mobile apps for recording and guiding interventions, or cost-effective manikins and sensors for simulation-based education. By enabling better assessment, timely interventions, and process monitoring, these solutions can improve outcomes in critical situations while making CPR training more accessible and effective, especially in resource-constrained settings.",
+    focusPoints: [
+      "Affordable real-time feedback systems to monitor compression depth, rate, and recoil",
+      "Mobile applications for CPR guidance, performance tracking, and data recording",
+      "Low-cost CPR training manikins with embedded sensors for simulation",
+      "Devices or software for pediatric- and age-specific CPR adaptation",
+      "Tools for remote CPR training and certification in resource-limited areas"
+    ],
+    faculty: [
+      {
+        name: "Dr. Sivamurukan Palaniswamy",
+        designation: "Department of Paediatrics",
+        description: "Dr Sivamurukan Palanisamy is an Assistant Professor in the Department of Pediatrics, JIPMER. Having completed his DM in Pediatric Critical Care, he is passionate about finding innovative and cost effective interventions in critical care and the ICU. Having worked with UG students for ICMR and other research projects, he is excited to mentor the budding doctors and engineers and nurture their ideas to improve healthcare.",
+        image: SivamurukanPalaniswamyImg,
+      },
+    ],
+  },
+  {
+    slug: "cardiovascular-cerebrovascular-diseases",
+    title: "Innovative Technologies for Early Detection and Long-Term Management of Cardiovascular and Cerebrovascular Diseases",
+    icon: "ri-heart-3-line", // Changed from ri-brain-line
+    color: "bg-cyan-500",
+    description: "Cardiovascular and cerebrovascular diseases—such as congenital heart defects, coronary artery disease (CAD), and stroke—pose major public health challenges. This theme invites innovation in specific, high-impact areas: early detection of heart and vascular conditions, rapid response systems for stroke and chest pain, and tools for long-term monitoring and rehabilitation. Emphasis is placed on low-cost, accessible solutions tailored for underserved settings. From screening murmurs and interpreting ECGs to post-stroke recovery and CAD follow-up, participants can target clearly defined problems using technology to improve patient outcomes across all age groups.",
+    focusPoints: [
+      "Early screening tools for congenital and acquired heart diseases",
+      "Digital triage and referral systems for acute chest pain and stroke",
+      "Low-cost, point-of-care diagnostics for CAD and cerebrovascular risk factors",
+      "Post-event rehabilitation and lifestyle monitoring for stroke and MI survivors",
+      "Vascular health innovations: limb ischemia detection, diabetic foot care, etc."
+    ],
+    faculty: [
+      {
+        name: "Dr. Bhagwati prasad pant",
+        designation: "Department of Cardiology",
+        description: "Dr. Bhagwati Pant is an Assistant Professor in the Department of Cardiology with a strong foundation in adult cardiology and interventional techniques. His core interests lie in structural heart disease, complex coronary interventions, coronary imaging, and heart failure management. Having completed his DM Cardiology residency at JIPMER (2018–2021), he went on to pursue a Post-Doctoral Fellowship in Adult Cardiology and Interventions at SCTIMST, Thiruvananthapuram in 2022. He joined as Assistant Professor of Cardiology at MGMCRI, Pondicherry in 2023. Dr. Pant is actively engaged in clinical research and continues to contribute to advancements in interventional and diagnostic cardiology.",
+        image: BhagwatiPrasadPantImg,
+      },
+    ],
+  },
 ];
-
-export type Theme = (typeof themesData)[0];

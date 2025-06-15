@@ -132,20 +132,20 @@ const Timeline = () => {
 
 							{/* Prelims Section (Steps 1-4) */}
 							<motion.div
-								className="absolute top-1/2 left-0 h-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-l-full transform -translate-y-1/2"
+								className="absolute top-1/2 left-0 h-3 bg-gradient-to-r from-purple-500 to-purple-700 rounded-l-full transform -translate-y-1/2"
 								initial={{ width: 0 }}
 								whileInView={{ width: "calc(100% * 4 / 6)" }} // 4 out of 6 steps
 								transition={{ duration: 1, ease: "easeInOut" }}
 								viewport={{ once: true }}
 							>
-								<span className="absolute -top-7 left-1/2 -translate-x-1/2 text-xs font-medium text-blue-700 dark:text-blue-300 whitespace-nowrap">
+								<span className="absolute -top-7 left-1/2 -translate-x-1/2 text-xs font-medium text-purple-600 dark:text-purple-400 whitespace-nowrap">
 									Prelims (Steps 1-4)
 								</span>
 							</motion.div>
 
 							{/* Finals Section (Steps 5-6) */}
 							<motion.div
-								className="absolute top-1/2 right-0 h-3 bg-gradient-to-l from-purple-500 to-pink-500 rounded-r-full transform -translate-y-1/2"
+								className="absolute top-1/2 right-0 h-3 bg-gradient-to-l from-green-500 to-green-700 rounded-r-full transform -translate-y-1/2"
 								initial={{ width: 0 }}
 								whileInView={{ width: "calc(100% * 2 / 6)" }} // 2 out of 6 steps
 								transition={{
@@ -155,12 +155,75 @@ const Timeline = () => {
 								}}
 								viewport={{ once: true }}
 							>
-								<span className="absolute -top-7 left-1/2 -translate-x-1/2 text-xs font-medium text-purple-700 dark:text-purple-300 whitespace-nowrap">
+								<span className="absolute -top-7 left-1/2 -translate-x-1/2 text-xs font-medium text-green-600 dark:text-green-400 whitespace-nowrap">
 									Finals (Steps 5-6)
 								</span>
 							</motion.div>
 						</div>
 					</div>
+					{/* Hackathon Stages Section */}
+				<motion.div
+					className="mt-20" // Add margin top to separate from the process flowchart
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.8, delay: 0.5 }} // Adjust delay as needed
+					viewport={{ once: true }}
+				>
+					{/* <h3 className="text-2xl md:text-3xl font-bold mb-12 text-center dark:text-white text-glow">
+						Hackathon Stages
+					</h3> */}
+					<div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-start">
+						{/* Stage 1 Card */}
+						<motion.div
+							className="backdrop-blur-sm bg-white/80 dark:bg-gray-800/80 rounded-xl p-8 shadow-xl hover:shadow-glow border border-purple-300 dark:border-purple-700 relative overflow-hidden scanner-line"
+							whileHover={{ y: -5, scale: 1.02 }}
+							transition={{ type: "spring", stiffness: 300 }}
+						>
+							<div className="absolute inset-0 digital-noise opacity-5"></div>
+							<div className="relative z-10">
+								<div className="flex items-center mb-4">
+									<span className="text-3xl font-bold text-purple-600 dark:text-purple-400 mr-3">
+										1
+									</span>
+									<h4 className="text-xl font-semibold text-gray-800 dark:text-white">
+										Online Prelims
+									</h4>
+								</div>
+								<p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
+									June - July
+								</p>
+								<p className="text-gray-700 dark:text-gray-300">
+									Proposal submission and initial screening.
+								</p>
+							</div>
+						</motion.div>
+
+						{/* Stage 2 Card */}
+						<motion.div
+							className="backdrop-blur-sm bg-white/80 dark:bg-gray-800/80 rounded-xl p-8 shadow-xl hover:shadow-glow border border-green-300 dark:border-green-700 relative overflow-hidden scanner-line"
+							whileHover={{ y: -5, scale: 1.02 }}
+							transition={{ type: "spring", stiffness: 300 }}
+						>
+							<div className="absolute inset-0 digital-noise opacity-5"></div>
+							<div className="relative z-10">
+								<div className="flex items-center mb-4">
+									<span className="text-3xl font-bold text-green-600 dark:text-green-400 mr-3">
+										2
+									</span>
+									<h4 className="text-xl font-semibold text-gray-800 dark:text-white">
+										Offline Finals
+									</h4>
+								</div>
+								<p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
+									August - October
+								</p>
+								<p className="text-gray-700 dark:text-gray-300">
+									Prototype submission and final presentations for selected teams.
+								</p>
+							</div>
+						</motion.div>
+					</div>
+				</motion.div>
 				</div>
 			</div>
 		</section>

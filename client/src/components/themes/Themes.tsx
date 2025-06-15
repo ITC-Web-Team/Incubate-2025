@@ -30,6 +30,10 @@ const Themes = () => {
                 <i className="ri-check-line text-primary dark:text-blue-400 mr-2 mt-1"></i>
                 <span>A team cannot submit more than one proposal for a given theme.</span>
               </li>
+              <li className="flex items-start">
+                <i className="ri-check-line text-primary dark:text-blue-400 mr-2 mt-1"></i>
+                <span>You can choose problem statements beyond the focus points. They stand the same chance of qualifying. Focus point are to aid those who may not be familiar with the themes.</span>
+              </li>
             </ul>
           </div>
         </div>
@@ -43,13 +47,6 @@ const Themes = () => {
               icon={theme.icon}
               color={theme.color}
               description={theme.description}
-              // mentors={theme.mentors}
-              // outcomes={theme.outcomes}
-              // image={theme.image}
-              // challenges={theme.challenges}
-              // resources={theme.resources}
-              tags={theme.tags}
-              // difficulty={theme.difficulty as "Beginner" | "Intermediate" | "Advanced"}
               slug={theme.slug}
               clickable={true}
             />
