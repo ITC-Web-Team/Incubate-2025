@@ -27,7 +27,7 @@ const AboutEvent = () => {
               <i className="ri-team-line text-2xl text-primary dark:text-blue-400"></i>
             </div>
             <h3 className="text-xl font-bold mb-3 dark:text-white">Collaboration</h3>
-            <p className="text-gray-600 dark:text-gray-400">Form a team of 2-4 with minimum one student from engineering and medical background to solve real-world healthcare challenges.</p>
+            <p className="text-gray-600 dark:text-gray-400">Form a team of 2-4 with minimum one student from engineering and medical background each to solve real-world healthcare challenges.</p>
           </div>
           
           <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-lg transition duration-300">
@@ -46,6 +46,23 @@ const AboutEvent = () => {
             <p className="text-gray-600 dark:text-gray-400">Get guidance from industry experts and faculty mentors from JIPMER and IIT Bombay throughout the hackathon process.</p>
           </div>
         </div>
+
+        {/* YouTube Video Section */}
+        <div className="mt-16 md:mt-24">
+          <h3 className="text-2xl md:text-3xl font-bold text-center mb-8 dark:text-white">Incubate Announcement Video</h3>
+            <div className="aspect-w-16 aspect-h-9 max-w-3xl mx-auto bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden shadow-xl">
+            <iframe 
+              className="w-full h-full min-h-[350px]"
+              src="https://www.youtube.com/embed/YTUmorKDUoY?si=EuhZI2GV5vg307Gu"
+              title="YouTube video player" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerPolicy="strict-origin-when-cross-origin" 
+              allowFullScreen
+            ></iframe>
+            </div>
+        </div>
+
       </div>
     </section>
   );

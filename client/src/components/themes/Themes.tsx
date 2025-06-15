@@ -1,5 +1,7 @@
 import ThemeCard from "./ThemeCard";
 import { themesData } from "@/data/themesData";
+import { iitBombayMentors } from "@/data/facultyData"; // Import IITB mentors
+import FacultyMentorCard from "./FacultyMentorCard"; // Import the new card component
 
 const Themes = () => {
   return (
@@ -9,7 +11,7 @@ const Themes = () => {
         
         <div className="max-w-3xl mx-auto mb-16">
           <p className="text-center text-lg text-gray-700 dark:text-gray-300 mb-8">
-            Faculty from JIPMER and IIT-B have co-curated these 12 themes based on scope for innovation, clinical relevance and ease of identification of problem statements.
+            Faculty from JIPMER and IIT-B have co-curated these 10 themes based on scope for innovation, clinical relevance and ease of identification of problem statements.
           </p>
           
           <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md">
@@ -38,6 +40,11 @@ const Themes = () => {
           </div>
         </div>
         
+        {/* Add instructional text here */}
+        <p className="text-center text-md text-gray-600 dark:text-gray-400 mb-8">
+          Click on any theme card to explore more details.
+        </p>
+
         {/* Theme cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {themesData.map((theme, index) => (
@@ -52,6 +59,17 @@ const Themes = () => {
             />
           ))}
         </div>
+
+        {/* IIT Bombay Faculty Mentors Section */}
+        <div className="mt-16 md:mt-24">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center dark:text-white">IIT Bombay Faculty Mentors</h2>
+          <div className="max-w-5xl mx-auto space-y-12">
+            {iitBombayMentors.map((mentor, index) => (
+              <FacultyMentorCard key={index} mentor={mentor} />
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   );

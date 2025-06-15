@@ -10,7 +10,7 @@ const AnnouncementBanner = () => {
       <div className="container mx-auto flex items-center justify-center">
         <span className="inline-block animate-pulse mr-2">🔔</span>
         <p className="font-medium">
-          Registration opens on June 25th! Stay tuned! National-level MedTech Hackathon with prizes worth ₹2,15,000
+          Registration opens on June 25th! Stay tuned! National-level MedTech Hackathon
         </p>
         <button 
           onClick={() => setIsVisible(false)}

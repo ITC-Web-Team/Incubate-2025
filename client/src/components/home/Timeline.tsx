@@ -7,7 +7,7 @@ const timelineData = [
 		description: "",
 	},
 	{
-		date: "25st June",
+		date: "25th June",
 		title: "Registrations Open",
 		description: "",
 	},

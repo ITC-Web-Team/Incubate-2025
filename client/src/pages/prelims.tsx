@@ -19,7 +19,7 @@ const PrelimsPage = () => {
   const importantDates = [
     { text: "Announcement of Themes: June 15th", icon: <FaCalendarAlt className="text-primary dark:text-accent-dark" /> },
     { text: "Registrations open: June 25th", icon: <FaCalendarAlt className="text-primary dark:text-accent-dark" /> },
-    { text: "Last date for submission of proposal: July 31st", icon: <FaCalendarAlt className="text-primary dark:text-accent-dark" /> },
+    { text: "Last date for submission of proposal and video: July 31st", icon: <FaCalendarAlt className="text-primary dark:text-accent-dark" /> },
   ];
 
   const submissionProposalPoints = [
@@ -42,6 +42,17 @@ const PrelimsPage = () => {
     "It should be uploaded to YouTube as an unlisted video.",
     "The link of the same is to be shared with us along with the proposal via the Submission Form that will be released on the website.",
     "Format for title: <Theme Number> <Registration ID>",
+    <>
+      <span >Steps to submit unlisted video:</span>{" "}
+      <a
+        href="https://youtu.be/wCxqvz9VZic?si=AKtGq3FWok67gcNl"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-primary underline hover:text-secondary"
+      >
+        How To Upload Unlisted YouTube Videos (Full Guide)
+      </a>
+    </>,
   ];
 
   const judgingCriteria = [

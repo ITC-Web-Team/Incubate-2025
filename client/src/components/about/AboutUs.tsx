@@ -3,6 +3,9 @@ import OrganizationCard from "./OrganizationCard";
 import { organizationsData } from "@/data/organizationsData";
 
 const AboutUs = () => {
+  // Define the organizations for the second row
+  const secondRowOrgs = [organizationsData[4], organizationsData[3]]; // KCDH, ITC
+
   return (
     <section className="py-16 bg-gradient-to-b from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 digital-noise relative overflow-hidden">
       {/* Circuit background elements */}
@@ -32,10 +35,10 @@ const AboutUs = () => {
         </motion.h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-          {/* First row: JUSRC and JIPMER */}
+          {/* First row: JIPMER and IIT Bombay */}
           {organizationsData.slice(0, 2).map((org, index) => (
             <motion.div
-              key={index}
+              key={org.title} // Use a unique key like title
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
@@ -54,13 +57,13 @@ const AboutUs = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-          {/* Second row: IIT Bombay and Institute Technical Council */}
-          {organizationsData.slice(2, 4).map((org, index) => (
+          {/* Second row: KCDH and Institute Technical Council (ITC) */}
+          {secondRowOrgs.map((org, index) => (
             <motion.div
-              key={index}
+              key={org.title} // Use a unique key like title
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 + 0.4 }}
+              transition={{ duration: 0.5, delay: index * 0.2 + 0.4 }} // Animation delay starts after first row
               viewport={{ once: true }}
             >
               <OrganizationCard 
@@ -76,21 +79,23 @@ const AboutUs = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:w-1/2 mx-auto">
-          {/* Third row: KCDH */}
+          {/* Third row: JUSRC */}
+          {/* organizationsData[2] is JUSRC */}
           <motion.div
+            key={organizationsData[2].title} // Use a unique key
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.8 }}
+            transition={{ duration: 0.5, delay: 0.8 }} // Animation delay after second row
             viewport={{ once: true }}
-            className="md:col-span-2"
+            className="md:col-span-2" // Make it span full width in its grid context
           >
             <OrganizationCard 
-              title={organizationsData[4].title}
-              subtitle={organizationsData[4].subtitle}
-              description={organizationsData[4].description}
-              socialLinks={organizationsData[4].socialLinks}
-              contacts={organizationsData[4].contacts}
-              logo={organizationsData[4].logo}
+              title={organizationsData[2].title}
+              subtitle={organizationsData[2].subtitle}
+              description={organizationsData[2].description}
+              socialLinks={organizationsData[2].socialLinks}
+              contacts={organizationsData[2].contacts}
+              logo={organizationsData[2].logo}
             />
           </motion.div>
         </div>
