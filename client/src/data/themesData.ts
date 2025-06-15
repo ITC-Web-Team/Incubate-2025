@@ -265,12 +265,12 @@ export const themesData: ThemeData[] = [
       "Gaps in continuity of care after surgery or intervention"
     ],
     faculty: [
-      {
-        name: "Dr. Bhagwati prasad pant",
-        designation: "Department of Cardiology",
-        description: "Dr. Bhagwati Pant is an Assistant Professor in the Department of Cardiology with a strong foundation in adult cardiology and interventional techniques. His core interests lie in structural heart disease, complex coronary interventions, coronary imaging, and heart failure management. Having completed his DM Cardiology residency at JIPMER (2018–2021), he went on to pursue a Post-Doctoral Fellowship in Adult Cardiology and Interventions at SCTIMST, Thiruvananthapuram in 2022. Dr. Pant is actively engaged in clinical research and continues to contribute to advancements in interventional and diagnostic cardiology.",
-        image: BhagwatiPrasadPantImg,
-      },
+      // {
+      //   name: "Dr. Bhagwati prasad pant",
+      //   designation: "Department of Cardiology",
+      //   description: "Dr. Bhagwati Pant is an Assistant Professor in the Department of Cardiology with a strong foundation in adult cardiology and interventional techniques. His core interests lie in structural heart disease, complex coronary interventions, coronary imaging, and heart failure management. Having completed his DM Cardiology residency at JIPMER (2018–2021), he went on to pursue a Post-Doctoral Fellowship in Adult Cardiology and Interventions at SCTIMST, Thiruvananthapuram in 2022. Dr. Pant is actively engaged in clinical research and continues to contribute to advancements in interventional and diagnostic cardiology.",
+      //   image: BhagwatiPrasadPantImg,
+      // },
     ],
   },
 ];
