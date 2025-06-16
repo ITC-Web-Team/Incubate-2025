@@ -169,6 +169,24 @@ const PrelimsPage = () => {
           </div>
         </section>
 
+        {/* Hackathon Format Video Section */}
+        <section className="bg-background-card dark:bg-gray-800 shadow-2xl rounded-xl p-6 md:p-10 transition-shadow duration-300 hover:shadow-lg">
+          <h2 className="text-3xl font-semibold text-secondary dark:text-secondary-dark mb-8 text-center">
+            Incubate Hackathon Format
+          </h2>
+          <div className="aspect-w-16 aspect-h-9 max-w-3xl mx-auto bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden shadow-xl">
+            <iframe 
+              className="w-full h-full min-h-[350px]"
+              src="https://www.youtube.com/embed/f9k5LirF-t4?si=o1LBuJv5GANMNd8U"
+              title="Incubate Hackathon Format Video" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerPolicy="strict-origin-when-cross-origin" 
+              allowFullScreen
+            ></iframe>
+          </div>
+        </section>
+
         {/* Judging Criteria Section */}
         <section className="bg-background-card dark:bg-gray-800 shadow-2xl rounded-xl p-6 md:p-10 transition-shadow duration-300 hover:shadow-lg">
           <h2 className="text-3xl font-semibold text-secondary dark:text-secondary-dark mb-8 text-center">
