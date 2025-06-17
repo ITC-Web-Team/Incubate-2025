@@ -57,6 +57,8 @@ const Themes = () => {
               description={theme.description}
               slug={theme.slug}
               clickable={true}
+              videoId={theme.videoId}
+
             />
           ))}
         </div>

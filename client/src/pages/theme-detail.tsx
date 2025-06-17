@@ -31,7 +31,25 @@ export default function ThemeDetailPage({ params }: { params: { slug: string } }
         <div className="w-full max-w-3xl mb-10">
           <ThemeCard {...theme} clickable={false} />
         </div>
-
+        {/* Theme Video Section */}
+{theme.videoId && (
+  <div className="mt-2 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl p-6 md:p-8 shadow-xl w-full max-w-3xl mb-10">
+    <h2 className="text-2xl md:text-3xl font-bold mb-6 text-blue-700 dark:text-blue-300 border-b pb-3 border-blue-200 dark:border-blue-700">
+      Theme Video
+    </h2>
+    <div className="w-full rounded-lg overflow-hidden shadow-lg relative" style={{ aspectRatio: "16/9", minHeight: "320px" }}>
+  <iframe
+    src={`https://www.youtube.com/embed/${theme.videoId}`}
+    title="YouTube video player"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerPolicy="strict-origin-when-cross-origin"
+    allowFullScreen
+    className="w-full h-full"
+  ></iframe>
+</div>
+  </div>
+)}
         {/* Focus Points Section */}
         {theme.focusPoints && theme.focusPoints.length > 0 && (
           <div className="mt-2 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl p-6 md:p-8 shadow-xl w-full max-w-3xl mb-10">
