@@ -8,6 +8,8 @@ interface ThemeCardProps {
   description: string;
   slug?: string;
   clickable?: boolean;
+  videoId?: string;
+
 }
 
 const ThemeCard = ({
@@ -16,7 +18,8 @@ const ThemeCard = ({
   color,
   description,
   slug,
-  clickable = false
+  clickable = false,
+  videoId
 }: ThemeCardProps) => {
   const cardContent = (
     <motion.div 
@@ -67,12 +70,18 @@ const ThemeCard = ({
             </p>
           </div>
         </div>
-        {/* Video Coming Soon Placeholder */}
-        <div className="mt-auto pt-4 border-t border-gray-200 dark:border-gray-700 text-center">
-          <p className="text-sm text-gray-500 dark:text-gray-400 italic">
-            <i className="ri-movie-2-line mr-2"></i>Video coming soon
-          </p>
-        </div>
+       {/* Video Status */}
+    <div className="mt-auto pt-4 border-t border-gray-200 dark:border-gray-700 text-center">
+      {videoId ? (
+    <p className="text-sm text-blue-600 dark:text-blue-400 font-medium flex items-center justify-center">
+      <i className="ri-play-circle-line mr-2 text-lg"></i>
+    </p>
+  ) : (
+    <p className="text-sm text-gray-500 dark:text-gray-400 italic flex items-center justify-center">
+      <i className="ri-movie-2-line mr-2"></i>Video coming soon
+    </p>
+  )}
+</div>
       </div>
     </motion.div>
   );

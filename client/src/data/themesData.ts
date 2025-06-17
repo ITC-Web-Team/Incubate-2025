@@ -34,6 +34,7 @@ export interface ThemeData {
   mentors?: string;
   outcomes?: string;
   difficulty?: "Beginner" | "Intermediate" | "Advanced";
+  videoId?: string;
 }
 
 export const themesData: ThemeData[] = [
@@ -62,7 +63,7 @@ export const themesData: ThemeData[] = [
   {
     slug: "neonatal-infant-care",
     title: "Neonatal and Infant Care Technologies",
-    icon: "ri-heart-pulse-line", // Changed from ri-baby-line
+    icon: "ri-hospital-line", // Changed from ri-baby-line
     color: "bg-pink-500",
     description: "Neonates, particularly preterm and low-birth-weight infants, are highly vulnerable to temperature instability, infections, and inadequate nutrition. This theme focuses on innovative technologies that support essential interventions like Kangaroo Mother Care (KMC), breastfeeding, sepsis detection, thermoregulation, and hygiene. By addressing critical challenges in neonatal care—such as early sepsis identification, maintaining warmth, monitoring umbilical flow, and improving feeding and sanitation—this theme offers vast potential to reduce neonatal mortality and enhance the quality of care in resource-limited settings.",
     focusPoints: [
@@ -87,6 +88,8 @@ export const themesData: ThemeData[] = [
         image: NishadPlakkalImg,
       },
     ],
+    videoId: "amB08lm3TLs",
+
   },
   {
     slug: "disease-surveillance-outbreak-detection",
