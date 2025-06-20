@@ -121,15 +121,16 @@ export const themesData: ThemeData[] = [
   },
   {
     slug: "vision-health-children",
-    title: "Innovative Screening Solutions for Vision Health in Children",
+    title: "Smart screening for Ocular diseases",
     icon: "ri-eye-line",
     color: "bg-green-500",
-    description: "Early vision screening in children is vital to detect refractive errors, amblyopia, strabismus, and serious conditions like congenital glaucoma. Challenges include limited access, lack of awareness, and the need for specialized tools and training. This theme focuses on innovative, child-friendly screening solutions to enable timely detection and referral, improving long-term vision and developmental outcomes.",
+    description: `Ocular diseases such as refractive errors, cataract, and glaucoma are leading causes of visual impairment and blindness, yet many remain undiagnosed due to barriers like poor access, lack of awareness, and shortage of trained personnel. Early detection plays a critical role in preventing irreversible vision loss and improving quality of life. This theme focuses on innovative, accessible, and scalable screening solutions that leverage technology to detect ocular diseases at earlier stages, particularly in underserved and rural communities enabling timely intervention and improved eye health outcomes.`,
     focusPoints: [
-      "Screening for refractive errors, amblyopia, and strabismus",
+      "Smart tools for refractive error screening in community and primary care settings",
+      "Early detection technologies for cataract, including portable slit-lamp alternatives and AI-based image analysis",
+      "Affordable, automated methods for glaucoma screening, including IOP monitoring and optic nerve imaging",
       "Early detection of congenital and developmental eye diseases",
-      "Innovative methods for pediatric-friendly vision assessment",
-      "Improving access and follow-up in childhood eye care"
+      "Innovative methods for pediatric-friendly vision assessment"
     ],
     faculty: [
       {
@@ -269,12 +270,25 @@ export const themesData: ThemeData[] = [
       "Gaps in continuity of care after surgery or intervention"
     ],
     faculty: [
-      // {
-      //   name: "Dr. Bhagwati prasad pant",
-      //   designation: "Department of Cardiology",
-      //   description: "Dr. Bhagwati Pant is an Assistant Professor in the Department of Cardiology with a strong foundation in adult cardiology and interventional techniques. His core interests lie in structural heart disease, complex coronary interventions, coronary imaging, and heart failure management. Having completed his DM Cardiology residency at JIPMER (2018–2021), he went on to pursue a Post-Doctoral Fellowship in Adult Cardiology and Interventions at SCTIMST, Thiruvananthapuram in 2022. Dr. Pant is actively engaged in clinical research and continues to contribute to advancements in interventional and diagnostic cardiology.",
-      //   image: BhagwatiPrasadPantImg,
-      // },
+      {
+        name: "Dr. Bhagwati prasad pant",
+        designation: "Department of Cardiology",
+        description: "Dr. Bhagwati Pant is an Assistant Professor in the Department of Cardiology with a strong foundation in adult cardiology and interventional techniques. His core interests lie in structural heart disease, complex coronary interventions, coronary imaging, and heart failure management. Having completed his DM Cardiology residency at JIPMER (2018–2021), he went on to pursue a Post-Doctoral Fellowship in Adult Cardiology and Interventions at SCTIMST, Thiruvananthapuram in 2022. Dr. Pant is actively engaged in clinical research and continues to contribute to advancements in interventional and diagnostic cardiology.",
+        image: BhagwatiPrasadPantImg,
+      },
     ],
   },
 ];
+
+// Export all unique JIPMER faculty mentors from all themes
+export const jipmerMentors: FacultyMember[] = (() => {
+  const allMentors = ([] as FacultyMember[]).concat(
+    ...themesData.map(theme => theme.faculty || [])
+  );
+  const seen = new Set<string>();
+  return allMentors.filter(mentor => {
+    if (!mentor || seen.has(mentor.name)) return false;
+    seen.add(mentor.name);
+    return true;
+  });
+})();
