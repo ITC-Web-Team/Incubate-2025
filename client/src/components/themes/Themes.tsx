@@ -1,8 +1,9 @@
 import ThemeCard from "./ThemeCard";
-import { themesData } from "@/data/themesData";
-import { iitBombayMentors } from "@/data/facultyData"; // Keep this import
-import FacultyMentorCard from "./FacultyMentorCard"; // Keep this import
-// import IITBMentorsCard from "./IITBMentorsCard"; // Remove this import, as we are not using the single collapsible card
+import { themesData, jipmerMentors } from "@/data/themesData";
+import { iitBombayMentors } from "@/data/facultyData";
+import FacultyMentorCard from "./FacultyMentorCard";
+import jipmerLogo from "@/assets/jipmer-logo.png";
+import iitbLogo from "@/assets/iitb-logo.png";
 
 const Themes = () => {
   return (
@@ -63,13 +64,33 @@ const Themes = () => {
           ))}
         </div>
 
-        {/* IIT Bombay Faculty Mentors Section - Reverted to individual cards */}
+        {/* Faculty Mentors Section with JIPMER and IIT Bombay Logos and Cards (stacked vertically, heading right of logo) */}
         <div className="mt-16 md:mt-24">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center dark:text-white">IIT Bombay Faculty Mentors</h2>
-          <div className="max-w-5xl mx-auto space-y-12">
-            {iitBombayMentors.map((mentor, index) => (
-              <FacultyMentorCard key={index} mentor={mentor} />
-            ))}
+          {/* JIPMER Icon & Label Row */}
+          <div className="flex items-center justify-center mb-8">
+            <img src={jipmerLogo} alt="JIPMER Logo" className="w-20 h-20 mr-4" />
+            <span className="text-2xl md:text-3xl font-bold text-blue-700 dark:text-blue-300">JIPMER Faculty Mentors</span>
+          </div>
+          <div className="max-w-5xl mx-auto mb-16">
+            <div className="space-y-8">
+              {jipmerMentors.map((mentor, idx) => (
+                <FacultyMentorCard key={idx} mentor={mentor} />
+              ))}
+            </div>
+          </div>
+          {/* IIT Bombay Icon & Label Row */}
+            <div className="flex items-center justify-center mb-8">
+            <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center mr-4 shadow">
+              <img src={iitbLogo} alt="IIT Bombay Logo" className="w-16 h-16 object-contain rounded-full" />
+            </div>
+            <span className="text-2xl md:text-3xl font-bold text-blue-700 dark:text-blue-300">IIT Bombay Faculty Mentors</span>
+            </div>
+          <div className="max-w-5xl mx-auto">
+            <div className="space-y-8">
+              {iitBombayMentors.map((mentor, idx) => (
+                <FacultyMentorCard key={idx} mentor={mentor} />
+              ))}
+            </div>
           </div>
         </div>
 

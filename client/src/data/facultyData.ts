@@ -1,6 +1,8 @@
 // client/src/data/facultyData.ts
 import KshitijImage from "@/assets/Faculty/Kshitij.jpg";
 import NirmalImage from "@/assets/Faculty/Nirmal.png";
+import AmbarishImage from "@/assets/Faculty/Ambarish.png";
+import LaxmeeshaImage from "@/assets/Faculty/Laxmeesha.jpg";
 
 export interface FacultyMentor {
   name: string;
@@ -47,5 +49,37 @@ export const iitBombayMentors: FacultyMentor[] = [
     ],
     image: NirmalImage,
     websiteUrl: "https://www.linkedin.com/in/npunjabi108/"
+  },
+  {
+    name: "Ambarish Kunwar",
+    role: "Professor",
+    title: "Professor",
+    affiliation: "Department of Biosciences and Bioengineering, IIT Bombay",
+    researchFocus: "Biophysics, computational biology, cellular mechanics, molecular motors",
+    contact: "",
+    researchArea: "Computational Biology & Bioinformatics, Healthcare Applications",
+    bio: [
+      "Dr. Ambarish Kunwar is a Professor in the Department of Biosciences and Bioengineering at IIT Bombay. His research focuses on biophysics and computational biology, with an emphasis on cellular mechanics and the role of molecular motors in intracellular transport. Dr. Kunwar’s work aims to unravel the complex interactions that drive cellular processes and their implications for health and disease.",
+      "His interdisciplinary approach integrates experimental biophysics and computational modeling to study intracellular dynamics and force generation by molecular motors. Dr. Kunwar’s research contributes to advancing our understanding of cellular behavior and its applications in developing therapeutic strategies.",
+      "Dr. Kunwar actively collaborates with researchers across disciplines to bridge the gap between fundamental science and applied healthcare solutions. He has been recognized for his innovative contributions to biophysics and computational biology."
+    ],
+    image: AmbarishImage,
+    websiteUrl: "https://www.bio.iitb.ac.in/people/faculty/kunwar-ambarish/" // Replace with actual personal website if available
+  },
+  {
+    name: "Laxmeesha Somappa",
+    role: "Assistant Professor",
+    title: "Assistant Professor",
+    affiliation: "Department of Electrical Engineering, IIT Bombay",
+    researchFocus: "Low-power biomedical circuits, analog and mixed-signal IC design, MEMS interfaces, neuromodulation systems",
+    contact: "",
+    researchArea: "Healthcare Devices & Embedded Systems, Biomedical Instrumentation, Sensor Interfaces",
+    bio: [
+      "Dr. Laxmeesha Somappa is an Assistant Professor in the Department of Electrical Engineering at IIT Bombay. His research centers on designing ultra-low power analog and mixed-signal integrated circuits for biomedical applications, including neuromodulation and biosensing systems. He leads the BioNICS group at IIT Bombay and manages the PCB Lab, contributing to cutting-edge development in biomedical circuit design.",
+      "Dr. Laxmeesha’s academic journey spans premier institutions including IIT Madras and IIT Bombay, with international research experience at the University of Cambridge and EPFL Switzerland. His work focuses on delta-sigma data converters, MEMS interface circuits, and embedded systems tailored for healthcare needs. He also contributes to the IEEE CAS Society and Sensors Council, fostering collaboration at the intersection of electronics and life sciences.",
+      "His interdisciplinary work bridges analog IC design with real-world biomedical applications, offering impactful solutions in healthcare diagnostics and monitoring."
+    ],
+    image: LaxmeeshaImage,
+    websiteUrl: "https://homepages.iitb.ac.in/~laxmeesha/" // Replace with actual personal website if available
   }
 ];

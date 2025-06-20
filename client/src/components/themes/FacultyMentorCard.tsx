@@ -34,7 +34,10 @@ const FacultyMentorCard: React.FC<FacultyMentorCardProps> = ({ mentor }) => {
           <div className="flex justify-between items-start">
             <div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white">{mentor.name}</h3>
-              <p className="text-primary dark:text-blue-400 font-medium text-sm">{mentor.role}, {mentor.title}</p>
+              {mentor.designation && (
+                <p className="text-sm text-blue-600 dark:text-blue-400 font-medium mb-2">{mentor.designation}</p>
+              )}
+              <p className="text-primary dark:text-blue-400 font-medium text-sm">{mentor.role} {mentor.title}</p>
               <p className="text-gray-600 dark:text-gray-400 text-sm mb-2">{mentor.affiliation}</p>
             </div>
             <motion.div whileHover={{ scale: 1.1 }} className="ml-4 flex-shrink-0">
@@ -83,9 +86,12 @@ const FacultyMentorCard: React.FC<FacultyMentorCardProps> = ({ mentor }) => {
             
             <h4 className="text-md font-semibold text-gray-800 dark:text-gray-200 mb-1">Bio</h4>
             <div className="space-y-2 text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-4">
-              {mentor.bio.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-              ))}
+              {Array.isArray(mentor.bio)
+                ? mentor.bio.map((paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
+                  ))
+                : mentor.description && <p>{mentor.description}</p>
+              }
             </div>
 
             {mentor.websiteUrl && (

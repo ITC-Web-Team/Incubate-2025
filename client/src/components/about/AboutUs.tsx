@@ -100,7 +100,120 @@ const AboutUs = () => {
           </motion.div>
         </div>
       </div>
+      {/* Student Organising Committee Section */}
+<div className="mt-20 max-w-4xl mx-auto bg-white/80 dark:bg-gray-800/80 rounded-xl shadow-lg p-8">
+  <h2 className="text-2xl md:text-3xl font-bold mb-6 text-blue-700 dark:text-blue-300 flex items-center">
+     Organising Committee
+  </h2>
+  <div className="mb-6">
+    <h3 className="text-lg font-semibold text-blue-600 dark:text-blue-400 mb-2">JIPMER UG Scientific and Research Club</h3>
+    {/* Expandable JIPMER student list */}
+    <details className="mb-4">
+      <summary className="cursor-pointer text-md font-medium text-gray-700 dark:text-gray-200">Show JIPMER Student Organisers</summary>
+      <ul className="list-disc list-inside mt-2 text-gray-700 dark:text-gray-300 space-y-1">
+        <li>Adhitya R</li>
+        <li>Adhithyan</li>
+        <li>Adhithyan</li>
+        <li>Akash Gavicherla LVNMK</li>
+        <li>Anish Sukumar Sudalaimuthu</li>
+        <li>Bhargava Bhat</li>
+        <li>Chinua K Pailoor</li>
+        <li>Dinesh Karthik</li>
+        <li>Gautam R</li>
+        <li>GVSVS Shashank</li>
+        <li>Jasil</li>
+        <li>Kaviyarasu S</li>
+        <li>K M Prithwinsiibi</li>
+        <li>Manvanth Chandrashekar</li>
+        <li>Nandan P</li>
+        <li>Naven Kumar S</li>
+        <li>Nehal H Prasanna</li>
+        <li>Padala Suhaas</li>
+        <li>Praneeth Roy</li>
+        <li>Pratham Gogoi</li>
+        <li>Sai Likith</li>
+        <li>Samit Iyer</li>
+        <li>Samrudh R</li>
+        <li>Sam Shreyas Joseph</li>
+        <li>Sanjana N S</li>
+        <li>Sankhalp Sunod</li>
+        <li>Sarvesh B</li>
+        <li>Shahid Sayeed Iqbal</li>
+        <li>Srijan M H</li>
+        <li>Srujan Vipperla</li>
+        <li>Tarunasri Paidi</li>
+        <li>Vajrakant Miragi</li>
+        <li>Viswajitt R P</li>
+        <li>Zinan Tariang</li>
+      </ul>
+    </details>
+  </div>
+  <div className="mb-6">
+    <h3 className="text-lg font-semibold text-blue-600 dark:text-blue-400 mb-2">IIT Bombay Student Council Members</h3>
+    <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
+      <li>Gaurish Khodke</li>
+      <li>Lakshaditya Singh</li>
+      <li>Shahu Patil</li>
+      <li>Veer</li>
+    </ul>
+  </div>
+  <div className="mb-6">
+    <h3 className="text-lg font-semibold text-blue-600 dark:text-blue-400 mb-2">Faculty Advisors</h3>
+    <div className="mb-2">
+      <span className="font-medium">JIPMER:</span>
+      <ul className="list-disc list-inside ml-4 text-gray-700 dark:text-gray-300">
+        <li>Dr. Nishad Plakkal</li>
+        <li>Dr. Prasanth Ganesan</li>
+        <li>Dr. Subitha L</li>
+      </ul>
+    </div>
+    <div>
+      <span className="font-medium">IIT Bombay:</span>
+      <ul className="list-disc list-inside ml-4 text-gray-700 dark:text-gray-300">
+        <li>Prof. Nivethida Thirugnanasambandam</li>
+      </ul>
+    </div>
+  </div>
+  <div className="mb-6">
+    <h3 className="text-lg font-semibold text-blue-600 dark:text-blue-400 mb-2">Mentors</h3>
+    <div className="mb-2">
+      <span className="font-medium">JIPMER:</span>
+      <ul className="list-disc list-inside ml-4 text-gray-700 dark:text-gray-300">
+        <li>Dr. Apurba Sastry</li>
+        <li>Dr. Arpitha Anantharaju</li>
+        <li>Dr. Bhagawati Prasad Pant</li>
+        <li>Dr. Hariswar P T</li>
+        <li>Dr. Karthikeyan M</li>
+        <li>Dr. M. S. Gopalakrishnan</li>
+        <li>Dr. Nishad Plakkal</li>
+        <li>Dr. Sasirekha Rengaraj</li>
+        <li>Dr. Shuvadeep Ganguly</li>
+        <li>Dr. Sivamurukan Palaniswamy</li>
+        <li>Dr. Subitha L</li>
+        <li>Dr. Swaminathan K</li>
+        <li>Dr. Usha Devi R</li>
+      </ul>
+    </div>
+    <div>
+      <span className="font-medium">IIT Bombay:</span>
+      <ul className="list-disc list-inside ml-4 text-gray-700 dark:text-gray-300">
+        <li>Prof. Ambarish Kunwar</li>
+        <li>Prof. Kshitij Jadhav</li>
+        <li>Prof. Laxmeesha Somappa</li>
+        <li>Prof. Nirmal Punjabi</li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <h3 className="text-lg font-semibold text-blue-600 dark:text-blue-400 mb-2">Operations and Outreach Advisors (KCDH, IIT Bombay)</h3>
+    <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
+      <li>Dr. Raghavendran Lakshminarayanan</li>
+      <li>Shatakshi Saxena</li>
+    </ul>
+  </div>
+</div>
     </section>
+
   );
 };
 
