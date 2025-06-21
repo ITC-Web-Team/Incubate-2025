@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'; // Added React import
+import { Link } from 'wouter';
 import { FaCalendarAlt, FaFileAlt, FaVideo, FaBalanceScale, FaClipboardList, FaBullseye, FaLightbulb, FaUsers, FaMedal, FaFilm, FaListOl } from 'react-icons/fa';
 import { RiArrowRightSLine } from 'react-icons/ri';
 
@@ -142,14 +143,12 @@ const PrelimsPage = () => {
               <p className="text-foreground dark:text-gray-300 mb-3">
                 Upload as a single <strong>.pdf file</strong> using the recommended template.
               </p>
-              <a 
+              <Link 
                 href="/submission-template" // Link to the new template page
-                target="_blank" // Open in new tab
-                rel="noopener noreferrer"
                 className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-dark dark:bg-accent-dark dark:hover:bg-accent-hover transition-colors"
               >
                 View Submission Template <RiArrowRightSLine className="ml-2" />
-              </a>
+              </Link>
             </div>
 
             {/* Video Pitch Card */}
