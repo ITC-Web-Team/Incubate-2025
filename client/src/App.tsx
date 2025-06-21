@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Switch, Route } from "wouter";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -18,10 +19,26 @@ import ScrollToTopOnRouteChange from "@/components/ui/scroll-to-top-on-route-cha
 import PrelimsPage from "./pages/prelims";
 import FinalsPage from "./pages/finals";
 import SubmissionTemplatePage from "./pages/submission-template";
+import Popup from "@/components/ui/Popup";
 
 function App() {
+  const [showPopup, setShowPopup] = useState(false);
+
+  useEffect(() => {
+    const popupShown = sessionStorage.getItem("popupShown");
+    if (!popupShown) {
+      setShowPopup(true);
+      sessionStorage.setItem("popupShown", "true");
+    }
+  }, []);
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
+
   return (
     <TooltipProvider>
+      {showPopup && <Popup onClose={handleClosePopup} />}
       <div className="flex flex-col min-h-screen">
         <ScrollToTopOnRouteChange />
         <AnnouncementBanner />

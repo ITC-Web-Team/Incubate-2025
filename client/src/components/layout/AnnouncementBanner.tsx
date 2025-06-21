@@ -10,9 +10,19 @@ const AnnouncementBanner = () => {
       <div className="container mx-auto flex items-center justify-center">
         <span className="inline-block animate-pulse mr-2">🔔</span>
         <p className="font-medium">
-          Registration opens on June 25th! Stay tuned! National-level MedTech Hackathon
+          Registration opens on June 25th! Stay tuned! National-level MedTech
+          Hackathon. Join our{" "}
+          <a
+            href="https://discord.gg/rbFhtagR"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-gray-300"
+          >
+            Discord Server
+          </a>{" "}
+          for updates!
         </p>
-        <button 
+        <button
           onClick={() => setIsVisible(false)}
           className="ml-4 text-white hover:text-gray-200"
           aria-label="Close announcement"

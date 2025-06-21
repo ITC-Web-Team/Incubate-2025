@@ -6,7 +6,7 @@ import HariswarPTImg from "@/assets/Faculty/Hariswar.png";
 import KarthikeyanMImg from "@/assets/Faculty/Karthikeyan.png";
 import ShuvadeepGangulyImg from "@/assets/Faculty/Shuvadeep.png";
 import MSGopalakrishnanImg from "@/assets/Faculty/Gopalakrishnan.png";
-import ArpithaAnantharajuImg from "@/assets/Faculty/Arpitha.png";
+import ArpithaAnantharajuImg from "@/assets/Faculty/Arpitha.jpg";
 import SasirekhaRengarajImg from "@/assets/Faculty/Sasirekha.png";
 import SwaminathanKImg from "@/assets/Faculty/Swaminathan.jpg";
 import SivamurukanPalaniswamyImg from "@/assets/Faculty/Sivamurukan.png";
@@ -169,10 +169,15 @@ export const themesData: ThemeData[] = [
     color: "bg-indigo-500",
     description: "The evolution of surgery is being driven by advancements in minimally invasive techniques and smart operating environments. This theme brings together innovation in surgical tools, anesthesia safety, and intelligent operating room systems. Participants are encouraged to reimagine surgical instruments, endoscopic technologies, and integrated platforms that support precision and rapid recovery. Alongside, there is a focus on enhancing surgical safety through real-time monitoring, better team coordination, and smart anesthesia delivery and vigilance systems. By bridging surgical innovation with perioperative safety, this theme aims to transform patient outcomes and redefine how surgeries are performed in the future.",
     focusPoints: [
-      "Innovative tools and imaging systems for minimally invasive surgery",
-      "Smart anesthesia monitoring and delivery technologies",
-      "Integrated OR platforms for workflow efficiency and safety",
-      "AI-driven systems for surgical error prevention and decision support"
+      "Improving ergonomics for prolonged surgeries",
+      "Real-time intraoperative malignancy diagnostics",
+      "Integrated communication tools for seamless OR team coordination",
+      "Innovations to strengthen sterility and infection control in the OR",
+      "Advanced patient monitoring tools for improved outcomes",
+      "Cognitive support tools for managing anesthetic data overload",
+      "Examiner- and patient-centric tools for cervical assessment",
+      "Improvement in OT tools and technology",
+      "Smart Anaesthesia monitoring and crisis management in the OT"
     ],
     faculty: [
       {
