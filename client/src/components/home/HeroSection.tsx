@@ -192,7 +192,7 @@ const HeroSection = () => {
               transition={{ delay: 0.6, duration: 0.8 }}
             >
               <a 
-                href="https://linktr.ee/incubatehackathon" 
+                href="https://forms.gle/D66ghgRHrDEqv11p9" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-3 px-8 rounded-md shadow-lg group"
