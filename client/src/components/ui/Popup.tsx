@@ -33,20 +33,30 @@ const Popup: React.FC<PopupProps> = ({ onClose }) => {
             </svg>
           </button>
           <div className="flex items-center mb-4">
-            <i className="text-2xl text-purple-400 ri-discord-fill mr-3"></i>
-            <h2 className="text-xl font-bold">Stay Updated!</h2>
+            
+            <h2 className="text-xl font-bold">Registrations Now Open!</h2>
           </div>
-          <p className="text-gray-300">
-            Join our Discord server to get the latest news, announcements, and connect with other participants.
-          </p>
+          <div className="mb-4">
+            <p className="text-gray-300 mb-2">
+               Ready to innovate in MedTech? Join INCUBATE 2025 - Where curiosity meets innovation!
+            </p>
+            {/* <div className="text-sm text-gray-400 space-y-1">
+              <p>📅 <strong>Registration Deadline:</strong> Soon!</p>
+              <p>💰 <strong>Prize Pool:</strong> ₹15,00,000+</p>
+              <p>🏥 <strong>Focus:</strong> Healthcare Innovation</p>
+            </div> */}
+          </div>
           <a
-            href="https://discord.gg/rbFhtagR"
+            href="https://forms.gle/D66ghgRHrDEqv11p9"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block w-full px-4 py-2 mt-6 font-semibold text-center text-white transition-colors bg-purple-600 rounded-md hover:bg-purple-700"
+            className="inline-block w-full px-4 py-2 mt-4 font-semibold text-center text-white transition-all bg-gradient-to-r from-blue-600 to-purple-600 rounded-md hover:from-blue-700 hover:to-purple-700 transform hover:scale-105"
           >
-            Join Discord Server
+            Register Now!
           </a>
+          <p className="text-xs text-gray-400 text-center mt-2">
+            Secure your spot in India's premier MedTech hackathon
+          </p>
         </motion.div>
       </motion.div>
     </AnimatePresence>
