@@ -59,6 +59,7 @@ export const themesData: ThemeData[] = [
         image: ApurbaSastryImg,
       },
     ],
+    videoId: "4vgpvLimZWQ",
   },
   {
     slug: "neonatal-infant-care",
@@ -239,6 +240,7 @@ export const themesData: ThemeData[] = [
         image: SwaminathanKImg,
       },
     ],
+    videoId: "2K2G05JK4G0",
   },
   {
     slug: "low-cost-cpr-innovation",

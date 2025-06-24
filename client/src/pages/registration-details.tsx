@@ -37,7 +37,7 @@ const RegistrationDetailsPage = () => {
                 </p>
                 <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300 pl-4">
                   <li>
-                    <span className="font-semibold">Medical courses</span> – MBBS, BDS, BSc Nursing
+                    <span className="font-semibold">Medical courses</span> – MBBS, BDS
                     <ul className="list-none pl-6">
                       <li className="flex items-start">
                         <i className="ri-arrow-right-s-line text-blue-500 dark:text-blue-400 mr-2 mt-1 flex-shrink-0"></i>
@@ -49,7 +49,7 @@ const RegistrationDetailsPage = () => {
                     <span className="font-semibold">Engineering courses</span> – BTech, BE and equivalent degrees in any discipline of engineering
                   </li>
                   <li>
-                    <span className="font-semibold">Science courses</span> – BSc, MSc, Integrated Masters in any discipline of natural or life sciences
+                    <span className="font-semibold">Science courses</span> – BSc, BSc Nursing, Integrated Masters upto 3rd year in any discipline of natural or life sciences
                     <ul className="list-none pl-6">
                       <li className="flex items-start">
                         <i className="ri-arrow-right-s-line text-blue-500 dark:text-blue-400 mr-2 mt-1 flex-shrink-0"></i>
@@ -60,7 +60,7 @@ const RegistrationDetailsPage = () => {
                     </ul>
                   </li>
                   <li>
-                    Students studying in International institutes may participate, but it is mandated that at least 2 representatives, one each from BTech and MBBS, attend the Finals
+                    Students studying in International institutes may participate, but it is mandated that at least 2 representatives, one each from engineering and medical, attend the Finals
                   </li>
                   <li>
                     <span className="font-semibold text-blue-700 dark:text-blue-300">
@@ -96,13 +96,13 @@ const RegistrationDetailsPage = () => {
                     {/* Member 1 - B.Tech */}
                     <div className="p-3 bg-white dark:bg-gray-700 rounded-md shadow-sm border border-gray-200 dark:border-gray-600">
                       <i className="ri-user-settings-line text-3xl text-blue-500 dark:text-blue-400 mb-1"></i>
-                      <p className="text-xs font-semibold text-gray-700 dark:text-gray-200">1 B.Tech Student</p>
+                      <p className="text-xs font-semibold text-gray-700 dark:text-gray-200">1 engineering Student</p>
                       <p className="text-xs text-red-500 dark:text-red-400 font-bold">(Compulsory)</p>
                     </div>
                     {/* Member 2 - MBBS */}
                     <div className="p-3 bg-white dark:bg-gray-700 rounded-md shadow-sm border border-gray-200 dark:border-gray-600">
                       <i className="ri-stethoscope-line text-3xl text-green-500 dark:text-green-400 mb-1"></i>
-                      <p className="text-xs font-semibold text-gray-700 dark:text-gray-200">1 MBBS Student</p>
+                      <p className="text-xs font-semibold text-gray-700 dark:text-gray-200">1 medical Student</p>
                       <p className="text-xs text-red-500 dark:text-red-400 font-bold">(Compulsory)</p>
                     </div>
                     {/* Member 3 - Any */}
@@ -161,8 +161,8 @@ const RegistrationDetailsPage = () => {
               <span>Individual Registrations</span>
             </h2>
             <ul className="list-disc list-inside space-y-3 text-gray-600 dark:text-gray-300 pl-4">
-              <li>Individuals without a team may register separately by paying INR 250.</li>
-              <li>Registered individuals will gain access to a platform (Discord) with other solo participants from the chosen theme to form teams.</li>
+              <li>Individuals without a team may register by paying a non refundable amount of Rs.100.</li>
+              <li>Registered individuals will be paired up based on our algorithm.</li>
               <li>The organisers cannot guarantee that all participants will find a teammate. The platform is only to facilitate team formation.</li>
               <li>Please note that the entry fee will not be refunded under any circumstances regardless of the outcome.</li>
               <li>Individual registrants are also free to find team members outside the platform.</li>
