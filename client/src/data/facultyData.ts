@@ -19,12 +19,12 @@ export interface FacultyMentor {
 
 export const iitBombayMentors: FacultyMentor[] = [
   {
-    name: "Kshitij Jadhav",
-    role: "Core Faculty",
+    name: "Prof. Kshitij Jadhav",
+    role: "",
     title: "Assistant Professor",
     affiliation: "Koita Centre for Digital Health",
     researchFocus: "Machine learning in healthcare, neuropsychiatric disorders, multimodal data integration, early life stress",
-    contact: "kshitij.jadhav@iitb.ac.in",
+    contact: "",
     researchArea: "Healthcare Analytics & AI/ML, Healthcare Applications, Large Language Modelling",
     bio: [
       "Dr. Kshitij Jadhav is an Assistant Professor at the Koita Centre for Digital Health, IIT Bombay. His research focuses on applying machine learning to address critical questions in healthcare, particularly in understanding neuropsychiatric disorders and the role of early life stress in mental health outcomes. Dr. Jadhav also works on developing methods for multimodal data integration to advance healthcare diagnostics and interventions.",
@@ -35,12 +35,12 @@ export const iitBombayMentors: FacultyMentor[] = [
     websiteUrl: "http://www.kcdh.iitb.ac.in/kshitij" 
   },
   {
-    name: "Nirmal Punjabi",
-    role: "Core Faculty",
+    name: "Prof. Nirmal Punjabi",
+    role: "",
     title: "Assistant Professor",
     affiliation: "Koita Centre for Digital Health",
     researchFocus: "Optical sensing, digital diagnostics, telemedicine, wearable healthcare devices",
-    contact: "npunjabi@iitb.ac.in",
+    contact: "",
     researchArea: "Healthcare Applications, Consumer Health & Tele-Medicine, Healthcare Analytics & AI/ML",
     bio: [
       "Dr. Nirmal Punjabi is an Assistant Professor at the Koita Centre for Digital Health at IIT Bombay. His research focuses on optical sensing and digital diagnostics, with an emphasis on telemedicine and wearable healthcare devices. Dr. Punjabi’s work aims to develop innovative tools and technologies for improving healthcare monitoring and diagnostics.",
@@ -51,8 +51,8 @@ export const iitBombayMentors: FacultyMentor[] = [
     websiteUrl: "https://www.linkedin.com/in/npunjabi108/"
   },
   {
-    name: "Ambarish Kunwar",
-    role: "Professor",
+    name: "Prof. Ambarish Kunwar",
+    role: "",
     title: "Professor",
     affiliation: "Department of Biosciences and Bioengineering, IIT Bombay",
     researchFocus: "Biophysics, computational biology, cellular mechanics, molecular motors",
@@ -67,8 +67,8 @@ export const iitBombayMentors: FacultyMentor[] = [
     websiteUrl: "https://www.bio.iitb.ac.in/people/faculty/kunwar-ambarish/" // Replace with actual personal website if available
   },
   {
-    name: "Laxmeesha Somappa",
-    role: "Assistant Professor",
+    name: "Prof. Laxmeesha Somappa",
+    role: "",
     title: "Assistant Professor",
     affiliation: "Department of Electrical Engineering, IIT Bombay",
     researchFocus: "Low-power biomedical circuits, analog and mixed-signal IC design, MEMS interfaces, neuromodulation systems",

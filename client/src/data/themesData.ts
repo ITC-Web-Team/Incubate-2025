@@ -11,6 +11,7 @@ import SasirekhaRengarajImg from "@/assets/Faculty/Sasirekha.png";
 import SwaminathanKImg from "@/assets/Faculty/Swaminathan.jpg";
 import SivamurukanPalaniswamyImg from "@/assets/Faculty/Sivamurukan.png";
 import BhagwatiPrasadPantImg from "@/assets/Faculty/Bhagwati.png";
+import YaminiMImg from "@/assets/Faculty/yamini.jpg";
 
 export interface FacultyMember {
   name: string;
@@ -276,13 +277,18 @@ export const themesData: ThemeData[] = [
       "Inadequate early detection of valvular and myocardial diseases",
       "Gaps in continuity of care after surgery or intervention"
     ],
-    faculty: [
-      {
+    faculty: [      {
         name: "Dr. Bhagwati prasad pant",
         designation: "Department of Cardiology",
         description: "Dr. Bhagwati Pant is an Assistant Professor in the Department of Cardiology with a strong foundation in adult cardiology and interventional techniques. His core interests lie in structural heart disease, complex coronary interventions, coronary imaging, and heart failure management. Having completed his DM Cardiology residency at JIPMER (2018–2021), he went on to pursue a Post-Doctoral Fellowship in Adult Cardiology and Interventions at SCTIMST, Thiruvananthapuram in 2022. Dr. Pant is actively engaged in clinical research and continues to contribute to advancements in interventional and diagnostic cardiology.",
         image: BhagwatiPrasadPantImg,
       },
+      {
+        name: "Dr. Yamini M",
+        designation: "Communicable Disease and Surveillance Division, JIPMER International School of Public Health",
+        description: "Dr. Yamini M is a dedicated public health professional serving as Assistant Professor in the Communicable Disease and Surveillance Division of JIPMER INTERNATIONAL School of Public Health. She holds an MD in Community Medicine and brings a strong focus on communicable diseases, health surveillance, and gender-based health disparities. Her interests include infectious disease modelling, vaccinology and improving access to care for vulnerable populations. Dr. Yamini actively contributes to academic initiatives through research, training, and intersectoral collaborations. Her teaching and mentorship continue to inspire the next generation of public health professionals.",
+        image: YaminiMImg,
+      }
     ],
   },
 ];
