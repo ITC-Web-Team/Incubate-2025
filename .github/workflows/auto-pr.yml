@@ -13,37 +13,49 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install GitHub CLI (v2.74.2)
+      - name: Install GitHub CLI
         run: |
-          curl -fsSL https://github.com/cli/cli/releases/download/v2.74.2/gh_2.74.2_linux_amd64.tar.gz -o gh.tar.gz
-          tar -xzf gh.tar.gz
-          sudo cp gh_2.74.2_linux_amd64/bin/gh /usr/local/bin/
+          type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
+          curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
+          && sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
+          && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
+          && sudo apt update \
+          && sudo apt install gh -y
           gh --version
 
       - name: Authenticate and Create PR (if not exists)
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
-          echo "$GH_TOKEN" | gh auth login --with-token
+          # Set up git config
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          echo "🔐 Authenticating with GitHub CLI..."
+          echo "$GH_TOKEN" | gh auth login --with-token --hostname github.com
           
           echo "🔍 Checking if pull request already exists..."
           existing_pr=$(gh pr list \
+            --repo ITC-Web-Team/Incubate-2025 \
             --state open \
             --head Thunder25Beast:main \
             --base main \
-            --repo ITC-Web-Team/Incubate-2025 \
             --json number \
-            --jq '.[0].number')
+            --jq '.[0].number' 2>/dev/null || echo "")
 
-          if [ -n "$existing_pr" ]; then
+          if [ -n "$existing_pr" ] && [ "$existing_pr" != "null" ]; then
             echo "✅ PR already exists: #$existing_pr"
+            echo "🔗 View PR: https://github.com/ITC-Web-Team/Incubate-2025/pull/$existing_pr"
             exit 0
           fi
 
           echo "🚀 Creating pull request..."
-          gh pr create \
-            --title "Automated Update from Fork" \
-            --body "This PR was automatically created from a push to the forked repo." \
+          pr_url=$(gh pr create \
+            --repo ITC-Web-Team/Incubate-2025 \
+            --title "🔄 Automated Update from Fork - $(date '+%Y-%m-%d %H:%M')" \
+            --body "🤖 Automated Pull Request - This PR was automatically created from a push to the forked repository. Latest updates from Thunder25Beast:main. Generated on: $(date). Commit SHA: ${{ github.sha }}. Please review the changes before merging." \
             --head Thunder25Beast:main \
-            --base main \
-            --repo ITC-Web-Team/Incubate-2025
+            --base main)
+          
+          echo "✅ Pull request created successfully!"
+          echo "🔗 PR URL: $pr_url"
