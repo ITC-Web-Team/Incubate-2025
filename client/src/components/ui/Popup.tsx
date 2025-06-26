@@ -34,28 +34,46 @@ const Popup: React.FC<PopupProps> = ({ onClose }) => {
           </button>
           <div className="flex items-center mb-4">
             
-            <h2 className="text-xl font-bold">Registrations Now Open!</h2>
+            <h2 className="text-xl font-bold">INCUBATE 2025 Updates</h2>
           </div>
-          <div className="mb-4">
-            <p className="text-gray-300 mb-2">
-               Ready to innovate in MedTech? Join INCUBATE 2025 - Where curiosity meets innovation!
-            </p>
-            {/* <div className="text-sm text-gray-400 space-y-1">
-              <p>📅 <strong>Registration Deadline:</strong> Soon!</p>
-              <p>💰 <strong>Prize Pool:</strong> ₹15,00,000+</p>
-              <p>🏥 <strong>Focus:</strong> Healthcare Innovation</p>
-            </div> */}
+          <div className="mb-6">
+            <div className="bg-gray-700 rounded-lg p-4 mb-4">
+              <h3 className="text-lg font-semibold text-green-400 mb-3">Registration Stats</h3>
+              <div className="space-y-2 text-sm">
+                <div className="flex justify-between">
+                  <span className="text-gray-300">Total teams registered:</span>
+                  <span className="text-white font-bold">72</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-300">Individuals registered:</span>
+                  <span className="text-white font-bold">225</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <a
-            href="https://forms.gle/D66ghgRHrDEqv11p9"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block w-full px-4 py-2 mt-4 font-semibold text-center text-white transition-all bg-gradient-to-r from-blue-600 to-purple-600 rounded-md hover:from-blue-700 hover:to-purple-700 transform hover:scale-105"
-          >
-            Register Now!
-          </a>
-          <p className="text-xs text-gray-400 text-center mt-2">
-            Secure your spot in India's premier MedTech hackathon
+          
+          <div className="space-y-3">
+            <a
+              href="https://forms.gle/D66ghgRHrDEqv11p9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block w-full px-4 py-3 font-semibold text-center text-white transition-all bg-gradient-to-r from-blue-600 to-purple-600 rounded-md hover:from-blue-700 hover:to-purple-700 transform hover:scale-105"
+            >
+              To register click here
+            </a>
+            
+            <a
+              href="https://discord.gg/W8acE8nK"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block w-full px-4 py-3 font-semibold text-center text-white transition-all bg-gradient-to-r from-purple-600 to-indigo-600 rounded-md hover:from-purple-700 hover:to-indigo-700 transform hover:scale-105"
+            >
+              Join the Discord Community
+            </a>
+          </div>
+          
+          <p className="text-xs text-gray-400 text-center mt-3">
+            Don't miss out on India's premier MedTech hackathon!
           </p>
         </motion.div>
       </motion.div>
