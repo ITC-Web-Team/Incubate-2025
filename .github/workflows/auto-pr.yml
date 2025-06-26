@@ -3,7 +3,7 @@ name: Auto PR from Fork to Upstream
 on:
   push:
     branches:
-      - main
+      - main  # Change if your working branch is different
 
 jobs:
   create-pull-request:
@@ -13,18 +13,34 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install GitHub CLI v2.74.2
+      - name: Install GitHub CLI (v2.74.2)
         run: |
           curl -fsSL https://github.com/cli/cli/releases/download/v2.74.2/gh_2.74.2_linux_amd64.tar.gz -o gh.tar.gz
           tar -xzf gh.tar.gz
           sudo cp gh_2.74.2_linux_amd64/bin/gh /usr/local/bin/
           gh --version
 
-      - name: Create Pull Request to Upstream
+      - name: Authenticate and Create PR (if not exists)
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
           echo "$GH_TOKEN" | gh auth login --with-token
+          
+          echo "🔍 Checking if pull request already exists..."
+          existing_pr=$(gh pr list \
+            --state open \
+            --head Thunder25Beast:main \
+            --base main \
+            --repo ITC-Web-Team/Incubate-2025 \
+            --json number \
+            --jq '.[0].number')
+
+          if [ -n "$existing_pr" ]; then
+            echo "✅ PR already exists: #$existing_pr"
+            exit 0
+          fi
+
+          echo "🚀 Creating pull request..."
           gh pr create \
             --title "Automated Update from Fork" \
             --body "This PR was automatically created from a push to the forked repo." \
