@@ -3,7 +3,8 @@ name: Auto PR from Fork to Upstream
 on:
   push:
     branches:
-      - main  # Change if your working branch is different
+      - main  # Triggers when main branch is updated
+  workflow_dispatch:  # Allows manual triggering
 
 jobs:
   create-pull-request:
@@ -15,8 +16,11 @@ jobs:
       repository-projects: write
 
     steps:
-      - name: Checkout repository
+      - name: Checkout main branch for PR content
         uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
 
       - name: Install GitHub CLI
         run: |
