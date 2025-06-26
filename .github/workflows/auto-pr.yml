@@ -8,6 +8,11 @@ on:
 jobs:
   create-pull-request:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+      repository-projects: write
 
     steps:
       - name: Checkout repository
@@ -21,14 +26,20 @@ jobs:
 
       - name: Authenticate and Create PR (if not exists)
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          GH_TOKEN: ${{ secrets.GH_PAT || github.token }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT || github.token }}
         run: |
           # Set up git config
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
           echo "🔐 Setting up GitHub CLI authentication..."
-          gh auth status || true
+          if [ -z "$GH_TOKEN" ]; then
+            echo "❌ No GitHub token available. Please set GH_PAT secret or ensure github.token has proper permissions."
+            exit 1
+          fi
+          
+          gh auth status || echo "⚠️ Auth status check failed, but continuing with token..."
           
           echo "🔍 Checking if pull request already exists..."
           existing_pr=$(gh pr list \
