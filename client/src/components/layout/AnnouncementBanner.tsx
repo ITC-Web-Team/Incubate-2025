@@ -10,7 +10,7 @@ const AnnouncementBanner = () => {
       <div className="container mx-auto flex items-center justify-center">
         <span className="inline-block animate-pulse mr-2">🔔</span>
         <p className="font-medium">
-          Registration are now open! Stay tuned! National-level MedTech
+          Registrations are now open! Stay tuned! National-level MedTech
           Hackathon. Join our{" "}
           <a
             href="https://discord.gg/rbFhtagR"
