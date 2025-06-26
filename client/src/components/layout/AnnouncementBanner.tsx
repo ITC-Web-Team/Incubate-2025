@@ -13,7 +13,7 @@ const AnnouncementBanner = () => {
           Registrations are now open! Stay tuned! National-level MedTech
           Hackathon. Join our{" "}
           <a
-            href="https://discord.gg/rbFhtagR"
+            href="https://discord.gg/W8acE8nK"
             target="_blank"
             rel="noopener noreferrer"
             className="underline hover:text-gray-300"

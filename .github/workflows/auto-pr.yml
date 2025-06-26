@@ -1,0 +1,73 @@
+name: Auto PR from Fork to Upstream
+
+on:
+  push:
+    branches:
+      - main  # Change if your working branch is different
+
+jobs:
+  create-pull-request:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install GitHub CLI
+        run: |
+          sudo apt update
+          sudo apt install gh -y
+          gh --version
+
+      - name: Authenticate and Create PR (if not exists)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          # Set up git config
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          echo "🔐 Setting up GitHub CLI authentication..."
+          gh auth status || true
+          
+          echo "🔍 Checking if pull request already exists..."
+          existing_pr=$(gh pr list \
+            --repo ITC-Web-Team/Incubate-2025 \
+            --state open \
+            --head Thunder25Beast:main \
+            --base main \
+            --json number \
+            --jq '.[0].number // empty' 2>/dev/null || echo "")
+
+          if [ -n "$existing_pr" ] && [ "$existing_pr" != "null" ] && [ "$existing_pr" != "" ]; then
+            echo "✅ PR already exists: #$existing_pr"
+            echo "🔗 View PR: https://github.com/ITC-Web-Team/Incubate-2025/pull/$existing_pr"
+            exit 0
+          fi
+
+          echo "🚀 Creating pull request..."
+          pr_url=$(gh pr create \
+            --repo ITC-Web-Team/Incubate-2025 \
+            --title "🔄 Automated Update from Fork - $(date '+%Y-%m-%d %H:%M')" \
+            --body "🤖 Automated Pull Request - This PR was automatically created from a push to the forked repository. Latest updates from Thunder25Beast:main. Generated on: $(date). Commit SHA: ${{ github.sha }}. Please review the changes before merging." \
+            --head Thunder25Beast:main \
+            --base main || {
+              echo "❌ Failed to create PR. Checking if it already exists..."
+              existing_pr=$(gh pr list \
+                --repo ITC-Web-Team/Incubate-2025 \
+                --state open \
+                --head Thunder25Beast:main \
+                --base main \
+                --json number \
+                --jq '.[0].number // empty' 2>/dev/null || echo "")
+              if [ -n "$existing_pr" ] && [ "$existing_pr" != "null" ] && [ "$existing_pr" != "" ]; then
+                echo "✅ PR already exists: #$existing_pr"
+                exit 0
+              else
+                echo "❌ Failed to create PR and no existing PR found"
+                exit 1
+              fi
+            })
+          
+          echo "✅ Pull request created successfully!"
+          echo "🔗 PR URL: $pr_url"
