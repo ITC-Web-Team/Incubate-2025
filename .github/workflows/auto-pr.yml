@@ -1,0 +1,29 @@
+name: Auto PR from Fork to Upstream
+
+on:
+  push:
+    branches:
+      - main  # or your branch name
+
+jobs:
+  create-pull-request:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install GitHub CLI
+        uses: cli/cli-action@v2
+
+      - name: Create Pull Request to Upstream
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          gh auth login --with-token <<< "$GH_TOKEN"
+          gh pr create \
+            --title "Automated Update from Fork" \
+            --body "This PR was automatically created from a push to the forked repo." \
+            --head Thunder25Beast:main \
+            --base main \
+            --repo ITC-Web-Team/Incubate-2025
