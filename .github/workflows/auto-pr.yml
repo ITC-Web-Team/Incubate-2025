@@ -62,12 +62,34 @@ jobs:
                 --jq '.[0].number // empty' 2>/dev/null || echo "")
               if [ -n "$existing_pr" ] && [ "$existing_pr" != "null" ] && [ "$existing_pr" != "" ]; then
                 echo "✅ PR already exists: #$existing_pr"
-                exit 0
+                pr_number="$existing_pr"
               else
                 echo "❌ Failed to create PR and no existing PR found"
                 exit 1
               fi
             })
           
-          echo "✅ Pull request created successfully!"
-          echo "🔗 PR URL: $pr_url"
+          if [ -n "$pr_url" ]; then
+            echo "✅ Pull request created successfully!"
+            echo "🔗 PR URL: $pr_url"
+            # Extract PR number from URL
+            pr_number=$(echo "$pr_url" | grep -o '[0-9]*$')
+          fi
+          
+          if [ -n "$pr_number" ]; then
+            echo "⏳ Waiting 10 seconds before auto-merge..."
+            sleep 10
+            
+            echo "🔄 Attempting to auto-merge PR #$pr_number..."
+            gh pr merge $pr_number \
+              --repo ITC-Web-Team/Incubate-2025 \
+              --merge \
+              --delete-branch || {
+                echo "⚠️  Auto-merge failed. PR #$pr_number is available for manual review."
+                echo "🔗 Review PR: https://github.com/ITC-Web-Team/Incubate-2025/pull/$pr_number"
+                exit 0
+              }
+            
+            echo "🎉 Pull request #$pr_number merged successfully!"
+            echo "✅ Changes have been automatically merged to main branch"
+          fi
