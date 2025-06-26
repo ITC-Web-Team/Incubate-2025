@@ -62,14 +62,6 @@ const Popup: React.FC<PopupProps> = ({ onClose }) => {
               To register click here
             </a>
             
-            {/* <a
-              href="https://discord.gg/W8acE8nK"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block w-full px-4 py-3 font-semibold text-center text-white transition-all bg-gradient-to-r from-purple-600 to-indigo-600 rounded-md hover:from-purple-700 hover:to-indigo-700 transform hover:scale-105"
-            >
-              Join the Discord Community
-            </a> */}
           </div>
           
           <p className="text-xs text-gray-400 text-center mt-3">
