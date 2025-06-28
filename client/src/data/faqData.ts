@@ -49,7 +49,7 @@ export const faqData = [
   },
   {
     question: "Can a participant be a part of more than 1 team?",
-    answer: "No, one person can be a part of one team only."
+    answer: "One person can be a part of a maximum of 2 teams."
   },
   {
     question: "Who are the judges?",
