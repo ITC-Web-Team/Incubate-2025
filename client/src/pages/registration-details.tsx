@@ -49,7 +49,7 @@ const RegistrationDetailsPage = () => {
                     <span className="font-semibold">Engineering courses</span> – BTech, BE and equivalent degrees in any discipline of engineering
                   </li>
                   <li>
-                    <span className="font-semibold">Science courses</span> – BSc, BSc Nursing, Integrated Masters upto 3rd year in any discipline of natural or life sciences
+                    <span className="font-semibold">Science courses</span> – BSc, BSc Nursing, BPT, Integrated Masters upto 3rd year in any discipline of natural or life sciences
                     <ul className="list-none pl-6">
                       <li className="flex items-start">
                         <i className="ri-arrow-right-s-line text-blue-500 dark:text-blue-400 mr-2 mt-1 flex-shrink-0"></i>
