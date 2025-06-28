@@ -41,12 +41,8 @@ const Popup: React.FC<PopupProps> = ({ onClose }) => {
               <h3 className="text-lg font-semibold text-green-400 mb-3">Registration Stats</h3>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
-                  <span className="text-gray-300">Total teams registered:</span>
-                  <span className="text-white font-bold">72</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-300">Individuals registered:</span>
-                  <span className="text-white font-bold">45</span>
+                  <span className="text-gray-300">Total registrations:</span>
+                  <span className="text-white font-bold">267</span>
                 </div>
               </div>
             </div>
