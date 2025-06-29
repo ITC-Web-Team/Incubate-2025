@@ -10,8 +10,9 @@ const AnnouncementBanner = () => {
       <div className="container mx-auto flex items-center justify-center">
         <span className="inline-block animate-pulse mr-2">🔔</span>
         <p className="font-medium">
-          Registrations are now open! Stay tuned! National-level MedTech
-          Hackathon. Join our{" "}
+          Individual registrations are now closed. Stay tuned! National-level MedTech
+          Hackathon. 
+          {/* Join our{" "}
           <a
             href="https://discord.gg/W8acE8nK"
             target="_blank"
@@ -20,7 +21,7 @@ const AnnouncementBanner = () => {
           >
             Discord Server
           </a>{" "}
-          for updates!
+          for updates! */}
         </p>
         <button
           onClick={() => setIsVisible(false)}
