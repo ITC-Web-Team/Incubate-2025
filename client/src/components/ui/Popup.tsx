@@ -42,7 +42,7 @@ const Popup: React.FC<PopupProps> = ({ onClose }) => {
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span className="text-gray-300">Total registrations:</span>
-                  <span className="text-white font-bold">267</span>
+                  <span className="text-white font-bold">362</span>
                 </div>
               </div>
             </div>
