@@ -19,7 +19,7 @@ import ScrollToTopOnRouteChange from "@/components/ui/scroll-to-top-on-route-cha
 import PrelimsPage from "./pages/prelims";
 import FinalsPage from "./pages/finals";
 import SubmissionTemplatePage from "./pages/submission-template";
-// import Popup from "@/components/ui/Popup";
+import Popup from "@/components/ui/Popup";
 
 function App() {
   const [showPopup, setShowPopup] = useState(false);
@@ -38,7 +38,7 @@ function App() {
 
   return (
     <TooltipProvider>
-      {/* {showPopup && <Popup onClose={handleClosePopup} />} */}
+      {showPopup && <Popup onClose={handleClosePopup} />}
       <div className="flex flex-col min-h-screen">
         <ScrollToTopOnRouteChange />
         <AnnouncementBanner />
