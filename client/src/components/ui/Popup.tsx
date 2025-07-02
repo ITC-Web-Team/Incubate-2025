@@ -21,7 +21,7 @@ const Popup: React.FC<PopupProps> = ({ onClose }) => {
           exit={{ scale: 0.9, opacity: 0 }}
           transition={{ duration: 0.3 }}
           className="relative max-w-md p-6 mx-4 text-white bg-gray-800 border border-gray-700 rounded-lg shadow-xl"
-          onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
+          onClick={(e) => e.stopPropagation()}
         >
           <button
             onClick={onClose}
@@ -32,20 +32,14 @@ const Popup: React.FC<PopupProps> = ({ onClose }) => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
-          <div className="flex items-center mb-4">
-            
-            <h2 className="text-xl font-bold">INCUBATE 2025 Updates</h2>
-          </div>
-          <div className="mb-6">
-            <div className="bg-gray-700 rounded-lg p-4 mb-4">
-              <h3 className="text-lg font-semibold text-green-400 mb-3">Registration Stats</h3>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span className="text-gray-300">Total registrations:</span>
-                  <span className="text-white font-bold">362</span>
-                </div>
-              </div>
-            </div>
+          
+          <div className="text-center">
+            <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 mb-2">
+              INCUBATE 2025
+            </h2>
+            <p className="text-gray-300 mb-6">
+              Registrations are open for India's premier MedTech hackathon.
+            </p>
           </div>
           
           <div className="space-y-3">
@@ -57,11 +51,10 @@ const Popup: React.FC<PopupProps> = ({ onClose }) => {
             >
               To register click here
             </a>
-            
           </div>
           
-          <p className="text-xs text-gray-400 text-center mt-3">
-            Don't miss out on India's premier MedTech hackathon!
+          <p className="text-xs text-gray-400 text-center mt-4">
+            Don't miss out on this incredible opportunity!
           </p>
         </motion.div>
       </motion.div>
