@@ -163,6 +163,7 @@ export const themesData: ThemeData[] = [
         image: ShuvadeepGangulyImg,
       },
     ],
+    videoId : "A8Xn_7kkNx8",
   },
   {
     slug: "smart-surgery-safer-operating-theaters",
