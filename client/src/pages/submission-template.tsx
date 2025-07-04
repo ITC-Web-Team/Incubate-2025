@@ -19,7 +19,7 @@ const SubmissionTemplatePage = () => {
       ],
     },
     {
-      title: "Slide 2: Problem Statement & Significance",
+      title: "Slide 2/3: Problem Statement & Significance",
       points: [
         "What is the <strong>specific problem</strong> being addressed?",
         "Who is <strong>affected by it</strong> (patients, clinicians, systems)?",
@@ -28,7 +28,7 @@ const SubmissionTemplatePage = () => {
       ],
     },
     {
-      title: "Slide 3: Proposed Solution & Novelty",
+      title: "Slide 3/4: Proposed Solution & Novelty",
       points: [
         "What is your <strong>proposed solution</strong>?",
         "What makes it <strong>different or better</strong> than existing solutions?",
@@ -36,7 +36,7 @@ const SubmissionTemplatePage = () => {
       ],
     },
     {
-      title: "Slide 4: Technical Approach",
+      title: "Slide 5/6: Technical Approach",
       points: [
         "<strong>Architecture, methodology, or technical flow</strong>.",
         "<strong>Technologies, algorithms, devices</strong> used.",
@@ -45,7 +45,7 @@ const SubmissionTemplatePage = () => {
       ],
     },
     {
-      title: "Slide 5: Clinical Relevance & Impact",
+      title: "Slide 7/8: Clinical Relevance & Impact",
       points: [
         "How will this <strong>improve clinical workflows, patient outcomes, or healthcare delivery</strong>?",
         "Any <strong>pilot use-case, scenario, or clinical pathway</strong>?",
@@ -53,7 +53,7 @@ const SubmissionTemplatePage = () => {
       ],
     },
     {
-      title: "Slide 6: Feasibility & Integration",
+      title: "Slide 8/9: Feasibility & Integration",
       points: [
         "<strong>Implementation roadmap</strong> (short-term and long-term).",
         "<strong>Challenges anticipated</strong> and mitigation.",
@@ -61,7 +61,7 @@ const SubmissionTemplatePage = () => {
       ],
     },
     {
-      title: "Slide 7: Summary & Call-to-Action",
+      title: "Slide 9/10: Summary & Call-to-Action",
       points: [
         "<strong>Recap</strong> the core problem and proposed solution.",
         "Highlight <strong>impact in 1–2 sentences</strong>.",
@@ -78,7 +78,7 @@ const SubmissionTemplatePage = () => {
           Hackathon Submission Template
         </h1>
         <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">
-          Maximum <strong>7 Slides</strong>, Including Title Slide.
+          Maximum <strong>10 Slides</strong>, Including Title Slide.
         </p>
          <p className="mt-2 text-md text-gray-600 dark:text-gray-400">
           This template is a guideline. Feel free to adapt the visual design while ensuring all content points are covered.
@@ -110,7 +110,7 @@ const SubmissionTemplatePage = () => {
           </h3>
           <ul className="space-y-2 text-gray-700 dark:text-gray-300">
             <li className="flex items-start"><RiArrowRightSLine className="flex-shrink-0 mr-2 mt-1 text-blue-500 dark:text-blue-400" /><span>Upload as a single <strong>.pdf file</strong>.</span></li>
-            <li className="flex items-start"><RiArrowRightSLine className="flex-shrink-0 mr-2 mt-1 text-blue-500 dark:text-blue-400" /><span>Follow the 7-slide structure.</span></li>
+            <li className="flex items-start"><RiArrowRightSLine className="flex-shrink-0 mr-2 mt-1 text-blue-500 dark:text-blue-400" /><span>Follow the <strong>10-slide structure</strong>.</span></li>
             <li className="flex items-start"><RiArrowRightSLine className="flex-shrink-0 mr-2 mt-1 text-blue-500 dark:text-blue-400" /><span>Ensure all information is concise and clear.</span></li>
           </ul>
         </div>
@@ -123,7 +123,7 @@ const SubmissionTemplatePage = () => {
             <li className="flex items-start"><RiArrowRightSLine className="flex-shrink-0 mr-2 mt-1 text-red-500 dark:text-red-400" /><span>Maximum <strong>2 minutes</strong>.</span></li>
             <li className="flex items-start"><RiArrowRightSLine className="flex-shrink-0 mr-2 mt-1 text-red-500 dark:text-red-400" /><span>Upload to YouTube as an <strong>unlisted video</strong>.</span></li>
             <li className="flex items-start"><RiArrowRightSLine className="flex-shrink-0 mr-2 mt-1 text-red-500 dark:text-red-400" /><span>Label: <code>&lt;Theme number&gt;&lt;Registration ID&gt;</code> (e.g., T03REG12345).</span></li>
-            <li className="flex items-start"><RiArrowRightSLine className="flex-shrink-0 mr-2 mt-1 text-red-500 dark:text-red-400" /><span>Embed video link/QR code in slide deck (Slide 7 recommended).</span></li>
+            <li className="flex items-start"><RiArrowRightSLine className="flex-shrink-0 mr-2 mt-1 text-red-500 dark:text-red-400" /><span>Embed video link/QR code in slide deck (<strong>Slide 9/10</strong> recommended).</span></li>
           </ul>
         </div>
       </div>
