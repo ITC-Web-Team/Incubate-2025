@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const prizeData = [
   {
     position: "2nd Prize",
-    amount: "To be announced on June 25th",
+    amount: "₹30,000",
     title: "RUNNER UP",
     iconClass: "ri-award-line",
     bgColorClass: "from-gray-300 to-gray-200",
@@ -20,7 +20,7 @@ const prizeData = [
   },
   {
     position: "1st Prize",
-    amount: "To be announced on June 25th",
+    amount: "₹40,000",
     title: "WINNER",
     iconClass: "ri-trophy-line",
     bgColorClass: "from-yellow-300 to-yellow-200",
@@ -37,7 +37,7 @@ const prizeData = [
   },
   {
     position: "3rd Prize",
-    amount: "To be announced on June 25th",
+    amount: "₹20,000",
     title: "SECOND RUNNER UP",
     iconClass: "ri-medal-line",
     bgColorClass: "from-orange-300 to-orange-200",
@@ -86,19 +86,7 @@ const Prizes = () => {
           Prizes
         </motion.h2>
         
-        <motion.div 
-          className="max-w-4xl mx-auto mb-16 backdrop-blur-sm bg-white/60 dark:bg-gray-800/60 p-6 rounded-xl border border-blue-200 dark:border-blue-900 shadow-lg"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <p className="text-center text-lg text-gray-700 dark:text-gray-300">
-            <span className="inline-block mt-2 text-blue-600 dark:text-blue-400 font-medium">
-              Upto 15 proposals will receive funding support of Rs. 10000 to aid in prototype building. They will be selected based on standardized evaluation criteria.
-            </span>
-          </p>
-        </motion.div>
+       
         
         {/* Prize podium visualization */}
         <div className="flex flex-col md:flex-row justify-center items-end max-w-4xl mx-auto mb-8 gap-8">
@@ -154,6 +142,25 @@ const Prizes = () => {
             </motion.div>
           ))}
         </div>
+         <motion.div 
+          className="max-w-4xl mx-auto backdrop-blur-sm bg-white/60 dark:bg-gray-800/60 p-6 rounded-xl border border-blue-200 dark:border-blue-900 shadow-lg"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <p className="text-center text-lg text-gray-700 dark:text-gray-300 mb-4">
+            <span className="inline-block text-blue-600 dark:text-blue-400 font-medium">
+              Up to 15 finalists get ₹7,500 each + certificate
+            </span>
+          </p>
+          <p className="text-center text-sm text-gray-600 dark:text-gray-400 mb-4">
+            4th and 5th place winners receive ₹15,000 each (inclusive of ₹7,500)
+          </p>
+          <p className="text-center text-xs text-gray-500 dark:text-gray-500">
+            *Prize money subject to change | Along with Medals and Certificates
+          </p>
+        </motion.div>
       </div>
     </section>
   );

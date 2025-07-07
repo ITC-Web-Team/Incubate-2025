@@ -12,8 +12,11 @@ const FinalsPage: FC = () => {
 
   const awards = [
     { title: "Certification of Participation", description: "To all participants (e-certificate).", icon: <FaMedal className="text-yellow-500 text-xl" /> },
-    { title: "Finalists", description: "Funding support along with finalist certificates and trophy.", icon: <FaAward className="text-blue-500 text-xl" /> },
-    { title: "Winners (3 prizes in total)", description: "Cash prizes, etched custom medals, and trophy.", icon: <FaAward className="text-green-500 text-xl" /> }, // Changed to FaAward as a fallback
+    { title: "1st Prize", description: "₹40,000 + medal + certificate", icon: <FaAward className="text-yellow-500 text-xl" /> },
+    { title: "2nd Prize", description: "₹30,000 + medal + certificate", icon: <FaAward className="text-gray-500 text-xl" /> },
+    { title: "3rd Prize", description: "₹20,000 + medal + certificate", icon: <FaAward className="text-orange-500 text-xl" /> },
+    { title: "4th & 5th Prize", description: "₹15,000 each (inclusive of ₹7,500) + certificate", icon: <FaAward className="text-green-500 text-xl" /> },
+    { title: "Finalists (Up to 15 teams)", description: "₹7,500 each + certificate", icon: <FaAward className="text-blue-500 text-xl" /> },
   ];
 
 
