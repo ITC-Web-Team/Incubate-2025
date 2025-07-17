@@ -187,12 +187,12 @@ const PrelimsPage = () => {
           </div>
         </section>
         {/* Submission Proposal Section */}
-         <section className="bg-background-card dark:bg-gray-800 shadow-2xl rounded-xl p-6 md:p-10 transition-shadow duration-300 hover:shadow-lg">
+         {/* <section className="bg-background-card dark:bg-gray-800 shadow-2xl rounded-xl p-6 md:p-10 transition-shadow duration-300 hover:shadow-lg">
             <h2 className="text-3xl font-semibold text-secondary dark:text-secondary-dark mb-8 text-center">
               Submit Your Proposal
             </h2>
             <Phase1SubmissionForm />
-          </section>
+          </section> */}
         {/* Judging Criteria Section */}
         <section className="bg-background-card dark:bg-gray-800 shadow-2xl rounded-xl p-6 md:p-10 transition-shadow duration-300 hover:shadow-lg">
           <h2 className="text-3xl font-semibold text-secondary dark:text-secondary-dark mb-8 text-center">
