@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'; // Added React import
 import { Link } from 'wouter';
 import { FaCalendarAlt, FaFileAlt, FaVideo, FaBalanceScale, FaClipboardList, FaBullseye, FaLightbulb, FaUsers, FaMedal, FaFilm, FaListOl } from 'react-icons/fa';
 import { RiArrowRightSLine } from 'react-icons/ri';
+import Phase1SubmissionForm from '../components/Phase1SubmissionForm';
 
 const PrelimsPage = () => {
   useEffect(() => {
@@ -185,7 +186,13 @@ const PrelimsPage = () => {
             ></iframe>
           </div>
         </section>
-
+        {/* Submission Proposal Section */}
+         <section className="bg-background-card dark:bg-gray-800 shadow-2xl rounded-xl p-6 md:p-10 transition-shadow duration-300 hover:shadow-lg">
+            <h2 className="text-3xl font-semibold text-secondary dark:text-secondary-dark mb-8 text-center">
+              Submit Your Proposal
+            </h2>
+            <Phase1SubmissionForm />
+          </section>
         {/* Judging Criteria Section */}
         <section className="bg-background-card dark:bg-gray-800 shadow-2xl rounded-xl p-6 md:p-10 transition-shadow duration-300 hover:shadow-lg">
           <h2 className="text-3xl font-semibold text-secondary dark:text-secondary-dark mb-8 text-center">
