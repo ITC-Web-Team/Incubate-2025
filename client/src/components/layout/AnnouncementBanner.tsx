@@ -1,8 +1,10 @@
 import { useState } from "react";
 
 const AnnouncementBanner = () => {
-  const [isVisible, setIsVisible] = useState(true);
+  // Always keep this false as registrations are closed
+  const [isVisible, setIsVisible] = useState(false);
 
+  // This component will never be displayed since isVisible is false
   if (!isVisible) return null;
 
   return (
@@ -10,7 +12,7 @@ const AnnouncementBanner = () => {
       <div className="container mx-auto flex items-center justify-center">
         <span className="inline-block animate-pulse mr-2">🔔</span>
         <p className="font-medium">
-          Team registrations are now open. Stay tuned! National-level MedTech
+          Registrations are closed. Stay tuned! National-level MedTech
           Hackathon. 
           {/* Join our{" "}
           <a

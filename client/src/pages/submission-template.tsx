@@ -78,7 +78,7 @@ const SubmissionTemplatePage = () => {
           Hackathon Submission Template
         </h1>
         <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">
-          Maximum <strong>10 Slides</strong>, Including Title Slide.
+          Maximum <strong>10 Slides</strong>, excluding Title Slide.
         </p>
          <p className="mt-2 text-md text-gray-600 dark:text-gray-400">
           This template is a guideline. Feel free to adapt the visual design while ensuring all content points are covered.
@@ -120,7 +120,7 @@ const SubmissionTemplatePage = () => {
             <FaYoutube className="mr-3 text-2xl" /> Video Pitch
           </h3>
           <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-            <li className="flex items-start"><RiArrowRightSLine className="flex-shrink-0 mr-2 mt-1 text-red-500 dark:text-red-400" /><span>Maximum <strong>2 minutes</strong>.</span></li>
+            <li className="flex items-start"><RiArrowRightSLine className="flex-shrink-0 mr-2 mt-1 text-red-500 dark:text-red-400" /><span>Maximum <strong>3 minutes</strong>.</span></li>
             <li className="flex items-start"><RiArrowRightSLine className="flex-shrink-0 mr-2 mt-1 text-red-500 dark:text-red-400" /><span>Upload to YouTube as an <strong>unlisted video</strong>.</span></li>
             <li className="flex items-start"><RiArrowRightSLine className="flex-shrink-0 mr-2 mt-1 text-red-500 dark:text-red-400" /><span>Label: <code>&lt;Theme number&gt;&lt;Registration ID&gt;</code> (e.g., T03REG12345).</span></li>
             <li className="flex items-start"><RiArrowRightSLine className="flex-shrink-0 mr-2 mt-1 text-red-500 dark:text-red-400" /><span>Embed video link/QR code in slide deck (<strong>Slide 9/10</strong> recommended).</span></li>

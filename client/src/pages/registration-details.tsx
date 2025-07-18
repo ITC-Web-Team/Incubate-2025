@@ -149,7 +149,7 @@ const RegistrationDetailsPage = () => {
           </motion.section>
 
           {/* Individual Registrations Section */}
-            <motion.section 
+            {/* <motion.section 
             className="bg-white dark:bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -167,7 +167,7 @@ const RegistrationDetailsPage = () => {
               <li>Please note that the entry fee will not be refunded under any circumstances regardless of the outcome.</li>
               <li>Individual registrants are also free to find team members outside the platform.</li>
             </ul>
-            </motion.section>
+            </motion.section> */}
         </div>
       </div>
     </div>

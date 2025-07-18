@@ -142,6 +142,7 @@ export const themesData: ThemeData[] = [
         image: KarthikeyanMImg,
       },
     ],
+    videoId: "vHjd-fdMA9o",
   },
   {
     slug: "clinical-trial-design",
@@ -260,7 +261,7 @@ export const themesData: ThemeData[] = [
     ],
     faculty: [
       {
-        name: "Dr. Sivamurukan Palaniswamy",
+        name: "Dr. Sivamurukan Palanisamy",
         designation: "Department of Paediatrics",
         description: "Dr Sivamurukan Palanisamy is an Assistant Professor in the Department of Pediatrics, JIPMER. Having completed his DM in Pediatric Critical Care, he is passionate about finding innovative and cost effective interventions in critical care and the ICU. Having worked with UG students for ICMR and other research projects, he is excited to mentor the budding doctors and engineers and nurture their ideas to improve healthcare.",
         image: SivamurukanPalaniswamyImg,

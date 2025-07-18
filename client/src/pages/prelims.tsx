@@ -14,14 +14,14 @@ const PrelimsPage = () => {
     { text: "Theme selection", rawIcon: <FaBullseye /> },
     { text: "Team registrations", rawIcon: <FaUsers /> },
     { text: "Problem identification", rawIcon: <FaLightbulb /> },
-    { text: "Submission of proposal and video (June 25th - July 31st)", rawIcon: <FaFileAlt /> },
+    { text: "Submission of proposal and video (June 25th - August 3rd)", rawIcon: <FaFileAlt /> },
     { text: "Results (August 14th)", rawIcon: <FaMedal /> },
   ];
 
   const importantDates = [
     { text: "Announcement of Themes: June 15th", icon: <FaCalendarAlt className="text-primary dark:text-accent-dark" /> },
     { text: "Registrations open: June 25th", icon: <FaCalendarAlt className="text-primary dark:text-accent-dark" /> },
-    { text: "Last date for submission of proposal and video: July 31st", icon: <FaCalendarAlt className="text-primary dark:text-accent-dark" /> },
+    { text: "Last date for submission of proposal and video: August 3rd", icon: <FaCalendarAlt className="text-primary dark:text-accent-dark" /> },
   ];
 
   const submissionProposalPoints = [

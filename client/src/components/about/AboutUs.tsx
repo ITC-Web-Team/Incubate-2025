@@ -188,7 +188,7 @@ const AboutUs = () => {
         <li>Dr. Nishad Plakkal</li>
         <li>Dr. Sasirekha Rengaraj</li>
         <li>Dr. Shuvadeep Ganguly</li>
-        <li>Dr. Sivamurukan Palaniswamy</li>
+        <li>Dr. Sivamurukan Palanisamy</li>
         <li>Dr. Subitha L</li>
         <li>Dr. Swaminathan K</li>
         <li>Dr. Usha Devi R</li>

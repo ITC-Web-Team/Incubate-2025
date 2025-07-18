@@ -14,7 +14,7 @@ import ThemeDetailPage from "@/pages/theme-detail";
 import RegistrationDetailsPage from "@/pages/registration-details";
 import IPPolicyRulesPage from "@/pages/ip-policy-rules";
 import ScrollToTop from "@/components/ui/scroll-to-top";
-import AnnouncementBanner from "@/components/layout/AnnouncementBanner";
+// Removed AnnouncementBanner import
 import ScrollToTopOnRouteChange from "@/components/ui/scroll-to-top-on-route-change";
 import PrelimsPage from "./pages/prelims";
 import FinalsPage from "./pages/finals";
@@ -41,7 +41,7 @@ function App() {
       {showPopup && <Popup onClose={handleClosePopup} />}
       <div className="flex flex-col min-h-screen">
         <ScrollToTopOnRouteChange />
-        <AnnouncementBanner />
+        {/* <AnnouncementBanner /> */}
         <Header />
         <main className="flex-grow">
           <Switch>
