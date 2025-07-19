@@ -1,15 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
 import Phase1SubmissionForm from '../components/Phase1SubmissionForm';
 
 const Phase1SubmissionPage = () => {
-  const [showForm, setShowForm] = useState(false);
-
-  const handleOpenForm = () => {
-    setShowForm(true);
-  };
-
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
@@ -23,18 +17,7 @@ const Phase1SubmissionPage = () => {
           </p>
         </div>
 
-        {!showForm ? (
-          <div className="text-center">
-            <button
-              onClick={handleOpenForm}
-              className="bg-blue-600 text-white py-2 px-4 rounded-md shadow-md hover:bg-blue-700 transition duration-300"
-            >
-              Open Submission Form
-            </button>
-          </div>
-        ) : (
-          <Phase1SubmissionForm />
-        )}
+        <Phase1SubmissionForm />
       </main>
       <Footer />
     </div>

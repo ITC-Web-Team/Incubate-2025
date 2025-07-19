@@ -134,11 +134,15 @@ export const submissionService = {
         body: formData,
       });
 
+      const data = await response.json();
+      
       if (!response.ok) {
-        throw new Error('Failed to submit proposal');
+        const errorMessage = data.error || 'Failed to submit proposal';
+        throw new Error(errorMessage);
       }
       
-      return await response.json();
+      console.log('File uploaded successfully:', data);
+      return data;
     } catch (error) {
       console.error('API error:', error);
       throw error;
