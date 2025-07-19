@@ -40,7 +40,7 @@ const Phase1SubmissionForm = () => {
           </CardHeader>
           <CardContent className="text-center">
             <p className="mb-4">You must be logged in to submit a proposal.</p>
-            <Button onClick={() => window.location.href = '/register'}>
+            <Button onClick={() => window.location.href = '/auth/login'}>
               Go to Login/Register
             </Button>
           </CardContent>

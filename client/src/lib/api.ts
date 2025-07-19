@@ -40,9 +40,10 @@ export const authService = {
     if (response.ok) {
       localStorage.setItem('authToken', data.token);
       localStorage.setItem('user', JSON.stringify(data.user));
+      return data;
+    } else {
+      throw new Error(data.error || 'Login failed');
     }
-    
-    return { data, ok: response.ok };
   },
 
   async register(userData: {
@@ -66,9 +67,10 @@ export const authService = {
     if (response.ok) {
       localStorage.setItem('authToken', data.token);
       localStorage.setItem('user', JSON.stringify(data.user));
+      return data;
+    } else {
+      throw new Error(data.error || 'Registration failed');
     }
-    
-    return { data, ok: response.ok };
   },
 
   logout() {

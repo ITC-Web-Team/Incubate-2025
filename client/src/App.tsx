@@ -9,6 +9,8 @@ import Home from "@/pages/home";
 import Themes from "@/pages/themes";
 import About from "@/pages/about";
 import FAQs from "@/pages/faqs";
+import LoginPage from "@/pages/login";
+import AuthRegisterPage from "@/pages/auth-register";
 // import Register from "@/pages/register"; // Commented out Register import
 import ThemeDetailPage from "@/pages/theme-detail";
 import RegistrationDetailsPage from "@/pages/registration-details";
@@ -51,6 +53,8 @@ function App() {
             <Route path="/themes" component={Themes} />
             <Route path="/themes/:slug" component={ThemeDetailPage} />
             <Route path="/faqs" component={FAQs} />
+            <Route path="/auth/login" component={LoginPage} />
+            <Route path="/auth/register" component={AuthRegisterPage} />
             {/* <Route path="/register" component={Register} /> */}{/* Commented out /register route */}
             <Route path="/registration-details" component={RegistrationDetailsPage} />
             <Route path="/ip-policy-rules" component={IPPolicyRulesPage} />
