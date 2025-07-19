@@ -1,6 +1,6 @@
 // This file contains API service methods for communication with the backend
 // In production, this will use https://incubate-backend.tech-iitb.org/api
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://incubate-backend.tech-iitb.org/api';
 
 export const authService = {
   async login(email: string, password: string) {
