@@ -2,6 +2,28 @@
 // In production, this will use https://incubate-backend.tech-iitb.org/api
 const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://incubate-backend.tech-iitb.org/api';
 
+// Helper function to get auth headers
+const getAuthHeaders = (): Record<string, string> => {
+  const token = localStorage.getItem('authToken');
+  return token ? { 'Authorization': `Bearer ${token}` } : {};
+};
+
+// Helper function for authenticated requests
+const authenticatedFetch = async (url: string, options: RequestInit = {}) => {
+  const authHeaders = getAuthHeaders();
+  
+  const config: RequestInit = {
+    ...options,
+    headers: {
+      ...authHeaders,
+      ...options.headers,
+    },
+    credentials: 'include',
+  };
+
+  return fetch(url, config);
+};
+
 export const authService = {
   async login(email: string, password: string) {
     const response = await fetch(`${API_BASE_URL}/auth/login`, {
@@ -135,14 +157,25 @@ export const submissionService = {
     try {
       console.log('Submitting to:', `${API_BASE_URL}/submission/phase1`);
       
+      // Get the authentication token
+      const token = localStorage.getItem('authToken');
+      if (!token) {
+        throw new Error('Authentication required. Please log in first.');
+      }
+
+      const headers: Record<string, string> = {
+        'Authorization': `Bearer ${token}`,
+      };
+
       const response = await fetch(`${API_BASE_URL}/submission/phase1`, {
         method: 'POST',
+        headers,
         body: formData,
         credentials: 'include',  // CRITICAL: Include credentials for CORS
       });
 
       console.log('Response status:', response.status);
-      console.log('Response headers:', [...response.headers.entries()]);
+      console.log('Response headers:', response.headers);
 
       const data = await response.json();
       
@@ -165,9 +198,7 @@ export const submissionService = {
 
   async getAllSubmissions() {
     try {
-      const response = await fetch(`${API_BASE_URL}/submission/all`, {
-        credentials: 'include',
-      });
+      const response = await authenticatedFetch(`${API_BASE_URL}/submission/all`);
       
       if (!response.ok) {
         throw new Error('Failed to fetch submissions');

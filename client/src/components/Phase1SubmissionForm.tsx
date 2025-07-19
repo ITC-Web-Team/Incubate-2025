@@ -1,7 +1,7 @@
-import React, { useState, ChangeEvent, FormEvent, useRef } from 'react';
+import React, { useState, ChangeEvent, FormEvent, useRef, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
-import { submissionService } from '../lib/api';
+import { submissionService, authService } from '../lib/api';
 
 type SubmissionStatus = {
   type: 'success' | 'error';
@@ -22,7 +22,32 @@ const Phase1SubmissionForm = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<SubmissionStatus>(null);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Check authentication status on component mount
+  useEffect(() => {
+    setIsAuthenticated(authService.isAuthenticated());
+  }, []);
+
+  // If not authenticated, show login prompt
+  if (!isAuthenticated) {
+    return (
+      <div className="max-w-2xl mx-auto p-6">
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-center">Authentication Required</CardTitle>
+          </CardHeader>
+          <CardContent className="text-center">
+            <p className="mb-4">You must be logged in to submit a proposal.</p>
+            <Button onClick={() => window.location.href = '/register'}>
+              Go to Login/Register
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
