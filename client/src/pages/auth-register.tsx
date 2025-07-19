@@ -6,8 +6,13 @@ import { Label } from '@/components/ui/label';
 import { authService } from '@/lib/api';
 import { useToast } from '@/hooks/use-toast';
 import { useLocation } from 'wouter';
+import OTPVerification from '@/components/auth/OTPVerification';
+
+type RegistrationStep = 'form' | 'otp' | 'success';
 
 export default function RegisterPage() {
+  const [step, setStep] = useState<RegistrationStep>('form');
+  const [registrationEmail, setRegistrationEmail] = useState('');
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -60,7 +65,7 @@ export default function RegisterPage() {
     setIsLoading(true);
 
     try {
-      await authService.register({
+      await authService.requestRegistration({
         email: formData.email,
         password: formData.password,
         fullName: formData.fullName,
@@ -68,15 +73,13 @@ export default function RegisterPage() {
         college: formData.college
       });
       
-      toast({
-        title: "Registration Successful",
-        description: "Account created successfully! Redirecting to submission page...",
-      });
+      setRegistrationEmail(formData.email);
+      setStep('otp');
       
-      // Redirect to submission page after successful registration
-      setTimeout(() => {
-        setLocation('/phase1-submission');
-      }, 1000);
+      toast({
+        title: "Verification Code Sent! 📧",
+        description: `Please check your email (${formData.email}) for the verification code.`,
+      });
     } catch (error) {
       toast({
         title: "Registration Failed",
@@ -88,6 +91,51 @@ export default function RegisterPage() {
     }
   };
 
+  const handleVerificationSuccess = () => {
+    setStep('success');
+    toast({
+      title: "Welcome to Incubate 2025! 🎉",
+      description: "Your account has been created successfully.",
+    });
+  };
+
+  const handleBackToForm = () => {
+    setStep('form');
+  };
+
+  // Show OTP verification step
+  if (step === 'otp') {
+    return (
+      <OTPVerification
+        email={registrationEmail}
+        onVerificationSuccess={handleVerificationSuccess}
+        onBack={handleBackToForm}
+        type="registration"
+      />
+    );
+  }
+
+  // Show success message (this will redirect automatically)
+  if (step === 'success') {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-emerald-100 dark:from-gray-900 dark:to-gray-800 py-12 px-4 sm:px-6 lg:px-8">
+        <Card className="w-full max-w-md">
+          <CardHeader className="text-center">
+            <CardTitle className="text-2xl text-green-600">Registration Complete! ✅</CardTitle>
+          </CardHeader>
+          <CardContent className="text-center space-y-4">
+            <p>Your account has been verified successfully.</p>
+            <p>Redirecting to submission portal...</p>
+            <Button onClick={() => setLocation('/phase1-submission')}>
+              Continue to Submissions
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
+
+  // Show registration form
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 py-12 px-4 sm:px-6 lg:px-8">
       <Card className="w-full max-w-md">

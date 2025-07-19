@@ -73,6 +73,52 @@ export const authService = {
     }
   },
 
+  async requestRegistration(userData: {
+    email: string;
+    password: string;
+    fullName: string;
+    phone: string;
+    college: string;
+  }) {
+    const response = await fetch(`${API_BASE_URL}/auth/register/request`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(userData),
+      credentials: 'include',
+    });
+
+    const data = await response.json();
+    
+    if (response.ok) {
+      return data;
+    } else {
+      throw new Error(data.error || 'Registration request failed');
+    }
+  },
+
+  async verifyOTP(email: string, otp: string) {
+    const response = await fetch(`${API_BASE_URL}/auth/register/verify`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email, otp }),
+      credentials: 'include',
+    });
+
+    const data = await response.json();
+    
+    if (response.ok) {
+      localStorage.setItem('authToken', data.token);
+      localStorage.setItem('user', JSON.stringify(data.user));
+      return data;
+    } else {
+      throw new Error(data.error || 'OTP verification failed');
+    }
+  },
+
   logout() {
     localStorage.removeItem('authToken');
     localStorage.removeItem('user');
