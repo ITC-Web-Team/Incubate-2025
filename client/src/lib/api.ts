@@ -10,6 +10,7 @@ export const authService = {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ email, password }),
+      credentials: 'include',
     });
 
     const data = await response.json();
@@ -35,6 +36,7 @@ export const authService = {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(userData),
+      credentials: 'include',
     });
 
     const data = await response.json();
@@ -109,6 +111,7 @@ export const submissionService = {
         'Authorization': `Bearer ${token}`,
       },
       body: formData,
+      credentials: 'include',
     });
 
     const data = await response.json();
@@ -121,6 +124,7 @@ export const submissionService = {
       headers: {
         'Authorization': `Bearer ${token}`,
       },
+      credentials: 'include',
     });
 
     const data = await response.json();
@@ -129,29 +133,41 @@ export const submissionService = {
 
   async submitPhase1Proposal(formData: FormData) {
     try {
+      console.log('Submitting to:', `${API_BASE_URL}/submission/phase1`);
+      
       const response = await fetch(`${API_BASE_URL}/submission/phase1`, {
         method: 'POST',
         body: formData,
+        credentials: 'include',  // CRITICAL: Include credentials for CORS
       });
+
+      console.log('Response status:', response.status);
+      console.log('Response headers:', [...response.headers.entries()]);
 
       const data = await response.json();
       
       if (!response.ok) {
-        const errorMessage = data.error || 'Failed to submit proposal';
+        const errorMessage = data.error || `HTTP ${response.status}: ${response.statusText}`;
+        console.error('Submission failed:', errorMessage);
         throw new Error(errorMessage);
       }
       
       console.log('File uploaded successfully:', data);
       return data;
     } catch (error) {
-      console.error('API error:', error);
+      console.error('API error details:', error);
+      if (error instanceof TypeError && error.message.includes('fetch')) {
+        throw new Error('Network error - unable to connect to server. Please check your internet connection.');
+      }
       throw error;
     }
   },
 
   async getAllSubmissions() {
     try {
-      const response = await fetch(`${API_BASE_URL}/submission/all`);
+      const response = await fetch(`${API_BASE_URL}/submission/all`, {
+        credentials: 'include',
+      });
       
       if (!response.ok) {
         throw new Error('Failed to fetch submissions');
