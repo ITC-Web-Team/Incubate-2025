@@ -70,9 +70,13 @@ const Phase1SubmissionForm = () => {
 
       const result = await submissionService.submitPhase1Proposal(formDataToSend);
       
+      // Store the fileUrl from the result if available
+      const fileUrl = result.fileUrl || '';
+      const submissionId = result.submissionId || '';
+      
       setSubmitStatus({ 
         type: 'success', 
-        message: `Submission successful! Your file "${formData.submissionFile?.name}" has been uploaded to our secure cloud storage.` 
+        message: `Submission successful! Your file "${formData.submissionFile?.name}" has been uploaded to our secure cloud storage with ID: ${submissionId}.` 
       });
       
       setFormData({ title: '', description: '', submissionFile: null });

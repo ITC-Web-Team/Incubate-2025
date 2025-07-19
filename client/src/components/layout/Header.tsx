@@ -58,6 +58,7 @@ const Header = () => {
     { name: "IP Policy & Rules", href: "/ip-policy-rules" },
     { name: "Phase I", href: "/prelims" },
     { name: "Finals & Awards", href: "/finals" }, // Added Finals & Awards
+    { name: "Submit", href: "/phase1-submission" },
     { name: "FAQs", href: "/faqs" },
   ];
 
@@ -69,6 +70,7 @@ const Header = () => {
     { name: "IP Policy & Rules", href: "/ip-policy-rules" },
     { name: "Phase I", href: "/prelims" },
     { name: "Finals & Awards", href: "/finals" }, // Added Finals & Awards
+    { name: "Submit", href: "/phase1-submission" },
     { name: "FAQs", href: "/faqs" },
     { name: "Register", href: "/register", isButton: true },
   ];

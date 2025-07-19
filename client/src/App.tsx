@@ -19,6 +19,7 @@ import ScrollToTopOnRouteChange from "@/components/ui/scroll-to-top-on-route-cha
 import PrelimsPage from "./pages/prelims";
 import FinalsPage from "./pages/finals";
 import SubmissionTemplatePage from "./pages/submission-template";
+import Phase1SubmissionPage from "./pages/phase1-submission";
 import Popup from "@/components/ui/Popup";
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
             <Route path="/prelims" component={PrelimsPage} />
             <Route path="/finals" component={FinalsPage} />
             <Route path="/submission-template" component={SubmissionTemplatePage} />
+            <Route path="/phase1-submission" component={Phase1SubmissionPage} />
             <Route component={NotFound} />
           </Switch>
         </main>
