@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const AnnouncementBanner = () => {
   // Always keep this false as registrations are closed
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   // This component will never be displayed since isVisible is false
   if (!isVisible) return null;

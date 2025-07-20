@@ -191,7 +191,7 @@ const HeroSection = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
-              <a 
+              {/* <a 
                 href="https://forms.gle/D66ghgRHrDEqv11p9" 
                 target="_blank"
                 rel="noopener noreferrer"
@@ -205,7 +205,7 @@ const HeroSection = () => {
                   </svg>
                 </span>
               </a>
-              
+               */}
               <Link href="/themes" className="relative overflow-hidden bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border border-white/30 font-semibold py-3 px-8 rounded-md shadow-lg transition-all duration-300">
                 Learn More
               </Link>

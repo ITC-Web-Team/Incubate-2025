@@ -98,13 +98,13 @@ export const authService = {
     }
   },
 
-  async verifyOTP(email: string, otp: string) {
-    const response = await fetch(`${API_BASE_URL}/auth/register/verify`, {
+  async completeRegistration(email: string) {
+    const response = await fetch(`${API_BASE_URL}/auth/register/complete`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ email, otp }),
+      body: JSON.stringify({ email }),
       credentials: 'include',
     });
 
@@ -115,8 +115,21 @@ export const authService = {
       localStorage.setItem('user', JSON.stringify(data.user));
       return data;
     } else {
-      throw new Error(data.error || 'OTP verification failed');
+      throw new Error(data.error || 'Registration completion failed');
     }
+  },
+
+  async verifyOTP(email: string, otp: string) {
+    // This now handles client-side verification
+    const { verifyOTPLocally } = await import('../utils/emailService');
+    
+    const isValid = verifyOTPLocally(email, otp);
+    if (!isValid) {
+      throw new Error('Invalid or expired verification code');
+    }
+
+    // Complete registration on backend
+    return this.completeRegistration(email);
   },
 
   logout() {

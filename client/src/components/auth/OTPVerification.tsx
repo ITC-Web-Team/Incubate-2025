@@ -7,6 +7,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { authService } from '@/lib/api';
 import { useToast } from '@/hooks/use-toast';
 import { useLocation } from 'wouter';
+import { getOTPRemainingTime, generateOTP, sendOTPEmail, storeOTPLocally } from '@/utils/emailService';
 
 interface OTPVerificationProps {
   email: string;
@@ -27,6 +28,17 @@ export default function OTPVerification({
   const [canResend, setCanResend] = useState(false);
   const { toast } = useToast();
   const [, setLocation] = useLocation();
+
+  // Initialize timer from stored OTP
+  useEffect(() => {
+    const remaining = getOTPRemainingTime(email);
+    if (remaining > 0) {
+      setTimeLeft(remaining);
+      setCanResend(false);
+    } else {
+      setCanResend(true);
+    }
+  }, [email]);
 
   // Countdown timer
   useEffect(() => {
@@ -98,11 +110,26 @@ export default function OTPVerification({
     
     setIsLoading(true);
     try {
-      // This would call a resend OTP endpoint
-      toast({
-        title: "Code Resent",
-        description: "A new verification code has been sent to your email",
-      });
+      const newOTP = generateOTP();
+      
+      try {
+        await sendOTPEmail(email, newOTP, 'User', type);
+        storeOTPLocally(email, newOTP);
+        
+        toast({
+          title: "Code Resent 📧",
+          description: "A new verification code has been sent to your email",
+        });
+      } catch (emailError) {
+        console.warn('Email sending failed, using local storage:', emailError);
+        storeOTPLocally(email, newOTP);
+        
+        toast({
+          title: "New Code Generated 🔐",
+          description: `For testing: Your new OTP is ${newOTP}`,
+        });
+      }
+      
       setTimeLeft(600);
       setCanResend(false);
     } catch (error) {

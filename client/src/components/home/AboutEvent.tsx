@@ -12,14 +12,14 @@ const AboutEvent = () => {
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
             Get ready to experience the world of innovation where we expand the limits of healthcare solutions through cutting-edge technology.
             </p>
-            <a
+            {/* <a
             href="https://forms.gle/D66ghgRHrDEqv11p9"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-primary hover:bg-primary-600 text-white font-semibold py-3 px-8 rounded-md shadow-md transition duration-300"
             >
             Register Now
-            </a>
+            </a> */}
         </div>
         
         {/* Features grid */}

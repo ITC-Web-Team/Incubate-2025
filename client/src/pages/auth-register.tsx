@@ -3,10 +3,12 @@ import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { Alert, AlertDescription } from '@/components/ui/alert';
 import { authService } from '@/lib/api';
 import { useToast } from '@/hooks/use-toast';
 import { useLocation } from 'wouter';
 import OTPVerification from '@/components/auth/OTPVerification';
+import { generateOTP, sendOTPEmail, storeOTPLocally } from '@/utils/emailService';
 
 type RegistrationStep = 'form' | 'otp' | 'success';
 
@@ -65,6 +67,7 @@ export default function RegisterPage() {
     setIsLoading(true);
 
     try {
+      // Step 1: Send registration data to backend
       await authService.requestRegistration({
         email: formData.email,
         password: formData.password,
@@ -72,14 +75,36 @@ export default function RegisterPage() {
         phone: formData.phone,
         college: formData.college
       });
+
+      // Step 2: Generate and send OTP via email (client-side)
+      const otp = generateOTP();
       
-      setRegistrationEmail(formData.email);
-      setStep('otp');
-      
-      toast({
-        title: "Verification Code Sent! 📧",
-        description: `Please check your email (${formData.email}) for the verification code.`,
-      });
+      try {
+        await sendOTPEmail(formData.email, otp, formData.fullName, 'registration');
+        
+        // Store OTP locally as backup
+        storeOTPLocally(formData.email, otp);
+        
+        setRegistrationEmail(formData.email);
+        setStep('otp');
+        
+        toast({
+          title: "Verification Code Sent! 📧",
+          description: `Please check your email (${formData.email}) for the verification code.`,
+        });
+      } catch (emailError) {
+        console.warn('Email sending failed, using local storage only:', emailError);
+        
+        // Store OTP locally and continue
+        storeOTPLocally(formData.email, otp);
+        setRegistrationEmail(formData.email);
+        setStep('otp');
+        
+        toast({
+          title: "Registration Initiated 🔐",
+          description: `For testing: Your OTP is ${otp}. In production, check your email.`,
+        });
+      }
     } catch (error) {
       toast({
         title: "Registration Failed",
@@ -146,6 +171,13 @@ export default function RegisterPage() {
           </p>
         </CardHeader>
         <CardContent className="space-y-4">
+          <Alert>
+            <AlertDescription>
+              📧 <strong>Email Setup:</strong> EmailJS configuration needed for email delivery. 
+              For testing, OTP codes will be shown in notifications.
+            </AlertDescription>
+          </Alert>
+          
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="fullName">Full Name</Label>

@@ -58,7 +58,7 @@ const Header = () => {
     { name: "IP Policy & Rules", href: "/ip-policy-rules" },
     { name: "Phase I", href: "/prelims" },
     { name: "Finals & Awards", href: "/finals" }, // Added Finals & Awards
-    { name: "Submit", href: "/phase1-submission" },
+    // { name: "Submit", href: "/phase1-submission" },
     { name: "FAQs", href: "/faqs" },
   ];
 
@@ -70,9 +70,9 @@ const Header = () => {
     { name: "IP Policy & Rules", href: "/ip-policy-rules" },
     { name: "Phase I", href: "/prelims" },
     { name: "Finals & Awards", href: "/finals" }, // Added Finals & Awards
-    { name: "Submit", href: "/phase1-submission" },
+    // { name: "Submit", href: "/phase1-submission" },
     { name: "FAQs", href: "/faqs" },
-    { name: "Register", href: "/register", isButton: true },
+    // { name: "Register", href: "/register", isButton: true },
   ];
 
   return (
@@ -109,7 +109,7 @@ const Header = () => {
                   </Link>
                 </li>
               ))}
-              <li className="ml-2 text-center"> 
+              {/* <li className="ml-2 text-center"> 
                 <a
                   href="https://forms.gle/D66ghgRHrDEqv11p9"
                   target="_blank"
@@ -118,7 +118,7 @@ const Header = () => {
                 >
                   REGISTER NOW
                 </a>
-              </li>
+              </li> */}
             </ul>
             <div className="nav-indicator absolute bottom-0 h-0.5 bg-primary dark:bg-blue-400 transition-all duration-300"></div>
           </nav>
@@ -160,7 +160,7 @@ const Header = () => {
               </li>
             ))}
             {/* Mobile Register Now Button */}
-            <li className="pt-2">
+            {/* <li className="pt-2">
               <a 
                 href="https://forms.gle/D66ghgRHrDEqv11p9"
                 target="_blank"
@@ -170,7 +170,7 @@ const Header = () => {
               >
                 REGISTER NOW
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
