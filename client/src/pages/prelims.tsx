@@ -3,6 +3,7 @@ import { Link } from 'wouter';
 import { FaCalendarAlt, FaFileAlt, FaVideo, FaBalanceScale, FaClipboardList, FaBullseye, FaLightbulb, FaUsers, FaMedal, FaFilm, FaListOl } from 'react-icons/fa';
 import { RiArrowRightSLine } from 'react-icons/ri';
 import Phase1SubmissionForm from '../components/Phase1SubmissionForm';
+import { FaCode } from 'react-icons/fa';
 
 const PrelimsPage = () => {
   useEffect(() => {
@@ -40,10 +41,19 @@ const PrelimsPage = () => {
   ];
 
   const submissionVideoPoints = [
-    "A video of maximum 2 minutes explaining your project, problem statement and solution.",
+    "A video of maximum 3 minutes explaining your project, problem statement and solution.",
     "It should be uploaded to YouTube as an unlisted video.",
     "The link of the same is to be shared with us along with the proposal via the Submission Form that will be released on the website.",
-    "Format for title: <Theme Number> <Registration ID>",
+    <>
+      Format for title:{" "}
+      <Link
+        href="/theme-codes"
+        className="text-primary underline hover:text-secondary "
+      >
+        &lt;Theme Name&gt; 
+      </Link>
+      &lt;Registration ID&gt;
+    </>,
     <>
       <span >Steps to submit unlisted video:</span>{" "}
       <a
@@ -165,6 +175,72 @@ const PrelimsPage = () => {
                   </li>
                 ))}
               </ul>
+            </div>
+          </div>
+        </section>
+                
+        {/* Video Format Guidelines Section */}
+        <section className="bg-background-card dark:bg-gray-800 shadow-2xl rounded-xl p-6 md:p-10 transition-shadow duration-300 hover:shadow-lg">
+          <h2 className="text-3xl font-semibold text-secondary dark:text-secondary-dark mb-8 text-center">
+            Video Format Guidelines
+          </h2>
+          
+          <div className="space-y-6">
+            {/* Time Limit */}
+            <div className="bg-background-alt dark:bg-gray-700 rounded-lg p-6 shadow-md">
+              <h3 className="text-xl font-semibold text-primary dark:text-primary-dark mb-3 flex items-center">
+                Time Limit
+              </h3>
+              <p className="text-lg font-medium text-foreground dark:text-gray-300">
+                Maximum <span className="text-primary dark:text-primary-dark font-bold">3 minutes</span>
+              </p>
+            </div>
+
+            {/* Format Guidelines */}
+            <div className="bg-background-alt dark:bg-gray-700 rounded-lg p-6 shadow-md">
+              <h3 className="text-xl font-semibold text-primary dark:text-primary-dark mb-4">
+                Format Guidelines
+              </h3>
+              <p className="text-foreground dark:text-gray-300 mb-4">
+                Format of video is not rigid, you should explain <strong>3 important factors:</strong>
+              </p>
+              
+              <div className="space-y-4">
+                <div className="border-l-4 border-primary dark:border-primary-dark pl-4">
+                  <h4 className="font-semibold text-foreground dark:text-gray-200 mb-2">
+                    i) Introduce the team, the theme you have chosen and why
+                  </h4>
+                </div>
+                
+                <div className="border-l-4 border-primary dark:border-primary-dark pl-4">
+                  <h4 className="font-semibold text-foreground dark:text-gray-200 mb-2">
+                    ii) Why is the Problem statement relevant?
+                  </h4>
+                </div>
+                
+                <div className="border-l-4 border-primary dark:border-primary-dark pl-4">
+                  <h4 className="font-semibold text-foreground dark:text-gray-200 mb-2">
+                    iii) The solution you are offering
+                  </h4>
+                  <ul className="ml-4 space-y-2 text-gray-600 dark:text-gray-400">
+                    <li className="flex items-start">
+                      <span className="text-primary dark:text-primary-dark mr-2">a)</span>
+                      <span>Explain certain concepts/workflows/diagrams from the slide</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-primary dark:text-primary-dark mr-2">b)</span>
+                      <span>Additional points that were not mentioned through the slide deck</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Final Note */}
+            <div className="bg-gradient-to-r from-primary to-primary-dark text-white dark:from-primary-dark dark:to-accent-dark p-6 rounded-lg shadow-lg text-center">
+              <p className="text-lg font-medium">
+                Make a <strong>holistic pitch</strong> as to why your project deserves to be <strong>shortlisted</strong>
+              </p>
             </div>
           </div>
         </section>

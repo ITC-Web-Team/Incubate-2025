@@ -7,7 +7,7 @@ const FinalsPage: FC = () => {
     { text: "Shortlisting will be purely based on the merit of the proposal. There will not be a theme wise allocation.", icon: <FaClipboardList className="text-primary dark:text-accent-dark text-2xl md:text-3xl" /> },
     { text: "Shortlisted teams will be given approximately 6 weeks to develop a prototype/proof-of-concept/working model for presentation in the finals.", icon: <FaLightbulb className="text-primary dark:text-accent-dark text-2xl md:text-3xl" /> },
     { text: "Shortlisted teams will receive mentorship from JIPMER and IIT Bombay faculty.", icon: <FaUsers className="text-primary dark:text-accent-dark text-2xl md:text-3xl" /> },
-    { text: "Finalists will present their proposals at JIPMER on October 5th.", icon: <FaFlagCheckered className="text-primary dark:text-accent-dark text-2xl md:text-3xl" /> },
+    { text: "Finalists will present their proposals at JIPMER on October 4th & 5th.", icon: <FaFlagCheckered className="text-primary dark:text-accent-dark text-2xl md:text-3xl" /> },
   ];
 
   const awards = [
@@ -43,7 +43,7 @@ const FinalsPage: FC = () => {
           Further details will be released soon.
         </p>
         <p className="mt-4 text-md text-red-500 dark:text-red-400 font-semibold text-center p-3 bg-red-500/10 dark:bg-red-400/10 rounded-md">
-          It is mandatory for at least 1 medical and 1 engineering studentin every team to be present for the offline phase.
+          It is mandatory for at least 1 medical and 1 engineering student in every team to be present for the offline phase on both days of the event in full.
         </p>
       </div>
 

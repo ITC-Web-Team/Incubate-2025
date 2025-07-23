@@ -191,21 +191,23 @@ const HeroSection = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
-              {/* <a 
-                href="https://forms.gle/D66ghgRHrDEqv11p9" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-3 px-8 rounded-md shadow-lg group"
-              >
-                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"></span>
+                <Link
+                href="/submission"
+                className="relative overflow-hidden bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold py-3 px-8 rounded-md shadow-lg group transition-all duration-300
+                  dark:from-blue-600 dark:to-purple-700
+                  bg-gradient-to-r
+                  hover:from-blue-400 hover:to-purple-500
+                  dark:hover:from-blue-500 dark:hover:to-purple-600
+                  w-full sm:w-auto text-center"
+                >
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-400 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0 dark:from-blue-500 dark:to-purple-500"></span>
                 <span className="relative z-10 flex items-center justify-center">
-                  <span>Register Now</span>
+                  <span>Submit Now</span>
                   <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </span>
-              </a>
-               */}
+                </Link>
               <Link href="/themes" className="relative overflow-hidden bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border border-white/30 font-semibold py-3 px-8 rounded-md shadow-lg transition-all duration-300">
                 Learn More
               </Link>

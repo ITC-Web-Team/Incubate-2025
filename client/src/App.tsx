@@ -20,6 +20,8 @@ import PrelimsPage from "./pages/prelims";
 import FinalsPage from "./pages/finals";
 import SubmissionTemplatePage from "./pages/submission-template";
 import AnnouncementBanner from "@/components/layout/AnnouncementBanner";
+import SubmissionAuthPage from "@/pages/submission-auth";
+import ThemeCodesPage from "@/pages/theme-codes";
 
 function App() {
 
@@ -42,6 +44,8 @@ function App() {
             <Route path="/prelims" component={PrelimsPage} />
             <Route path="/finals" component={FinalsPage} />
             <Route path="/submission-template" component={SubmissionTemplatePage} />
+            <Route path="/submission" component={SubmissionAuthPage} />
+            <Route path="/theme-codes" component={ThemeCodesPage} />
             <Route component={NotFound} />
           </Switch>
         </main>

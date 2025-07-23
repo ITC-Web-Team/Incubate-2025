@@ -13,8 +13,8 @@ const SubmissionTemplatePage = () => {
       title: "Slide 1: Title Slide",
       points: [
         "<strong>Project Title</strong>",
-        "<strong>Team Name</strong>",
-        "<strong>Team Members</strong> (Name | Institution | Role – Medical/Engineering)",
+        "<strong>Team Name and ID</strong>",
+        "<strong>Team Members</strong> (Name | Contribution | Role – Medical/Engineering)",
         "<strong>Contact Email</strong>",
       ],
     },

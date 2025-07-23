@@ -41,15 +41,15 @@ export interface ThemeData {
 export const themesData: ThemeData[] = [
   {
     slug: "infection-control-critical-care",
-    title: "Infection control & Critical Care Monitoring",
+    title: "Infection Control and Critical Care",
     icon: "ri-shield-flash-line",
     color: "bg-red-500",
-    description: "Hospital-Acquired Infections (HAIs), often caused by multi-drug resistant (MDR) organisms, are major challenges in healthcare settings. These infections can escalate to sepsis, a life-threatening condition requiring urgent, intensive care. Critically ill patients need continuous monitoring across multiple parameters, but traditional methods may miss early warning signs. There’s a growing need for smart critical care solutions using AI, sensors, and predictive tools to detect deterioration early and guide timely intervention. This theme calls for innovations that prevent HAIs, address AMR, and enhance critical care through intelligent, tech-driven monitoring systems.",
+    description: "This theme covers all aspects of infection control, from preventing Healthcare Associated Infections (HAIs) to combating the rise of multi drug resistant (MDR) organisms. HAIs can escalate to sepsis, a life threatening condition requiring urgent, multi organ system interventions. With critically ill patients needing continuous monitoring, there is a pressing need for smart critical care solutions that use AI, sensors, and predictive tools to detect deterioration early and guide timely intervention. This theme calls for innovations that prevent HAIs, address antimicrobial resistance (AMR), and enhance critical care through intelligent, tech driven monitoring systems.",
     focusPoints: [
-      "Detection and surveillance of Hospital-Acquired Infections (HAIs)",
-      "Tracking and addressing the emergence of Multi-Drug Resistant (MDR) pathogens",
+      "Detection and surveillance of Hospital Acquired Infections (HAIs)",
+      "Tracking and addressing the emergence of Multi Drug Resistant (MDR) pathogens",
       "Early identification and prediction of sepsis in hospitalized patients",
-      "Continuous, multi-parameter monitoring in critical care settings",
+      "Continuous, multi parameter monitoring in critical care settings",
       "Integrated clinical data analysis for timely intervention and improved ICU outcomes"
     ],
     faculty: [
@@ -65,16 +65,17 @@ export const themesData: ThemeData[] = [
   {
     slug: "neonatal-infant-care",
     title: "Neonatal and Infant Care Technologies",
-    icon: "ri-hospital-line", // Changed from ri-baby-line
+    icon: "ri-hospital-line",
     color: "bg-pink-500",
-    description: "Neonates, particularly preterm and low-birth-weight infants, are highly vulnerable to temperature instability, infections, and inadequate nutrition. This theme focuses on innovative technologies that support essential interventions like Kangaroo Mother Care (KMC), breastfeeding, sepsis detection, thermoregulation, and hygiene. By addressing critical challenges in neonatal care—such as early sepsis identification, maintaining warmth, monitoring umbilical flow, and improving feeding and sanitation—this theme offers vast potential to reduce neonatal mortality and enhance the quality of care in resource-limited settings.",
+    description: "This broad theme encompasses multi organ system technologies and innovations for neonatal and infant care, with key intersections in pediatrics. Neonates, particularly preterm and low birth weight infants, are highly vulnerable to temperature instability, infections, and inadequate nutrition. This theme focuses on innovative technologies that support essential interventions like Kangaroo Mother Care (KMC), breastfeeding, sepsis detection, thermoregulation, and hygiene to reduce neonatal mortality and enhance the quality of care, especially in resource limited settings.",
     focusPoints: [
       "Umbilical cord care",
       "Maintaining thermal stability",
       "Early identification of Neonatal shock and sepsis",
       "Neonatal Infections",
       "Neonatal Nutrition and Follow up",
-      "Breast Feeding and Kangaroo Mother Care"
+      "Breast Feeding and Kangaroo Mother Care",
+      "Infant care and intersections in Paediatrics"
     ],
     faculty: [
       {
@@ -91,20 +92,20 @@ export const themesData: ThemeData[] = [
       },
     ],
     videoId: "amB08lm3TLs",
-
   },
   {
     slug: "disease-surveillance-outbreak-detection",
-    title: "Integrated Disease Surveillance and Outbreak Detection",
+    title: "Integrated Disease Surveillance, Management, and Outbreak Detection",
     icon: "ri-radar-line",
     color: "bg-yellow-500",
-    description: "This theme aims to enhance the capacity of health systems to detect, respond to, and manage infectious disease outbreaks with greater speed and precision. With the increasing threat of vector-borne and emerging infections like melioidosis, the focus is on real-time surveillance, early warning systems, and rapid, point-of-care diagnostic tools. Participants are encouraged to explore digital platforms for outbreak and vector monitoring, predictive models to identify disease hotspots, and integrated strategies for early intervention. By bridging surveillance with timely diagnosis and response, this theme envisions a future where outbreaks are contained swiftly, minimizing transmission and improving public health outcomes.",
+    description: "This theme focuses on comprehensive infectious disease surveillance and management to strengthen the capacity of health systems to detect, respond to, and manage outbreaks with speed and precision. It covers a wide range of infectious diseases, with a special emphasis on vector borne diseases (VBDs) and emerging threats like melioidosis. Participants are encouraged to develop real time surveillance platforms, early warning systems, predictive models for disease hotspots, and rapid, point of care diagnostic tools to ensure outbreaks are contained swiftly, minimizing transmission and improving public health outcomes. This theme includes all infectious diseases related problem statements.",
     focusPoints: [
       "Early Warning Systems for Outbreak Detection and management",
-      "Surveillance, Prevention, and Diagnosis of Vector-Borne Diseases",
-      "Real-time outbreak and vector surveillance using digital tools",
-      "Rapid, point-of-care diagnostics for diseases like melioidosis",
-      "Prediction of disease hotspots"
+      "Surveillance, Prevention, and Diagnosis of Vector Borne Diseases",
+      "Real time outbreak and vector surveillance using digital tools",
+      "Rapid, point of care diagnostics for diseases like melioidosis",
+      "Prediction of disease hotspots",
+      "Comprehensive surveillance, diagnosis and management modalities for a wide range of infectious diseases"
     ],
     faculty: [
       {
@@ -123,16 +124,16 @@ export const themesData: ThemeData[] = [
   },
   {
     slug: "vision-health-children",
-    title: "Smart screening for Ocular diseases",
+    title: "Advancing Smart Screening and Diagnostics in Ophthalmology and Integrated Solutions for Neurological Disorders",
     icon: "ri-eye-line",
     color: "bg-green-500",
-    description: `Ocular diseases such as refractive errors, cataract, and glaucoma are leading causes of visual impairment and blindness, yet many remain undiagnosed due to barriers like poor access, lack of awareness, and shortage of trained personnel. Early detection plays a critical role in preventing irreversible vision loss and improving quality of life. This theme focuses on innovative, accessible, and scalable screening solutions that leverage technology to detect ocular diseases at earlier stages, particularly in underserved and rural communities enabling timely intervention and improved eye health outcomes.`,
+    description: "This theme focuses on innovative screening, diagnostic and solutions for management in two critical areas: vision health and neurological disorders. For ophthalmology, the emphasis is on early, child friendly detection of refractive errors and amblyopia and congenital eye diseases to improve long term outcomes. It also has verticals extending to cataract, glaucoma, retinal diseases and less common Ocular pathologies. This theme is extended to include the development of accessible and accurate screening and diagnostic tools for a range of neurological conditions, addressing the need for timely detection and intervention in both pediatric and adult populations.",
     focusPoints: [
-      "Smart tools for refractive error screening in community and primary care settings",
-      "Early detection technologies for cataract, including portable slit-lamp alternatives and AI-based image analysis",
-      "Affordable, automated methods for glaucoma screening, including IOP monitoring and optic nerve imaging",
+      "Screening and diagnosis of Ocular diseases",
       "Early detection of congenital and developmental eye diseases",
-      "Innovative methods for pediatric-friendly vision assessment"
+      "Innovative methods for pediatric friendly vision assessment",
+      "Accessible diagnosis and management of neurological disorders.",
+      "Integrated platforms combining ophthalmological and neurological data for comprehensive diagnosis."
     ],
     faculty: [
       {
@@ -146,15 +147,17 @@ export const themesData: ThemeData[] = [
   },
   {
     slug: "clinical-trial-design",
-    title: "Clinical Trial Design- Recruitment and Execution",
+    title: "Clinical Trial Innovations: Enhancing Recruitment, Retention, and Adherence",
     icon: "ri-flask-line",
     color: "bg-blue-500",
-    description: "Clinical trial success heavily depends on efficient recruitment and seamless execution. Challenges like low enrollment rates, high dropout, and protocol deviations often hinder progress. With growing emphasis on patient-centric approaches and streamlined processes, there is significant scope to innovate trial design and implementation methods to enhance participant engagement, compliance, and overall trial efficiency.",
+    description: "This theme addresses critical challenges in clinical research by focusing on innovations in trial design and execution. Success depends on efficient recruitment, randomization, monitoring, and long term retention of participants. With a growing emphasis on patient centric approaches, this theme seeks solutions to improve participant engagement, prevent dropouts, ensure protocol adherence, and enhance the overall quality and efficiency of clinical trials.",
     focusPoints: [
       "Patient recruitment",
       "Randomization",
-      "Long term follow up and prevention of non-compliance",
-      "Clinical trial tracker"
+      "Long term follow up and prevention of non compliance",
+      "Clinical trial tracker",
+      "Real time monitoring systems for trial data, patient adherence, and safety.",
+      "Software that integrates all above mentioned focus points"
     ],
     faculty: [
       {
@@ -164,24 +167,26 @@ export const themesData: ThemeData[] = [
         image: ShuvadeepGangulyImg,
       },
     ],
-    videoId : "A8Xn_7kkNx8",
+    videoId: "A8Xn_7kkNx8",
   },
   {
     slug: "smart-surgery-safer-operating-theaters",
-    title: "Smart Surgery and Safer Operating Theaters",
-    icon: "ri-robot-line", // Changed from ri-scalpel-line
+    title: "Smart Surgery, Safer Operating Theaters, and Specialty Specific Surgical Innovations",
+    icon: "ri-robot-line",
     color: "bg-indigo-500",
-    description: "The evolution of surgery is being driven by advancements in minimally invasive techniques and smart operating environments. This theme brings together innovation in surgical tools, anesthesia safety, and intelligent operating room systems. Participants are encouraged to reimagine surgical instruments, endoscopic technologies, and integrated platforms that support precision and rapid recovery. Alongside, there is a focus on enhancing surgical safety through real-time monitoring, better team coordination, and smart anesthesia delivery and vigilance systems. By bridging surgical innovation with perioperative safety, this theme aims to transform patient outcomes and redefine how surgeries are performed in the future.",
+    description: "This theme explores innovations across the entire surgical continuum, from pre operative planning to post operative recovery. It focuses on advancing minimally invasive techniques, developing smart anesthesia and patient monitoring systems, and creating integrated operating room platforms for workflow efficiency. Participants are encouraged to reimagine surgical instruments, robotics, and AI driven decision support systems to prevent errors, enhance precision, and improve safety, with opportunities for solutions tailored to specific surgical specialties.",
     focusPoints: [
       "Improving ergonomics for prolonged surgeries",
-      "Real-time intraoperative malignancy diagnostics",
+      "Real time intraoperative malignancy diagnostics",
       "Integrated communication tools for seamless OR team coordination",
       "Innovations to strengthen sterility and infection control in the OR",
       "Advanced patient monitoring tools for improved outcomes",
       "Cognitive support tools for managing anesthetic data overload",
-      "Examiner- and patient-centric tools for cervical assessment",
+      "Examiner and patient centric tools for cervical assessment",
       "Improvement in OT tools and technology",
-      "Smart Anaesthesia monitoring and crisis management in the OT"
+      "Smart Anaesthesia monitoring and crisis management in the OT",
+      "AI driven systems for surgical error prevention and decision support",
+      "Development of innovations tailored to specific specialties."
     ],
     faculty: [
       {
@@ -201,17 +206,18 @@ export const themesData: ThemeData[] = [
   },
   {
     slug: "hypertensive-disorders-pregnancy",
-    title: "Monitoring and management of hypertensive disorders in Pregnancy",
+    title: "Hypertension in Pregnancy and Maternal Co morbid Conditions: Integrated Monitoring and Management",
     icon: "ri-women-line",
     color: "bg-purple-500",
-    description: "Hypertensive disorders in pregnancy pose serious risks to both mother and baby. This theme focuses on developing medical technologies for effective monitoring and timely management to prevent complications. Solutions that enable early detection, continuous tracking, and better communication between patients and healthcare providers—especially in low-resource settings—can greatly improve maternal and fetal outcomes.",
+    description: "This theme focuses on developing technologies for the effective monitoring and management of high risk pregnancies. While the primary focus is on hypertensive disorders, which pose serious risks to both mother and baby, the theme also addresses other significant maternal comorbidities (e.g., gestational diabetes, cardiac conditions, autoimmune and renal diseases). The goal is to create solutions that enable early risk stratification, continuous remote monitoring, and timely intervention to improve maternal and fetal outcomes, especially in low resource settings.",
     focusPoints: [
       "Early risk stratification and screening",
       "Remote and continuous blood pressure monitoring",
-      "Integrated maternal-fetal monitoring platforms",
-      "Novel technology for point of care diagnosis and risk stratification for Pre-eclampsia",
+      "Integrated maternal fetal monitoring platforms",
+      "Novel technology for point of care diagnosis and risk stratification for Pre eclampsia",
       "Clinical decision support for timely intervention",
-      "Patient education and self-management tools"
+      "Patient education and self management tools",
+      "Integrated monitoring solutions for other maternal comorbidities like gestational diabetes, cardiac conditions, autoimmune and renal diseases"
     ],
     faculty: [
       {
@@ -225,16 +231,17 @@ export const themesData: ThemeData[] = [
   },
   {
     slug: "pharmacovigilance-cancer-treatment",
-    title: "Integrated Systems for Pharmacovigilance and Patient Safety in Cancer Treatment and Toxicity Management",
+    title: "Optimizing Patient Safety and Toxicity Management in Oncotherapy via Integrated Pharmacovigilance, with Extensions to Rheumatology and Other Chronic Disorders",
     icon: "ri-capsule-line",
     color: "bg-teal-500",
-    description: "Cancer treatment often involves a combination of chemotherapy, radiotherapy, targeted therapy, and surgery—each with its own spectrum of adverse effects. From acute reactions like nausea, immunosuppression, and dermatological toxicities to long-term complications such as neuropathy, cardiotoxicity, infertility, and psychological distress, patients face a complex therapeutic journey. This theme emphasizes the need for integrated systems to monitor, predict, and manage these adverse outcomes in real-time. Innovations in pharmacovigilance, personalized risk assessment, and long-term survivorship care can enhance treatment safety, patient compliance, and overall quality of life across all oncological specialties.",
+    description: "This theme targets patient safety and the management of treatment related toxicity, with a primary focus on cancer therapies. Cancer treatment involves complex regimens with a wide spectrum of adverse effects. This theme seeks integrated systems to monitor, predict, and manage these toxicities in real time. The adaptable frameworks developed here are also applicable to managing adverse effects in rheumatology and other chronic disorders where patients undergo long term, complex treatment protocols.",
     focusPoints: [
-      "Real-time monitoring of adverse effects from chemotherapy, radiation, and surgery",
-      "Dermatological pharmacovigilance for skin-related toxicities",
-      "Predictive models for patient-specific side-effect risks",
-      "Management of long-term sequelae and survivorship care",
-      "Integrated tools for tracking and reporting across therapy modalities"
+      "Real time monitoring of adverse effects from chemotherapy, radiation, and surgery",
+      "Dermatological pharmacovigilance for skin related toxicities",
+      "Predictive models for patient specific side effect risks",
+      "Management of long term sequelae and survivorship care",
+      "Integrated tools for tracking and reporting across therapy modalities",
+      "Adaptable pharmacovigilance frameworks for managing toxicities in rheumatology and other chronic diseases."
     ],
     faculty: [
       {
@@ -248,16 +255,17 @@ export const themesData: ThemeData[] = [
   },
   {
     slug: "low-cost-cpr-innovation",
-    title: "Low-Cost Innovation for Cardiopulmonary Resuscitation (CPR)",
+    title: "Affordable Innovations for CPR, Emergency Response, and Life Saving Interventions",
     icon: "ri-heart-pulse-line",
     color: "bg-orange-500",
-    description: "This theme focuses on developing low-cost devices and software solutions to enhance the delivery, assessment, and monitoring of Cardiopulmonary Resuscitation (CPR) across all age groups—infants, children, and adults. It aims to support both real-life emergency scenarios and training simulations. Innovations may include tools for real-time feedback during CPR, mobile apps for recording and guiding interventions, or cost-effective manikins and sensors for simulation-based education. By enabling better assessment, timely interventions, and process monitoring, these solutions can improve outcomes in critical situations while making CPR training more accessible and effective, especially in resource-constrained settings.",
+    description: "This theme is focused on developing cost effective solutions, devices, and training tools to improve outcomes in medical emergencies. It covers the full spectrum of emergency care, from Cardiopulmonary Resuscitation (CPR) to first response systems and other critical life saving interventions. Innovations may include real time feedback devices for CPR, mobile apps for guiding emergency response, or low cost manikins for accessible training, aiming to enhance survival rates by making life saving skills and technologies more effective and widely available.",
     focusPoints: [
-      "Affordable real-time feedback systems to monitor compression depth, rate, and recoil",
-      "Mobile applications for CPR guidance, performance tracking, and data recording",
-      "Low-cost CPR training manikins with embedded sensors for simulation",
-      "Devices or software for pediatric- and age-specific CPR adaptation",
-      "Tools for remote CPR training and certification in resource-limited areas"
+      "Affordable real time feedback devices and mobile applications to guide high quality CPR.",
+      "Low cost and accessible training solutions, such as smart manikins and remote certification tools.",
+      "Devices and software adapted for age specific resuscitation in pediatric and infant emergencies.",
+      "Technologies to improve emergency communication and shorten response times, such as smart dispatch or citizen responder networks.",
+      "Cost effective devices for critical life saving interventions beyond CPR, like hemorrhage control, airway management and transfusion medicine",
+      "Integrated platforms for data recording and analysis to enhance the performance of Emergency Medical Systems (EMS) and Triaging"
     ],
     faculty: [
       {
@@ -269,18 +277,25 @@ export const themesData: ThemeData[] = [
     ],
   },
   {
-    slug: "structural-heart-diseases", // Updated slug for clarity, or keep as cardiovascular-cerebrovascular-diseases if preferred
-    title: "Targeted Innovation for Structural Heart Diseases: Screening, Diagnosis, and Follow-up",
-    icon: "ri-heart-3-line", 
+    slug: "structural-heart-diseases",
+    title: "Targeted Innovations in Vascular Health and Structural Heart Diseases: Screening, Diagnosis, and Comprehensive Care",
+    icon: "ri-heart-3-line",
     color: "bg-cyan-500",
-    description: "Structural heart diseases—including congenital defects, valvular disorders, and cardiomyopathies—are often underdiagnosed or diagnosed late, especially in low-resource settings. This theme focuses on addressing key gaps in the care pathway: limited early screening, delayed diagnosis, inadequate referral systems, and poor long-term follow-up. Participants are encouraged to identify bottlenecks in healthcare delivery and propose impactful solutions to improve detection, continuity of care, and outcomes for patients across age groups.",
+    description: "This theme addresses the significant and often silent health burden of Vascular diseases, such as CAD, Aneurysms, Vasculitis, Cerebro Vascular Diseases and beyond. The theme also looks at structural Heart Diseases (SHD), like congenital defects, valvular disorders and cardiomyopathies. A critical challenge across both domains is late or missed diagnosis, particularly in low resource settings, leading to severe complications and fragmented care. This theme calls for integrated solutions that tackle the entire care continuum, from community level screening and rapid point of care diagnosis to long term management and follow up.",
     focusPoints: [
-      "Missed or delayed diagnosis of congenital heart defects",
-      "Limited access to cardiac screening in newborns and children",
-      "Inadequate early detection of valvular and myocardial diseases",
-      "Gaps in continuity of care after surgery or intervention"
+      "Low Cost Community Screening",
+      "Point of Care Diagnostics",
+      "Remote Patient Monitoring",
+      "Risk Stratification",
+      "Targeted Intervention for High Risk Groups",
+      "Integrated Digital Health Platforms",
+      "Clinical Decision Support",
+      "Ensuring Long Term Care Continuity",
+      "Wearable sensors",
+      "Wide range of disease specific solutions for both SHD and Vascular Disorders"
     ],
-    faculty: [      {
+    faculty: [
+      {
         name: "Dr. Bhagwati prasad pant",
         designation: "Department of Cardiology",
         description: "Dr. Bhagwati Pant is an Assistant Professor in the Department of Cardiology with a strong foundation in adult cardiology and interventional techniques. His core interests lie in structural heart disease, complex coronary interventions, coronary imaging, and heart failure management. Having completed his DM Cardiology residency at JIPMER (2018–2021), he went on to pursue a Post-Doctoral Fellowship in Adult Cardiology and Interventions at SCTIMST, Thiruvananthapuram in 2022. Dr. Pant is actively engaged in clinical research and continues to contribute to advancements in interventional and diagnostic cardiology.",
