@@ -25,7 +25,7 @@ const ThemeCodesPage = () => {
       slug: "disease-surveillance-outbreak"
     },
     {
-      name: "Advancing Smart Screening and Diagnostics in Ophthalmology, and integrated Solutions for Neurological Disorders",
+      name: "Advancing Smart Screening and Diagnostics for Ocular and Neurological diseases",
       code: "OPT",
       slug: "smart-screening-ophthalmology"
     },

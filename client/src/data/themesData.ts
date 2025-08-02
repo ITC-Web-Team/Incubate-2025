@@ -124,7 +124,7 @@ export const themesData: ThemeData[] = [
   },
   {
     slug: "vision-health-children",
-    title: "Advancing Smart Screening and Diagnostics in Ophthalmology and Integrated Solutions for Neurological Disorders",
+    title: "Advancing Smart Screening and Diagnostics for Ocular and Neurological diseases",
     icon: "ri-eye-line",
     color: "bg-green-500",
     description: "This theme focuses on innovative screening, diagnostic and solutions for management in two critical areas: vision health and neurological disorders. For ophthalmology, the emphasis is on early, child friendly detection of refractive errors and amblyopia and congenital eye diseases to improve long term outcomes. It also has verticals extending to cataract, glaucoma, retinal diseases and less common Ocular pathologies. This theme is extended to include the development of accessible and accurate screening and diagnostic tools for a range of neurological conditions, addressing the need for timely detection and intervention in both pediatric and adult populations.",
