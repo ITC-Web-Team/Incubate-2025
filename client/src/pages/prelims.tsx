@@ -196,6 +196,16 @@ const PrelimsPage = () => {
               </p>
             </div>
 
+            {/* Video Quality */}
+            <div className="bg-background-alt dark:bg-gray-700 rounded-lg p-6 shadow-md">
+              <h3 className="text-xl font-semibold text-primary dark:text-primary-dark mb-3 flex items-center">
+                Video Quality
+              </h3>
+              <p className="text-lg font-medium text-foreground dark:text-gray-300">
+                Video should be in <span className="text-primary dark:text-primary-dark font-bold">16:9 aspect ratio</span>
+              </p>
+            </div>
+
             {/* Format Guidelines */}
             <div className="bg-background-alt dark:bg-gray-700 rounded-lg p-6 shadow-md">
               <h3 className="text-xl font-semibold text-primary dark:text-primary-dark mb-4">
