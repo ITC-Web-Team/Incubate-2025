@@ -34,38 +34,11 @@ const ParticleBackground = () => {
 };
 
 const SubmissionAuthPage = () => {
-  const [code, setCode] = useState('');
-  const [phone, setPhone] = useState('');
-  const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setError('');
-    setLoading(true);
-
-    // Validate inputs
-    if (!code.trim() || !phone.trim()) {
-      setError('Please fill in both fields');
-      setLoading(false);
-      return;
-    }
-
-    // Validate credentials
-    if (validateCredentials(code.trim().toUpperCase(), phone.trim())) {
-      // Redirect to Google Form
-      window.open(SUBMISSION_FORM_URL, '_blank');
-      setLoading(false);
-    } else {
-      setError('Invalid code or phone number. Please check your credentials.');
-      setLoading(false);
-    }
-  };
+  // Submissions are closed; no form logic needed
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 dark:from-gray-950 dark:via-blue-950 dark:to-gray-950 light:from-blue-50 light:via-blue-100 light:to-indigo-100 flex items-center justify-center px-4 py-8 relative overflow-hidden">
       <ParticleBackground />
-      
       {/* Digital circuit lines matching homepage */}
       <div className="absolute inset-0 z-0 overflow-hidden opacity-10 dark:opacity-10">
         <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -91,79 +64,11 @@ const SubmissionAuthPage = () => {
             <Lock className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
           </motion.div>
           <h1 className="text-2xl sm:text-3xl font-bold text-white light:text-gray-900 mb-2">Submission Portal</h1>
-          <p className="text-blue-200 dark:text-blue-300 light:text-gray-600 text-sm sm:text-base">Enter your credentials to access the submission form</p>
+          <p className="text-blue-200 dark:text-blue-300 light:text-gray-600 text-sm sm:text-base font-semibold">Submissions are now closed.</p>
         </div>
-
-        <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
-          {/* Phone Number Field - Now First */}
-          <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-blue-200 dark:text-blue-300 light:text-gray-700 mb-2">
-              Phone Number
-            </label>
-            <div className="relative">
-              <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-300 dark:text-blue-400 light:text-gray-400 w-5 h-5" />
-              <input
-                type="tel"
-                id="phone"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-white/5 dark:bg-white/5 light:bg-white border border-white/20 dark:border-white/20 light:border-gray-300 rounded-lg text-white light:text-gray-900 placeholder-blue-300 dark:placeholder-blue-400 light:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                placeholder="Enter your phone number"
-                required
-              />
-            </div>
-          </div>
-
-          {/* Access Code Field - Now Second */}
-          <div>
-            <label htmlFor="code" className="block text-sm font-medium text-blue-200 dark:text-blue-300 light:text-gray-700 mb-2">
-              Access Code
-            </label>
-            <div className="relative">
-              <Key className="absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-300 dark:text-blue-400 light:text-gray-400 w-5 h-5" />
-              <input
-                type="text"
-                id="code"
-                value={code}
-                onChange={(e) => setCode(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-white/5 dark:bg-white/5 light:bg-white border border-white/20 dark:border-white/20 light:border-gray-300 rounded-lg text-white light:text-gray-900 placeholder-blue-300 dark:placeholder-blue-400 light:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                placeholder="Enter your access code"
-                required
-              />
-            </div>
-          </div>
-
-          {error && (
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="bg-red-500/20 border border-red-500/30 text-red-200 light:text-red-700 light:bg-red-100 light:border-red-300 px-4 py-3 rounded-lg text-sm"
-            >
-              {error}
-            </motion.div>
-          )}
-
-          <motion.button
-            type="submit"
-            disabled={loading}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 light:from-blue-600 light:to-blue-700 light:hover:from-blue-700 light:hover:to-blue-800 text-white font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300 flex items-center justify-center space-x-2 disabled:opacity-50 text-sm sm:text-base"
-          >
-            {loading ? (
-              <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-            ) : (
-              <>
-                <span>Access Submission Form</span>
-                <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5" />
-              </>
-            )}
-          </motion.button>
-        </form>
-
         <div className="mt-6 text-center">
           <p className="text-blue-300 dark:text-blue-400 light:text-gray-600 text-xs sm:text-sm">
-            Don't have credentials? Contact the event organizers.
+            Thank you for your interest in Incubate. Stay tuned for updates!
           </p>
         </div>
       </motion.div>

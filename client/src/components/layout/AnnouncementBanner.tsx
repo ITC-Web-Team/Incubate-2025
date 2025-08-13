@@ -7,24 +7,20 @@ const AnnouncementBanner = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-3 px-4 text-center text-sm shadow-lg">
-      <div className="container mx-auto flex items-center justify-center">
-        <p className="font-medium">
-          <strong>Phase 1 Submissions Open!</strong> Submit your innovative solutions now.{" "}
-          <Link
-            href="/submission"
-            className="underline hover:text-blue-200 font-semibold ml-1"
+    <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-1.5 px-2 text-center text-xs shadow-lg">
+      <div className="container mx-auto flex items-center justify-center min-h-0">
+        <div className="flex items-center justify-center w-full min-h-0">
+          <p className="font-medium w-full">
+            <span className="font-bold text-base tracking-wide">Incubate 2025</span> &mdash; Thank you for your interest in the Incubate Hackathon. Registration is now closed. <span className="font-semibold">Stay tuned!</span>
+          </p>
+          <button
+            onClick={() => setIsVisible(false)}
+            className="ml-2 text-white hover:text-purple-200 transition-colors text-base"
+            aria-label="Close announcement"
           >
-            Click here to Submit 
-          </Link>
-        </p>
-        <button
-          onClick={() => setIsVisible(false)}
-          className="ml-4 text-white hover:text-blue-200 transition-colors"
-          aria-label="Close announcement"
-        >
-          ✕
-        </button>
+            ✕
+          </button>
+        </div>
       </div>
     </div>
   );
