@@ -22,6 +22,7 @@ import SubmissionTemplatePage from "./pages/submission-template";
 import AnnouncementBanner from "@/components/layout/AnnouncementBanner";
 import SubmissionAuthPage from "@/pages/submission-auth";
 import ThemeCodesPage from "@/pages/theme-codes";
+import ResultsPage from "@/pages/results";
 
 function App() {
 
@@ -46,6 +47,7 @@ function App() {
             <Route path="/submission-template" component={SubmissionTemplatePage} />
             <Route path="/submission" component={SubmissionAuthPage} />
             <Route path="/theme-codes" component={ThemeCodesPage} />
+            <Route path="/results" component={ResultsPage} />
             <Route component={NotFound} />
           </Switch>
         </main>
