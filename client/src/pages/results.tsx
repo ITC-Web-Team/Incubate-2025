@@ -95,9 +95,12 @@ const ResultsPage: React.FC = () => {
           <List items={honourable} />
         </SectionCard>
 
-        <SectionCard title="Instructions for Finalists">
+        <SectionCard title="Instructions for Finalists and Honourable Mentions">
           <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-3">
             You are requested to send a confirmation mail to <a className="underline" href="mailto:jipmersciclub@gmail.com">jipmersciclub@gmail.com</a> by <strong>11:00 PM, 22/08/2025</strong> with the following details:
+          </p>
+          <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-3 italic">
+            Please compile these details into a single Word document (.docx) and email it as an attachment along with a covering letter.
           </p>
           <ul className="list-disc pl-5 space-y-1 text-sm sm:text-base text-gray-700 dark:text-gray-300">
             {instructions.map((i, idx) => (

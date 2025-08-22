@@ -16,7 +16,7 @@ const PrelimsPage = () => {
     { text: "Team registrations", rawIcon: <FaUsers /> },
     { text: "Problem identification", rawIcon: <FaLightbulb /> },
     { text: "Submission of proposal and video (June 25th - August 6th)", rawIcon: <FaFileAlt /> },
-    { text: "Results (August 14th)", rawIcon: <FaMedal /> },
+  { text: "Results announced", rawIcon: <FaMedal /> },
   ];
 
   const importantDates = [
@@ -306,8 +306,11 @@ const PrelimsPage = () => {
         {/* Results Section */}
         <section className="bg-primary dark:bg-primary-dark text-white dark:text-gray-900 p-6 md:p-8 rounded-xl shadow-xl text-center hover:shadow-2xl transition-shadow duration-300">
           <h2 className="text-2xl md:text-3xl font-bold mb-2">Results Announcement</h2>
-          <p className="text-xl md:text-2xl font-medium">
-            Results for Phase I will be announced on the website on <span className="font-bold underline">August 14th</span>.
+          <p className="text-lg md:text-xl font-medium">
+            Results for Phase I have been announced. {" "}
+            <Link href="/results" className="underline font-semibold text-white dark:text-gray-900 hover:opacity-90">
+              View the list
+            </Link>
           </p>
         </section>
 
