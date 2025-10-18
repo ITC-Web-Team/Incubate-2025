@@ -2,7 +2,6 @@ import HeroSection from "@/components/home/HeroSection";
 import AboutEvent from "@/components/home/AboutEvent";
 import Timeline from "@/components/home/Timeline";
 import Process from "@/components/home/Process";
-import Prizes from "@/components/home/Prizes";
 import Sponsors from "@/components/home/Sponsors";
 import IncubateLogo from "@/components/home/IncubateLogo";
 import Popup from "@/components/ui/Popup";
@@ -53,7 +52,6 @@ export default function Home() {
         <AboutEvent />
         <Timeline />
         <Process />
-        <Prizes />
         <Sponsors />
       </motion.div>
       
