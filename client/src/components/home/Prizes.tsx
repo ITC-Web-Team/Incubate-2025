@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 const prizeData = [
   {
     position: "2nd Prize",
-    amount: "₹30,000",
-    title: "RUNNER UP",
+    amount: "₹30,000 (inclusive of ₹7,500)",
+    title: "RUNNER UP (subject to change)",
     iconClass: "ri-award-line",
     bgColorClass: "from-gray-300 to-gray-200",
     borderColorClass: "border-gray-400",
@@ -20,8 +20,8 @@ const prizeData = [
   },
   {
     position: "1st Prize",
-    amount: "₹40,000",
-    title: "WINNER",
+    amount: "₹40,000 (inclusive of ₹7,500)",
+    title: "WINNER (subject to change)",
     iconClass: "ri-trophy-line",
     bgColorClass: "from-yellow-300 to-yellow-200",
     borderColorClass: "border-yellow-400",
@@ -37,8 +37,8 @@ const prizeData = [
   },
   {
     position: "3rd Prize",
-    amount: "₹20,000",
-    title: "SECOND RUNNER UP",
+    amount: "₹20,000 (inclusive of ₹7,500)",
+    title: "SECOND RUNNER UP (subject to change)",
     iconClass: "ri-medal-line",
     bgColorClass: "from-orange-300 to-orange-200",
     borderColorClass: "border-orange-400",
